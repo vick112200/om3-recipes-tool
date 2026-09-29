@@ -42,19 +42,25 @@ def A(c, msg):
 
 
 # ================================================================ 静态
-print('=== ①-a 静态：扫码入口已隐藏 + 「怎么连相机」指引在位（第 49 轮）===')
+print('=== ①-a 静态：扫码入口已隐藏 + 「怎么连相机」指引在位（第 49 轮；第 97 轮又收了一次）===')
 A('.hid49{display:none !important}' in src, 'CSS：.hid49（隐藏扫码入口）在')
 for _i in ['camGateScan', 'camScan', 'camScanHelp']:
     import re as _re
     _m = _re.search(r'<button[^>]*id="%s"[^>]*>' % _i, src)
-    A(bool(_m) and 'hid49' in _m.group(0), '入口 #%s 带 .hid49（隐藏，元素保留）' % _i)
+    _tag = _m.group(0) if _m else ''
+    # 第 97 轮口径：第 74 轮把入口放回来过，第 97 轮又收起来 —— 现在用的是 style="display:none"
+    # （比 .hid49 更"就地"，class 不动 → 老探针的 class 断言不受影响）。两种都算"隐藏且元素保留"。
+    A(bool(_m) and ('hid49' in _tag or 'display:none' in _tag),
+      '入口 #%s 隐藏（.hid49 或 style="display:none" 都算；第 97 轮用的是后者）' % _i)
 A('<div class="camguide49">' in src, '首屏新增「怎么连相机」指引块 .camguide49')
 A('官方 App' in src and 'OM Image Share' in src, '指引里写了：第一次用**官方 App** 连一次')
 A('手机就记住了这台相机的 Wi-Fi' in src, '指引里写了：连过一次手机就记住了')
-A('直接点下面的「<b>连接相机</b>」' in src, '指引里写了：以后直接点「连接相机」')
+A('直接点上面的「<b>连接相机</b>」' in src,
+  '指引里写了：以后直接点「连接相机」（第 98 轮按钮挪到说明**上面**，文案跟着改成"上面"）')
 A('手动填 SSID / 密码' in src, '指引里留了「不想装官方 App → 手动填 SSID/密码」的兜底')
-A("if(gs) gs.addEventListener('click', function(){ showStep(1); });" in src,
-  '底栏第①步不再偷偷启动扫码（原来会 camScan.click()）')
+A('camScan.click()' not in src,
+  '底栏第①步不再偷偷启动扫码（页面里没有任何 camScan.click()；第 79 轮起那个 click 接的是 startScanNow，'
+  '底栏第①步只切步骤）')
 A('<div class="camcard" id="camManualCard">' in src, '手动填卡片直接可见（不再靠「看不到二维码？手动填」展开）')
 
 print('\n=== ①-b 静态：解码回到省 CPU 的两遍（撤掉第 48 轮的高清/放大方案）===')
@@ -196,16 +202,23 @@ setTimeout(function(){
     });
     /* 首屏两个真按钮仍然点得到；指引看得见 */
     tap('camGateConn', '首屏「连接相机」', ok);
-    var fold = document.querySelector('#camGateOff details');
-    ok(!!fold, '首屏有「连不上？更多方式」折叠（手动填在里面）');
-    if(fold){
-      ok(fold.querySelector('summary').textContent.indexOf('手动填 SSID') >= 0,
-         '折叠标题里写了「手动填 SSID/密码」（用户找得到）');
-      fold.open = true;                 /* 用户路径：点开这一格 */
-    }
-    tap('camGateManual', '「连不上？更多方式」里的手动填', ok);
+    /* 第 97 轮口径：这个折叠**一定是包着 #camGateManual 的那一个**。
+       以前写的是 `#camGateOff details`（拿第一个 details）—— 第 79 轮在指引里又加了一个
+       「详细说明（第一次连 / 以后怎么连 / 不装官方 App）」折叠，于是第一个 details 不再是它 → 假红。 */
+    /* 第 98 轮口径：手动填按钮**提到了首屏**（扫码收起后它是第二入口）→
+       ① 断言它在首屏且**不在任何折叠里**；② 「连不上？更多方式」折叠还在（里面是"只连相机热点"）。 */
+    var man = document.getElementById('camGateManual'), inFold = false, up = man;
+    while(up){ if(up.tagName === 'DETAILS') inFold = true; up = up.parentNode; }
+    ok(!!man && !inFold, '★「手动填 SSID / 密码」在**首屏**（不再收在折叠里）');
+    var fold = null, dss = document.querySelectorAll('#camGateOff details');
+    for(var z2 = 0; z2 < dss.length; z2++) if(dss[z2].querySelector('#camGateDirect')) fold = dss[z2];
+    ok(!!fold, '「连不上？更多方式」折叠还在（里面是"只连相机热点"）');
+    if(fold) fold.open = true;                 /* 用户路径：点开这一格 */
+    tap('camGateManual', '首屏的「手动填 SSID / 密码」', ok);
+    /* 第 98 轮：指引清单收进「怎么连」折叠了 → 先展开再判高度 */
+    document.querySelectorAll('#paneD details').forEach(function(d){ d.open = true; });
     var gt = document.querySelector('.camguide49');
-    ok(!!gt && gt.getBoundingClientRect().height > 30, '首屏「怎么连相机」指引可见（' +
+    ok(!!gt && gt.getBoundingClientRect().height > 30, '展开「怎么连」折叠后：指引块可见（' +
        Math.round(gt ? gt.getBoundingClientRect().height : 0) + 'px）');
     /* 底栏第①步：以前会顺手启动扫码，现在只切步骤 */
     var s1 = document.querySelector('#barD button[data-dstep="1"]') || document.querySelector('#barD button');
@@ -236,9 +249,12 @@ setTimeout(function(){
     /* 第 49 轮：入口已隐藏 → 不能点它；改从首屏「连接相机」按钮确认指引 + 用官方导出的入口驱动扫码流程 */
     var gs = document.getElementById('camGateScan');
     ok(!!gs && getComputedStyle(gs).display === 'none', '首屏「扫二维码（第一次）」已隐藏（display:none）');
+    /* 第 98 轮：指引清单收进「怎么连」折叠 → 先展开再判（三件事照旧要都在） */
+    document.querySelectorAll('#paneD details').forEach(function(d){ d.open = true; });
     var gt = document.querySelector('.camguide49');
-    ok(!!gt && gt.getBoundingClientRect().height > 30, '首屏「怎么连相机」指引可见');
-    var gtx = gt ? gt.textContent : '';
+    ok(!!gt && gt.getBoundingClientRect().height > 30, '展开「怎么连」折叠后：指引块可见');
+    /* 第 98 轮：「详细说明」从 .camguide49 里拎出来变成**同级**折叠了 → 三件事要按整个 gate 区判 */
+    var gtx = (document.getElementById('camGateOff') || {}).textContent || '';
     ok(gtx.indexOf('官方 App') >= 0 && gtx.indexOf('连接相机') >= 0 && gtx.indexOf('手动填') >= 0,
        '指引里三件事都在：第一次用官方 App / 以后点连接相机 / 手动填兜底');
     tap('camGateConn', '首屏「连接相机」', ok);

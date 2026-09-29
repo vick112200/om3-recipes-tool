@@ -1522,8 +1522,23 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
      「蓝牙工具（高级）…」（y=66），而真正的「连接相机」按钮在 **y=737**（第一屏几乎看不到），
      需求方因此说「看不懂，不知道具体操作步骤」。现在按钮在最上面，蓝牙工具挪到它后面。 -->
 <div class="camgate" id="camGateOff">
-    <h3>连接相机</h3>
+    <h1>连接相机</h1>
       <div style="font-size:12.5px;color:#9aa3b2;line-height:1.7;margin:-4px 0 8px">已经开着相机 Wi-Fi（自己开的也算）或以前连过这台 → 直接点「连接相机」；第一次连、手上又没二维码 → 用「手动填 SSID / 密码」。</div>
+
+    <!-- r97：**扫码入口又收起来了**（需求方 2026-09-29：「现在扫码还是扫不出来，实在不行就把扫码连接去掉吧」）。
+       只加 style="display:none"（class/节点/逻辑一个没动），所以：
+         · 想再开：删掉这 3 处 style —— ① #camGateScan（下一行）② #camScan ③ #camScanHelp；
+           并把本页「情况 A/B」指引文案改回「扫码连接」那一版（第 74 轮那版在 git 历史里）。
+         · 解码代码（jsQR / 全屏浮层 #scanMask / 诊断行 #scanStat / 测试页 ⑨ 自检）**一条没删**。
+       第 49 轮藏的时候忘了改指引文案，页面上还让用户点一个看不见的按钮 —— 这次文案一起改了。 -->
+    <!-- r97：扫码入口（隐藏）—— 想开就删掉这行末尾的 style -->
+    <button type="button" class="big" id="camGateConn">连接相机</button>
+    <button type="button" class="big gho" id="camGateManual">手动填 SSID / 密码</button>
+    <!-- r98：首屏原来 793px 全是说明文字（按钮和下面的状态条被推到屏幕外，需求方说"上面一块下面一块"）
+         → 「怎么连」收进这个折叠（默认收起）；「详细说明」从它里面拎出来**同级并列**，免得折叠套折叠。 -->
+    <details class="fold fnote" style="margin-top:8px">
+      <summary>怎么连？看相机屏幕上是什么 · 对号入座（点开）</summary>
+      <div class="foldbody">
     <div class="camguide49">
       <!-- r76：怎么操作：需求方「看不懂，不知道具体操作步骤」→ 最上面先给**编号清单**（相机做什么／手机点哪里／看到什么算成功） -->
       <!-- r79：需求方「完全看不懂」→ 改成**按相机屏幕上看到什么**分支，并明确回答
@@ -1531,15 +1546,21 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
       <p style="font-size:14px;color:#fff;font-weight:700;margin-bottom:8px">先看相机屏幕上是什么，对号入座：</p>
       <p style="line-height:1.9">
         <b>情况 A：相机屏幕上有「二维码」</b><br>
-        　→ 这台相机点下面<b>「扫码连接」</b>，对着二维码即可（系统弹窗点「连接」）。<br>
+        　→ 二维码里装的<b>就是 SSID 和密码</b>：看相机屏幕上写的那两行，
+用下面<b>「连不上？更多方式」→「手动填 SSID / 密码」</b>抄进去（填一次就记住）。<br>
+        　<span style="color:#8b93a1">（本版 App 的扫码识别不稳：相机屏幕小、有反光，
+扫半天扫不出来反而耽误事，所以先把「扫码连接」收起来了 —— 用同样的两格手填就行。）</span><br>
         <b>情况 B：相机屏幕上只有 SSID 和密码，没有二维码</b><br>
-        　→ 点下面<b>「连不上？更多方式」</b> → <b>「手动填 SSID / 密码」</b>，照抄两格即可。<br>
+        　→ 同上：点下面<b>「连不上？更多方式」</b> → <b>「手动填 SSID / 密码」</b>，照抄两格即可。<br>
         <b>情况 C：你已经自己在相机/手机设置里把相机 Wi-Fi 打开了（或连过一次）</b><br>
         　→ 直接点下面<b>「连接相机」</b>就行。<br>
         <span style="color:#7ed3bd">不用先去改相机的 Wi-Fi 开关 —— 相机没开也没关系：
         <b>App 不会替你开相机 Wi-Fi</b>（开启相机 Wi-Fi 是有副作用的动作，得你点头）：请在相机上进入传输状态（MENU → Wi-Fi/蓝牙 → 连接到智能手机）；<b>这一步只能你在相机上做</b>（App 不会替你开相机 Wi-Fi）。</span>
       </p>
       <p class="g49n" style="margin-bottom:14px">连不上？照最后一节：☰（右上）→ <b>🔧 测试页</b> → 点<b>「分享日志」</b>发我。</p>
+
+    </div>      </div>
+    </details>
       <details class="fold fnote" style="margin-top:10px">
         <summary>详细说明（第一次连 / 以后怎么连 / 不装官方 App）</summary>
         <div class="foldbody">
@@ -1548,18 +1569,13 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
           按相机屏幕上的提示连上。<br>
         · 连上这一次，<b>手机就记住了这台相机的 Wi-Fi</b> —— 以后不用再动官方 App。</p>
       <p><b>以后（已经连过一次）</b><br>
-        · 相机打开 Wi-Fi 传输，回到这一页直接点下面的「<b>连接相机</b>」就行 —— 不用扫码、不用官方 App。</p>
+        · 相机打开 Wi-Fi 传输，回到这一页直接点上面的「<b>连接相机</b>」就行 —— 不用装官方 App。</p>
       <p class="g49n">不想装官方 App？相机屏幕上会写 <b>SSID 和密码</b>，
         在下面「连不上？更多方式 → <b>手动填 SSID / 密码</b>」里填一次，也一样（填过就记住）。</p>
     
         </div>
       </details>
-    </div>
-    <!-- r74：扫码放回来，但**往后放**：排在「连接相机」之后、样式降一级（.gho 灰底）。
-       第 49 轮是把它整个藏起来（.hid49），而下面的提示文案还在让用户去点它（指向一个看不见的按钮）。
-       要再藏回去：给这三个按钮加回 class="hid49" 即可（.hid49 那条 CSS 保留着）。 -->
-    <button type="button" class="big" id="camGateConn">连接相机</button>
-    <button type="button" class="big gho" id="camGateScan">扫码连接（忘了密码时用）</button>
+    <button type="button" class="big gho" id="camGateScan" style="display:none">扫码连接（忘了密码时用）</button>
     
     <!-- 首屏只留两个大按钮（用户 2026-09-24：「好几个按钮」+「直连按钮和『连接相机』有歧义」）：
          「连接相机」一个按钮搞定 —— **先直连**（自己扫附近 Wi-Fi 挑出相机热点）→ 不行再用记住的凭据连
@@ -1568,7 +1584,7 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
       <summary>连不上？更多方式（只连相机热点 · 手动填 SSID/密码 · 系统 Wi-Fi 设置）</summary>
       <div class="foldbody">
         <button type="button" class="gho" id="camGateDirect">只连相机热点（相机 Wi-Fi 已开时最快）</button>
-        <button type="button" class="gho" id="camGateManual">手动填 SSID / 密码</button>
+        <!-- r98：#camGateManual 搬到首屏了（扫码头收起后它是第二入口）-->
         <div style="color:#9aa3b2;font-size:12px;margin-top:4px">
           相机屏幕上会写 SSID 和密码，照抄即可。手机上已经连过这台相机的话，也可以直接去系统 Wi-Fi 设置里点它。</div>
       </div>
@@ -1589,8 +1605,9 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
   
 
     <div class="camrun hide" id="camRun"><span class="spin"></span><span id="camRunTxt">待机</span><span class="t" id="camRunTime"></span></div><div class="wrap">
-<h1>导入相机</h1>
-<p class="sub">手机直连 OM-3 写配方 · 扫码连一次，以后自动连</p>
+<!-- r98：这里原来是第二个大标题「导入相机」—— 一屏两个标题、看着像"上面一块下面一块"（需求方 2026-09-29）。
+     现在只留一行小字，把"这两块是什么关系"讲清楚。 -->
+<div style="color:#9aa3b2;font-size:12.5px;line-height:1.7;margin:2px 0 8px">上面那块是「怎么连」；<b>连上之后</b>，下面这块才是「检测相机 · 备份 · 写配方」。</div>
 
 <div class="camhead">
   <div class="camstatus">
@@ -1653,23 +1670,24 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
   <!-- 这四张卡和上面的 gate 是同一批动作（扫码/连接/手动填/检测）→ 默认折叠，避免一屏两套按钮。
        "手动填"入口会由 JS 自动展开这里（om3OpenFold）。 -->
   <details class="fold fnote" id="camV1Fold">
-    <summary>连接详情（扫码 / 手动填 / 检测 / 忘掉相机）—— 点开看细节</summary>
+    <summary>连接详情（手动填 / 检测 / 忘掉相机）—— 点开看细节</summary>
     <div class="foldbody">
   <div class="camcard">
-    <div class="camhd">扫相机屏幕上的二维码</div>
+    <div class="camhd">手动填 SSID / 密码</div>
     <div class="camout" style="border-color:#33507e">
       <b>连接流程（照这个顺序）：</b><br>
-      1. 相机上：菜单 → Wi-Fi / 蓝牙 → 切到 <b>Wi-Fi 传输状态</b>（屏幕显示二维码 / SSID）<br>
-      2. 手机：点「扫码连接」扫相机屏幕的二维码（或手动填 SSID + 密码）<br>
+      1. 相机上：菜单 → Wi-Fi / 蓝牙 → 切到 <b>Wi-Fi 传输状态</b>（屏幕显示 SSID / 密码，有的还显示二维码）<br>
+      2. 手机：把相机屏幕上的 <b>SSID</b> 和<b>密码</b>抄到下面「手动填 SSID / 密码」那两格<br>
       3. 系统弹窗点「连接」→ 手机连上相机热点（记住后无需重复）<br>
       4. 显示 <b>OM-3 · 已连接</b> 后，就能备份 / 写入配方<br>
       <span style="color:#d8b45a">相机一关机或退出传输态，手机会自动断，状态球变回"未连接"。</span>
     </div>
-    <p class="camnote">相机上：<code>MENU → Wi-Fi/蓝牙 → Wi-Fi 设置</code>（或屏幕上「连接智能手机」那一屏），会出现二维码。<br>
-      对着它扫一下，密码就自动填好并交给系统 —— <b>扫这一次就够：以后相机开机 Wi-Fi 打开，手机会自动连上</b>，不用再扫、也不用装官方 app。</p>
-    <button type="button" id="camScan" class="camprimary">扫二维码</button>
-    <button type="button" id="camScanHelp">看不到二维码？手动填</button>
-    <div class="camout" id="camScanOut">还没扫。相机没显示二维码的话，点右边「手动填」也行（SSID 和密码相机屏幕上都有写）。</div>
+    <p class="camnote">相机上：<code>MENU → Wi-Fi/蓝牙 → Wi-Fi 设置</code>（或屏幕上「连接智能手机」那一屏），SSID 和密码都写在屏幕上。<br>
+      二维码里装的也就是这两个值 —— <b>手填一次就够：以后相机开机 Wi-Fi 打开，手机会自动连上</b>，不用再填、也不用装官方 app。</p>
+    <!-- r97：扫码入口（隐藏）—— 想开就删掉下面两行末尾的 style -->
+    <button type="button" id="camScan" class="camprimary" style="display:none">扫二维码</button>
+    <button type="button" id="camScanHelp" style="display:none">看不到二维码？手动填</button>
+    <div class="camout" id="camScanOut">扫码这版先收起来了（相机屏幕小、有反光，识别不稳）。<b>照相机屏幕上写的 SSID / 密码，填到下面「手动填 SSID / 密码」那两格就行。</b></div>
   </div>
 
   <div class="camcard" id="camManualCard">
@@ -1683,12 +1701,14 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
   </div>
 
     <div class="camcard">
-    <div class="camhd">连接 / 断开</div>
+    <div class="camhd">断开 / 忘掉相机</div>
     <div class="camout" id="camSaved"></div>
-    <button type="button" id="camConnect" class="camprimary">连接相机</button>
+    <!-- r98：这个「连接相机」按钮跟首屏那个是同一件事（都走 connectNow）→ **去重**：只隐藏它
+         （id / 事件 / 测试页的 tvSaved 都照旧，节点还在）。首屏那个才是唯一主入口。 -->
+    <button type="button" id="camConnect" class="camprimary" style="display:none">连接相机</button>
     <button type="button" id="camDisconnect">断开（回到原来的 Wi-Fi）</button>
     <button type="button" id="camForgetSaved" class="camghost">忘掉这台相机</button>
-    <div class="camout" id="camConnectOut">扫过一次之后，这里会记住这台相机 —— 下次直接点「连接相机」就行，不用再扫。
+    <div class="camout" id="camConnectOut">连过一次之后，这里会记住这台相机 —— 下次在首屏点「连接相机」就行。
 连上后相机的设置写入会走这条连接；点「断开」或退出 app，手机会自动回到原来的 Wi-Fi。</div>
   </div>
 
@@ -1701,7 +1721,9 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
   </div>
     </div>
   </details>
-  <details class="fold cfold" id="camLinkFold">
+  <!-- r98：需求方第 92 轮已定「不要蓝牙开相机 Wi-Fi，以后都手动开」→ 这格整块隐藏
+       （节点 / id / 逻辑全保留，想再开删掉下面的 style 即可）。 -->
+  <details class="fold cfold" id="camLinkFold" style="display:none">
     <summary>蓝牙唤醒（相机 Wi-Fi 没开时用这个）</summary>
     <div class="foldbody">
 <div class="camcard" id="camLinkCard" style="border-color:#33507e">
@@ -1862,7 +1884,7 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
     <div class="cvnote">每一步都要你点：<b>App 不会自己连蓝牙，也不会自己开相机 Wi-Fi</b>。
       <b>相机 Wi-Fi 请在相机上开</b>（MENU → Wi-Fi/蓝牙 → 连接到智能手机）。
       「②」只是把官方那两条命令（`電源ON` + `リモコンモード 0x1D01`）发出去**供诊断** ——
-      真机实测（2026-09-29）：相机收到并回执，但**不执行**「リモコンモード」→ **它开不了相机 Wi-Fi**（需求方已决定不做这个功能）。这个控制台现在放在<b>测试页</b>，平时不用管它。
+      真机实测：相机收到并回执，但**不执行**「リモコンモード」→ **它开不了相机 Wi-Fi**（需求方已决定不做这个功能）。这个控制台现在放在<b>测试页</b>，平时不用管它。
       三个按钮各做一件事、互不代劳：① 只连蓝牙 ② 只发唤醒帧 ③ 只连手机↔相机 Wi-Fi。用完请点「④ 断开全部」。</div>
     </div>
   </details>
@@ -2033,7 +2055,7 @@ C1 人像档那两卷（Astia、Pro Neg Std）是<b>日光向</b>的曲线，夜
       <button type="button" id="camCopyLog">复制全部日志</button>
       <button type="button" id="camDlLog">下载日志文件</button>
       <button type="button" id="camClearLog" class="camghost">清空日志</button>
-      <span class="camloghint">怎么发我，就这三步：（<b>别用「下载日志文件」</b>：2026-09-28 真机实测 —— 安卓 WebView 不接管下载，点了不会有文件）<b>①点「分享日志」</b> → ②在弹出来的面板里选<b>微信</b>或<b>邮件</b> → ③发给我。（发不了再点「复制全部日志」粘给我；「下载日志文件」存手机「下载」里，<b>点了没反应就用前两种</b>）</span>
+      <span class="camloghint">怎么发我，就这三步：（<b>别用「下载日志文件」</b>：真机实测 —— 安卓 WebView 不接管下载，点了不会有文件）<b>①点「分享日志」</b> → ②在弹出来的面板里选<b>微信</b>或<b>邮件</b> → ③发给我。（发不了再点「复制全部日志」粘给我；「下载日志文件」存手机「下载」里，<b>点了没反应就用前两种</b>）</span>
     </div>
   </div>
 
@@ -14202,7 +14224,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
       if(a && !a.value) a.value = s.ssid;
       if(b && !b.value && s.pass) b.value = s.pass;
     } else {
-      el.textContent = '还没记住相机：扫一次二维码，或手动填 SSID / 密码后点「记住它」。';
+      el.textContent = '还没记住相机：把相机屏幕上的 SSID / 密码填到「手动填」那两格，再点「记住它」。';
     }
     bindSavedRow();
     try{ renderAuto(); }catch(e){ om3err(e, "silent"); }   /* 记住/忘掉相机后，自动连接那一行也跟着更新 */
@@ -14240,14 +14262,14 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
       if(sv.ssid && !window.__om3askPwDone){
         window.__om3askPwDone = 1;
         camOut('用记住的密码连不上 —— 相机的 Wi-Fi 密码可能变了（每次进 Wi-Fi 模式可能会重发）。', 'warn');
-        log('[连相机] 连不上 ' + sv.ssid + '：可能是密码变了。可以：① 点「扫码连接（忘了密码时用）」自动重填；② 点下面填新密码。', 'warn');
+        log('[连相机] 连不上 ' + sv.ssid + '：可能是密码变了（相机每次进 Wi-Fi 模式都可能重发）。可以：① 点「手动填 SSID / 密码」填一遍新密码（相机屏幕上写着）；② 直接在弹窗里填。', 'warn');
         try{
           om3Ask({ title: '连不上？重填一次密码',
-            body: '相机屏幕上（Wi-Fi 设置那一屏）写着当前密码。填一次就记住了，以后自动用这个。\n也可以点「扫二维码」让它自动填。',
+            body: '相机屏幕上（Wi-Fi 设置那一屏）写着当前密码。填一次就记住了，以后自动用这个。',
             fields: [ { label: '密码', value: '' } ], okText: '记住并重连' }).then(function(v){
               var pw = String(v || '').trim();
               window.__om3askPwDone = 0;
-              if(!pw){ camOut('没填密码 —— 也可以点「扫码连接（忘了密码时用）」让它自动填。', 'warn'); return; }
+              if(!pw){ camOut('没填密码 —— 相机屏幕上（Wi-Fi 设置那一屏）写着当前密码，再看一眼。', 'warn'); return; }
               var s2 = camSaved() || {};
               try{ camSave(camRec(s2.ssid, pw, s2)); }catch(e){ om3err(e, "silent"); }   /* r64：bssid 一起继承 */
               camOut('已记住新密码，正在重连…', 'ok');
@@ -14279,7 +14301,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
     var a = $('camSsid'), b = $('camPass');
     var ssid = ((a && a.value) || s.ssid || '').trim();
     var pass = ((b && b.value) || s.pass || '').trim();
-    if(!ssid){ camOut('先扫二维码，或把 SSID 填上。', 'warn'); return 'no_ssid'; }
+    if(!ssid){ camOut('先把 SSID 填上（相机屏幕上写着）。', 'warn'); return 'no_ssid'; }
     if(!Native || !Native.connectCamera){ camOut('这个版本没有原生能力（页面）。', 'warn'); return 'unsupported'; }
     var keep = camSaved() || {};
     camSave(camRec(ssid, pass, keep));                 /* r64：统一构造（保住已学的 bssid） */
@@ -14327,7 +14349,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
     if(nt){
       if(!on) nt.textContent = '（关掉了：进页面不会自动连，点上面「连接相机」仍然可以）';
       else if(_autoStop) nt.textContent = '（已停：本次打开 app 内不再自动连；点右边「开/关」可以恢复）';
-      else if(!camSaved() || !camSaved().ssid) nt.textContent = '（还没记住相机 —— 先扫一次二维码或手填 SSID）';
+      else if(!camSaved() || !camSaved().ssid) nt.textContent = '（还没记住相机 —— 先手动填 SSID / 密码）';
       else if(_autoWait) nt.textContent = '正在自动连『' + (camSaved() || {}).ssid + '』…第 ' + _autoTries + '/' + AUTO_MAX + ' 次（相机要先把 Wi-Fi 打开）';
       else nt.textContent = '记住的相机：' + (camSaved() || {}).ssid + ' —— 进这个页面会自动连；连不上会自动重试 ' + AUTO_MAX + ' 次。';
     }
@@ -14401,8 +14423,8 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
       L.push('<span style="color:#ffd98a">你已经连在相机热点上了，但相机 HTTP 没响应 —— '
            + '多半是相机没切到「Wi-Fi 传输状态」。</span>到相机上切一下，或用蓝牙唤醒。');
     }else{
-      L.push('先让相机开着：<b>MENU → Wi-Fi/蓝牙</b> 里把 Wi-Fi 打到「Wi-Fi 传输状态」（屏幕出现二维码）。'
-           + '手机这边点上面①「扫二维码」或「连接相机」。');
+      L.push('先让相机开着：<b>MENU → Wi-Fi/蓝牙</b> 里把 Wi-Fi 打到「Wi-Fi 传输状态」（屏幕出现 SSID / 密码）。'
+           + '手机这边点「连接相机」，或到「连不上？更多方式」里手动填 SSID / 密码。');
     }
     out.innerHTML = L.join('<br>');
     /* r81：手动控制台：手动控制台的状态区跟着这条既有刷新走（同一份真实状态，不另开定时器） */
@@ -14516,8 +14538,8 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
     if(document.body.classList.contains('cam-on')){ _autoWait = false; _autoRun = false; renderAuto(); return; }
     if(_autoTries >= AUTO_MAX){
       _autoWait = false; _autoRun = false; renderAuto();
-      log('[自动] 试了 ' + AUTO_MAX + ' 次都没连上 —— 先确认：① 相机开着 Wi-Fi（MENU → Wi-Fi/蓝牙）② 就在旁边 ③ 或者用「扫二维码」', 'warn');
-      camOut('自动连接没成功（试了 ' + AUTO_MAX + ' 次）。用上面「扫二维码」最稳；连过一次以后系统会记住。', 'warn');
+      log('[自动] 试了 ' + AUTO_MAX + ' 次都没连上 —— 先确认：① 相机开着 Wi-Fi（MENU → Wi-Fi/蓝牙）② 就在旁边 ③ 或者手动填 SSID / 密码', 'warn');
+      camOut('自动连接没成功（试了 ' + AUTO_MAX + ' 次）。到「连不上？更多方式」里手动填 SSID / 密码最稳；连过一次以后系统会记住。', 'warn');
       return;
     }
     _autoTries++;
@@ -14915,7 +14937,7 @@ setInterval(function(){ if(!document.hidden) statusTick(); }, 5000);
   $('camScan').addEventListener('click', function(){ startScanNow(); });
   window.__om3camGranted = function(state){
     if(state === 'denied'){
-      camOut('相机权限被拒绝了：设置 → 应用 → 权限 → 相机，允许后再点「扫二维码」。', 'warn');
+      camOut('相机权限被拒绝了：设置 → 应用 → 权限 → 相机，允许后再试。', 'warn');
       toastMsg('相机权限被拒绝');
       log('扫码：相机权限被拒绝', 'err');
       return;
@@ -14958,7 +14980,13 @@ setInterval(function(){ if(!document.hidden) statusTick(); }, 5000);
         scanStream = stream;
         var v = $('scanVideo'), c = $('scanCanvas');
         v.srcObject = stream;
-        var p = v.play(); if(p && p.catch) p.catch(function(){});
+        /* r97：play() 的失败原来被**静默吞掉** —— 真机上若 WebView 拦了自动播放（"必须有用户手势"），
+           用户只看到黑屏、日志里一个字都没有，这就是"扫不出来"里最难查的一种。现在写进日志 + 浮层。 */
+        var p = v.play(); if(p && p.catch) p.catch(function(e2){
+          var _why = (e2 && e2.name) ? e2.name : String(e2);
+          try{ log('[扫码] 画面播不出来（' + _why + '）—— 摄像头拿到了但画面没进来', 'warn'); }catch(x2){}
+          scanSay('摄像头起来了但画面播不出来（' + _why + '）—— 把日志发我：☰ → 测试页 → 分享日志。');
+        });
         var ctx = c.getContext('2d');
         /* ① 优先用系统原生 BarcodeDetector（比 jsQR 快很多，且不用过 canvas） */
         var BD = null;
@@ -17189,7 +17217,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
     if(n === 0) return '0 = 成功';
     if(n === 1) return '1 = 相机答「已经在开机状态」（官方也当成功，但**不会因此打开 Wi-Fi**）';
     if(n === 33) return '33 = 手机蓝牙被关了';
-    if(n === 34) return '34 = 蓝牙口令错（要口令认证：相机屏幕「蓝牙配对」那串，或扫二维码自动填）';
+    if(n === 34) return '34 = 蓝牙口令错（要口令认证：相机屏幕「蓝牙配对」那串，填进「① 填蓝牙口令」）';
     if(n === 35) return '35 = 开机失败（POWON_ERROR）';
     if(n === 36) return '36 = 结束';
     return n + ' = 认不出的码（把整条日志发我）';
@@ -17699,7 +17727,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
           _okCode = (code === 0);
           if(code < 0){
             bleAutoSay('这条「' + st.name + '」**没等到应答**（回帧不是给它的）—— 帧是发出去了，'
-              + '若相机那边没动作，多半要先把**蓝牙口令**给它（扫二维码会自动填）', 'warn');
+              + '若相机那边没动作，多半要先把**蓝牙口令**给它（口令在相机屏幕上，填进「① 填蓝牙口令」）', 'warn');
           } else
           bleAutoSay((_okCode ? '✅ 相机接受了「' + st.name + '」' : '❌ 相机**拒绝**了「' + st.name + '」')
             + '：结果码 ' + code + '（官方这条要求**正好 0**）'
@@ -17956,7 +17984,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
        （相机 Wi-Fi 只能你自己在相机上开：MENU → Wi-Fi/蓝牙 → 连接到智能手机。） */
     if(!_bleAutoDone && !_bleAutoStop && !camHotspotVisible()){
       step('没看到相机 Wi-Fi。**App 不会替你开相机 Wi-Fi** —— 请在相机上进入传输状态'
-           + '（MENU → Wi-Fi/蓝牙 → 连接到智能手机），再点「连接相机」（忘了密码就点「扫码连接」）', 'warn');
+           + '（MENU → Wi-Fi/蓝牙 → 连接到智能手机），再点「连接相机」（忘了密码就手动填 SSID / 密码）', 'warn');
       if(!blePossible){
         step('（这台设备没有蓝牙接口）→ 直接试 Wi-Fi', 'warn');
         wifi(); return;
@@ -17992,7 +18020,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
            + '）→ 直接请系统连它（**不依赖扫描**）…', 'ok');
         try{ connectNow(); }catch(e0){ om3err(e0, "silent"); }
         step('已经交给系统了 —— 连上后这里会自动「检测相机」；'
-           + '若一直连不上，点下面「扫码连接（忘了密码时用）」最稳（相机屏幕上那个码）');
+           + '若一直连不上，到「连不上？更多方式」里手动填 SSID / 密码最稳（相机屏幕上写着）');
         watchHttp();
         return;
       }
@@ -18008,7 +18036,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
         connectNow();
       });
       step('已经交给系统了 —— 连上后这里会自动「检测相机」；'
-         + '若一直连不上，点下面「扫码连接（忘了密码时用）」最稳（相机屏幕上那个码）');
+         + '若一直连不上，到「连不上？更多方式」里手动填 SSID / 密码最稳（相机屏幕上写着）');
       watchHttp();
     }
     /* r67：看门狗 —— 只有 HTTP 真通才报成功（上面两条路都调它） */
@@ -18028,7 +18056,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
         if(w >= 30000){
           clearInterval(wd);
           step((said ? '30 秒了还没确认能通' : '30 秒还没连上')
-             + ' → 点下面「扫码连接（忘了密码时用）」最稳；或到相机上确认 Wi-Fi 已打到「Wi-Fi 传输状态」', 'warn');
+             + ' → 到「连不上？更多方式」里手动填 SSID / 密码最稳；或到相机上确认 Wi-Fi 已打到「Wi-Fi 传输状态」', 'warn');
         }
       }, 1000);
     }
@@ -21109,7 +21137,7 @@ log('===== 映射诊断结束。把这一段复制给我（含 ★ 行和"槽位
       okText: '记住并连接'
     }).then(function(v){
       var pw = String(v || '').trim();
-      if(!pw){ say('没填密码 → 不连（不猜密码；也可以点「扫二维码」让它自动填）', 'warn'); return; }
+      if(!pw){ say('没填密码 → 不连（不猜密码；相机屏幕上写着当前密码）', 'warn'); return; }
       /* ⚠ 2026-09-24（第 34 轮）修：以前这里**只连不记** —— 弹窗上写着"填一次就记住了"，
          但函数里根本没有 camSave()。后果（都能让用户觉得"连接很繁琐"）：
            ① 每次点「连接相机」都要重新输一遍密码；
@@ -21509,7 +21537,7 @@ log('===== 映射诊断结束。把这一段复制给我（含 ★ 行和"槽位
   setInterval(function(){
     if(scanStream && scanStartedAt && (Date.now() - scanStartedAt > 90000)){
       stopScan();
-      camOut('扫码等太久，已经关掉了。再点一次「扫二维码」或直接手动填。', 'warn');
+      camOut('扫码等太久，已经关掉了（扫码入口已收起，请手动填 SSID / 密码）。', 'warn');
     }
   }, 5000);
   document.addEventListener('visibilitychange', function(){
@@ -21688,7 +21716,7 @@ log('===== 映射诊断结束。把这一段复制给我（含 ★ 行和"槽位
   <button type="button" data-p="C">场景对比</button>
 </div>
 <!-- 连接相机的底部四切换（对应原有 4 步） -->
-<div class="gatehint" id="gateHintD">相机还没连上 —— 先用上面①「扫二维码」或「连接相机」。连上后这里才能备份 / 写入 / 记录</div>
+<div class="gatehint" id="gateHintD">相机还没连上 —— 先在「连接相机」页点「连接相机」（忘了密码就点「手动填 SSID / 密码」）。连上后这里才能备份 / 写入 / 记录</div>
 <div class="barD" id="barD">
   <button type="button" data-dstep="1" class="on">连接</button>
   <button type="button" data-dstep="2">安全备份</button>

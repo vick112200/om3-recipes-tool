@@ -92,8 +92,9 @@ A('这次扫描一个热点都没返回' in page and '被安卓限流' in page,
 A('if(!found && camIsCameraSsid(camNowSsid())) found = true;' in page,
   'B5 扫描说没有相机热点、但手机正连着相机 → 以"已连"为准')
 A('手机现在就连在' in page, 'B6 直连失败前会说明"手机现在就连在 X 上"')
-A('2026-09-28 真机实测' in page and '别用「下载日志文件」' in page,
-  'B7 「下载日志文件」文案带上真机实测结论（WebView 不落文件）')
+A('真机实测' in page and '别用「下载日志文件」' in page and '点了不会有文件' in page,
+  'B7 「下载日志文件」文案带上真机实测结论（WebView 不落文件）'
+  ' —— 第 98 轮口径：日期按用户硬约束「界面上不许出现日期」去掉了，判据改成不含日期的说法')
 A('r78：真机两个 bug' in page, 'B8 r78 标记在（生成脚本幂等判据）')
 si, so = ids(page), ids(old)
 A(not (so - si), 'B9 老 id 一个都没少（少的：%s）' % (sorted(so - si) or '无'))

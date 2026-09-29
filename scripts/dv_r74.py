@@ -117,8 +117,12 @@ got = run_headless('R74A', '', [
 for seg in got.split(' ;; '):
     print('  · ' + seg)
 A('A0 进到连接相机页' in got, 'A0 能进连接相机页（前置检查）')
-A('A1 camGateScan=显示 camScan=显示 camScanHelp=显示 camGateConn=显示' in got,
-  'A1 三个扫码入口都放回来了（第 49 轮它们被 .hid49 藏成 display:none）')
+# 口径修正（第 97 轮，需求方 2026-09-29「扫码还是扫不出来，实在不行就把扫码连接去掉吧」）：
+# 这一条原来断的是"第 74 轮放回来的三个扫码入口都可见"。第 97 轮按规格**又收起来了**
+# （只加 style="display:none"，class/节点/逻辑都没动），所以判据改成：
+#   ① 三个入口**都隐藏**（第 97 轮的新目标态）② 「连接相机」照旧可见 ③ 节点/class 还在（第 97 轮另验"一键能开"）
+A('A1 camGateScan=隐藏 camScan=隐藏 camScanHelp=隐藏 camGateConn=显示' in got,
+  'A1 三个扫码入口**都收起来了**（第 97 轮决定；「连接相机」照旧在）—— 原来的口径是第 74 轮"都放回来"')
 A('A2 主按钮在扫码前面=true' in got and 'gho' in got.split('A2')[1].split(';;')[0],
   'A2 扫码**排在「连接相机」之后**、且样式降一级（.gho）—— 是"往后放"而不是第一入口')
 A('A9 运行错误=0' in got, 'A9 全程 0 运行错误')
@@ -210,8 +214,9 @@ A(bool(m2) and int(m2.group(1)) <= 6,
 A('A4 扫 Wi-Fi 次数=2（窗口约 14 秒）' in got or 'A4 扫 Wi-Fi 次数=1（窗口约 14 秒）' in got,
   'A4 十几秒窗口内真扫 ≤2 次（30 秒节流的正确表现；修前是每 500ms 一次 ≈20 次）')
 A('没重复扫 Wi-Fi（节流' in page, 'A4 静态：节流那句日志确实在页面里（N 不写死，第 78 轮按真机改成 30 秒）')
-A('A4 提示文案=' in got and '扫码连接（忘了密码时用）' in got.split('A4 提示文案=')[-1],
-  'A2b 提示文案里的按钮名跟真按钮一致（A4 那次真跑时看到的就是「扫码连接（忘了密码时用）」）')
+A('A4 提示文案=' in got and '手动填 SSID / 密码最稳' in got.split('A4 提示文案=')[-1],
+  'A2b 提示文案改成了**看得见的那条路**（第 97 轮扫码入口收起后，提示语里改指「手动填 SSID / 密码」；'
+  '第 74 轮这里指的是「扫码连接（忘了密码时用）」）')
 
 # ── A5：日志头 + 不含密码
 SAVED = {"ssid": "OM-3", "pass": "SIM-PASS-1234", "model": "OM-3", "serial": "BJ8A0001", "at": 1759000000000}
@@ -235,7 +240,12 @@ A('SSID=OM-3' in got and '密码不写进日志' in got, 'A5 记住的相机那�
 
 print('=== B. 静态 ===')
 A('.hid49{display:none !important}' in page, 'B1 .hid49 的 CSS 还在（留着当"再藏回去"的开关）')
-A(re.search(r'<button[^>]*class="[^"]*hid49', page) is None, 'B1 但没有任何**按钮**带 .hid49 了（扫码可用）')
+A(re.search(r'<button[^>]*class="[^"]*hid49', page) is None,
+  'B1 没有任何**按钮**带 .hid49（第 97 轮的隐藏用的是 style="display:none"，.hid49 只作为历史开关留着）')
+A("id=\"camGateScan\" style=\"display:none\"" in page
+  and "id=\"camScan\" class=\"camprimary\" style=\"display:none\"" in page
+  and "id=\"camScanHelp\" style=\"display:none\"" in page,
+  'B1b 第 97 轮：三个扫码入口是**一行 style 开关**（想开就删这 3 处 style）')
 A("var blePossible = (function(){" in page and 'if(!blePossible){' in page,
   'B2 蓝牙可用性判据在（跑不起来就不等那 10 秒）')
 _thr = re.search(r'\(now - _hsAt\) >= (\d+)\)', page)

@@ -72,8 +72,9 @@ setTimeout(function(){
        '★蓝牙工具默认折叠（扫描/唤醒首屏看不见）');
     ok(!!document.getElementById('bleFold'), '蓝牙折叠区在');
 
-    /* ④ gate 的次要入口也在折叠里 */
-    ok(!visReal(document.getElementById('camGateManual')), '★「手动填 SSID/密码」首屏不占位（收进"连不上？更多方式"）');
+    /* ④ 第 98 轮口径：扫码收起之后，「手动填 SSID/密码」**应该**在首屏（它是第二入口）——
+       原来是"首屏不占位、收进『连不上？更多方式』"，那条已随本轮改动更新。 */
+    ok(visReal(document.getElementById('camGateManual')), '★「手动填 SSID/密码」在首屏可见（第 98 轮起是第二入口）');
     ok(!visReal(document.getElementById('camScan')) && !visReal(document.getElementById('camCheck')),
        '★和 gate 重复的"扫码/检测"不再同时出现（收进"连接详情"）');
 
@@ -86,7 +87,10 @@ setTimeout(function(){
       else if(tx.indexOf('蓝牙工具') >= 0) bleSum = sums[q];
       else if(tx.indexOf('连接详情') >= 0) v1Sum = sums[q];
     }
-    ok(!!gateSum && !!bleSum && !!v1Sum, '三个折叠的标题都在');
+    ok(!!gateSum && !!v1Sum, '连接页两个折叠的标题都在（「连不上？更多方式」/「连接详情」）');
+    /* 第 92 轮口径：需求方决定关掉"蓝牙开相机 Wi-Fi" → 「蓝牙工具（高级）」整卡搬到**测试页**（诊断用），
+       所以连接页里**不该**再有"蓝牙工具"那格折叠。这一条原来是"三个折叠标题都在"，现在改判"它不在连接页"。 */
+    ok(!bleSum, '★「蓝牙工具」那格**不在连接页**（第 92 轮整块搬到测试页 paneT，data-tv/id 一个没动）');
 
     if(gateSum) gateSum.click();
     setTimeout(function(){
@@ -97,10 +101,10 @@ setTimeout(function(){
         ok(visReal(document.getElementById('camSsid')) && visReal(document.getElementById('camJoin')),
            '手动填里面的 SSID 输入框 / 「记住并连接」都看得见');
 
-        if(bleSum) bleSum.click();
+        /* 第 92 轮起蓝牙工具在测试页 → 这里不再"点开蓝牙工具"（点不到也没有），改成断言它不在这页 */
         setTimeout(function(){
-          ok(visReal(document.getElementById('bleScan')) && visReal(document.getElementById('bleWake')),
-             '★点开"蓝牙工具"→ 扫描 / 唤醒 按钮出现');
+          ok(!visReal(document.getElementById('bleScan')),
+             '★蓝牙工具（现在住在测试页）不会跑到连接页首屏来');
           var n2 = 0, a2 = pd.querySelectorAll('button');
           for(var z = 0; z < a2.length; z++) if(!a2[z].classList.contains('dis') && visReal(a2[z])) n2++;
           o.push('  展开两个折叠后可见按钮 ' + n2 + ' 个');

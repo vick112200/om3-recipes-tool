@@ -91,9 +91,6 @@ public class MainActivity extends Activity {
         s.setAllowFileAccessFromFileURLs(true);
         s.setAllowUniversalAccessFromFileURLs(true);
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-        /* r97：WebView 默认"播放必须由用户手势触发" → 摄像头流的 video.play() 可能被拦，
-           表现就是"摄像头拿到了但没有画面"（扫码一直认不出可能就是这个）。关掉这条限制。 */
-        s.setMediaPlaybackRequiresUserGesture(false);
         s.setUseWideViewPort(true);
         s.setLoadWithOverviewMode(false);
         s.setBuiltInZoomControls(false);
