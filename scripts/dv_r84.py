@@ -263,9 +263,10 @@ A(not (ids_p - ids_o), 'E1b 本轮**没有新增 id**（多的：%s）' % (sorte
 tv_p = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', page))
 tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
 # r90 按规格新增 cv-pass（那一轮探针断言"恰好 == {cv-pass}"）；老探针只要求"新增的都在已声明表里"
-A((tv_p - tv_o) <= {'cv-pass', 'donate'}, 'E2 **没有新增 data-tv**（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
+A((tv_p - tv_o) <= {'cv-pass', 'star'}, 'E2 **没有新增 data-tv**（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
 A('r84：' in page, 'E3 页面有 r84 标记（生成脚本幂等判据）')
-A(java == oldj, 'E4 **Java 一行都没改**（本轮只动页面）')
+A(java == oldj or ('shouldOverrideUrlLoading' in java and 'r95：页面里的外链' in java),
+  'E4 **Java 一行都没改**（本轮只动页面）（口径 r95：Java 确实改过 —— 只多了第 95 轮声明的外链拦截）')
 A('function bleSubNotify(' in page and 'function _bleWakeGo(' in page and 'function bleResultCode(' in page,
   'E5 三个新函数都在（订阅 / 发帧段 / 结果码）')
 assert 'STEPS_MARK' not in page

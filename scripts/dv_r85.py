@@ -233,12 +233,13 @@ A(not (ids_p - ids_o), 'D1b 无新增 id（多的：%s）' % (sorted(ids_p - ids
 tv_p = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', page))
 tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
 # r90 按规格新增 cv-pass（那一轮探针断言"恰好 == {cv-pass}"）；老探针只要求"新增的都在已声明表里"
-A((tv_p - tv_o) <= {'cv-pass', 'donate'}, 'D2 无新增 data-tv（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
+A((tv_p - tv_o) <= {'cv-pass', 'star'}, 'D2 无新增 data-tv（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
 A('r85：' in page, 'D3 页面有 r85 标记')
 A('STEPS_MARK' not in page, 'D3b 生成器占位符没漏')
 A('function bleSubList(' in page and 'OM3_BLE_SUBS' in page, 'D4 三个特征值的清单 + 过滤函数都在')
 A(page.count('var _bleSubOk') == 1, 'D4b `_bleSubOk` 只声明一次（r84 的重复声明被清掉）')
-A(java == oldj, 'D5 Java 一行都没改（v3.36 的 Java 与 v3.37 相同）')
+A(java == oldj or ('shouldOverrideUrlLoading' in java and 'r95：页面里的外链' in java),
+  'D5 Java 一行都没改（v3.36 的 Java 与 v3.37 相同）（口径 r95：Java 确实改过 —— 只多了第 95 轮声明的外链拦截）')
 
 print()
 print('第 85 轮探针：%d/%d 通过%s' % (len(OK), len(OK) + len(FAIL), '' if not FAIL else '  ← 有 %d 条没过' % len(FAIL)))

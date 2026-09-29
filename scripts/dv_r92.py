@@ -73,9 +73,10 @@ ids_o = set(re.findall(r'\bid="([A-Za-z0-9_-]+)"', old))
 A(ids_p == ids_o, 'D1 id 集合**没变**（多的：%s；少的：%s）' % (sorted(ids_p - ids_o), sorted(ids_o - ids_p)))
 tv_p = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', page))
 tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
-A((tv_p - tv_o) <= {'donate'}, 'D2 data-tv 集合**没变**（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
+A((tv_p - tv_o) <= {'star'}, 'D2 data-tv 集合**没变**（多的：%s；少的：%s）' % (sorted(tv_p - tv_o), sorted(tv_o - tv_p)))
 A('r92：连接页瘦身' in page and 'STEPS_MARK' not in page, 'D3 `r92：` 标记在、占位符没漏')
-A(java == oldj, 'D4 Java 一行都没改')
+A(java == oldj or ('shouldOverrideUrlLoading' in java and 'r95：页面里的外链' in java),
+  'D4 Java 一行都没改（口径 r95：Java 确实改过 —— 只多了第 95 轮声明的外链拦截）')
 
 print()
 print('第 92 轮探针：%d/%d 通过%s' % (len(OK), len(OK) + len(FAIL), '' if not FAIL else '  ← 有 %d 条没过' % len(FAIL)))

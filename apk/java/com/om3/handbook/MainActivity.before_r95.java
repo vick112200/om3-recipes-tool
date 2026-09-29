@@ -155,26 +155,6 @@ public class MainActivity extends Activity {
                 }
                 return null;
             }
-
-            /* r95：页面里的外链（去 GitHub 点 Star）交给系统浏览器打开。
-               注意：App 自己的页面是从 https://om3.local/ 加载的，必须放行，
-               否则点任何链接都会把 App 自己甩到浏览器里。 */
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
-                try {
-                    Uri u = req.getUrl();
-                    if (u != null) {
-                        String s = u.toString();
-                        String host = u.getHost();
-                        if ((s.startsWith("http://") || s.startsWith("https://"))
-                                && (host == null || !"om3.local".equals(host))) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, u));
-                            return true;      /* 已交给系统浏览器，App 内不跳转 */
-                        }
-                    }
-                } catch (Throwable t) { }
-                return false;                 /* om3.local / file:// 等：照旧在 App 内加载 */
-            }
         });
         wv.setBackgroundColor(0xFF161616);
         wv.setOverScrollMode(View.OVER_SCROLL_NEVER);

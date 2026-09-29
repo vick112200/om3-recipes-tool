@@ -30,7 +30,7 @@
 
 ## 下载
 
-**⬇ [om3-recipes-tool-v3.45.apk](../../releases/download/v3.45/om3-recipes-tool-v3.45.apk)** —— 75.7 MB，Android 8.0+
+**⬇ [om3-recipes-tool-v3.46.apk](../../releases/download/v3.46/om3-recipes-tool-v3.46.apk)** —— 75.7 MB，Android 8.0+
 
 也可以到 [Releases](../../releases) 看全部版本。签名固定，以后新版本**直接覆盖升级**，数据不会丢。
 
@@ -64,3 +64,7 @@
 ## 许可
 
 个人项目，自用为主。配方与样片版权归原作者；引用请注明来源。
+
+---
+
+**喜欢这个手册？在 App 右上角点 ⭐，或直接来 GitHub 给个 Star —— 免费、无广告，Star 能让更多拍胶片的人搜到它。**

@@ -249,9 +249,9 @@ tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
 DECLARED = {'cv-seen', 'cv-notseen'}   # ← 本轮规格 §4 那张表（新增 data-tv **完全等于**它）
 A(not (tv_o - tv_p), 'B2 老 data-tv 一个都没少（少的：%s）' % (sorted(tv_o - tv_p) or '无'))
 # r90 按规格新增 cv-pass（那一轮探针断言"恰好 == {cv-pass}"）；本轮只要求"老的一个不少、新增的都在已声明表里"
-A((tv_o - tv_p) == set() and all(x in (set(DECLARED) | {'cv-pass', 'donate'}) for x in (tv_p - tv_o)),
+A((tv_o - tv_p) == set() and all(x in (set(DECLARED) | {'cv-pass', 'star'}) for x in (tv_p - tv_o)),
   'B2b 新增 data-tv 都在已声明表里（多的：%s；少的：%s）'
-  % (sorted((tv_p - tv_o) - set(DECLARED) - {'cv-pass', 'donate'}), sorted(tv_o - tv_p)))
+  % (sorted((tv_p - tv_o) - set(DECLARED) - {'cv-pass', 'star'}), sorted(tv_o - tv_p)))
 for n in sorted(DECLARED):
     A(('data-tv="%s"' % n) in page, 'B2c 规格里写的 `%s` 真在页面里' % n)
 A('r83：' in page, 'B3 页面有 r83 标记（生成脚本幂等判据）')

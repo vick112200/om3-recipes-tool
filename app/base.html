@@ -1028,11 +1028,11 @@ input[type="search"]::-webkit-search-results-decoration{-webkit-appearance:none;
       <!-- r68：测试页的隐藏代理页签（不进可见页签；只为复用既有切换逻辑） -->
       <button type="button" data-p="T" id="tabTest" style="display:none">测试页</button>
     </span>
-    <!-- r93：右上角打赏按钮（需求方 2026-09-29）—— 展示收款码，请作者喝杯咖啡。
-         规矩：新控件只用 data-tv（不加 id），所以按钮就一个 data-tv="donate"。 -->
-    <!-- r94：**先隐藏**（需求方 2026-09-29「不用嵌二维码，这个功能先隐藏，后面再做」）。
-         想开：① 去掉下面那个 style="display:none"；② python scripts/set_donate.py 收款码.png；③ 出包。 -->
-    <button type="button" class="donbtn" data-tv="donate" style="display:none" title="请我喝杯咖啡" aria-label="打赏">☕</button>
+    <!-- r93/r94：这里原来是打赏按钮（展示收款码），第 95 轮改成「点 Star」。
+         规矩：新控件只用 data-tv（不加 id），所以按钮就一个 data-tv="star"。 -->
+    <!-- r94：上一轮把它隐藏过（现在又拿出来了，但换成点 Star）。
+         想恢复打赏：把 data-tv 改回 donate + python scripts/set_donate.py 收款码.png。 -->
+    <button type="button" class="donbtn" data-tv="star" title="喜欢就点个 Star" aria-label="去 GitHub 点 Star">⭐</button>
   </div>
 </div>
 <div id="gStatusBar" class="gstatus" title="点一下去连接相机；长按拖动可换位置">📷 未连接</div>
@@ -17067,8 +17067,8 @@ setInterval(function(){ if(!document.hidden) statusTick(); }, 5000);
      发现服务 → **订阅通知（写 CCCD）** → 才能发命令。
      我们以前只在"手动蓝牙工具"里订阅，**自动链一直没订阅** → 相机的状态包/应答一个都收不到，
      `blePowerOnBlock()` 的前提判据（bit3 蓝牙连接模式）也永远拿不到 → 从不生效。 */
-  /* r93：打赏收款码（微信/支付宝收款码的 data URI）—— 空着时弹窗会如实说"还没放进来"。
-   填图：python scripts/set_donate.py 收款码.png （幂等；会写回这一行） */
+  /* r93 的打赏收款码：r95 起右上角改成"去 GitHub 点 Star"，这一行暂时没用上。
+   想恢复打赏：python scripts/set_donate.py 收款码.png （幂等；会写回这一行） */
 var OM3_DONATE_IMG = '';   /* r93:donate */
 var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o：第三个通知特征 */
   var OM3_BLE_SVC_LC = 'adc505f9-4e58-4b71-b8ca-983bb8c73e4f';    /* 官方那个服务（只订它下面这三个） */
@@ -18667,6 +18667,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
       }
       var ok = $('ook'), cancel = $('ocancel');
       ok.textContent = opt.okText || '确定';
+      if(cancel) cancel.textContent = opt.cancelText || '取消';   /* r95 */
       ok.className = opt.danger ? 'danger' : 'primary';
       function done(val){
         if(doneOnce) return;                       /* r69：只收一次（遮罩与按钮同时点也不会重复 resolve） */
@@ -18694,26 +18695,7 @@ var OM3_BLE_NOTIFY = '05A02050-0860-4919-8ADD-9801FBA8B6ED';   /* 官方字段 o
   }
   window.__om3ask = om3Ask;
 
-  /* r93：右上角 ☕ 打赏 —— 展示收款码（内嵌图，不联网） */
-  (function(){
-    var b = document.querySelector('[data-tv="donate"]');
-    if(!b || !window.__om3ask) return;
-    b.addEventListener('click', function(){
-      var img = '';
-      try{ img = String(OM3_DONATE_IMG || ''); }catch(e){ img = ''; }
-      var has = img.indexOf('data:image') === 0;
-      window.__om3ask({
-        title: '请我喝杯咖啡 ☕',
-        onlyOk: true,
-        okText: '谢谢',
-        body: has
-          ? '这个手册是免费做的、也没广告。如果它帮到了你，可以扫下面的码请我喝杯咖啡 —— 谢谢！'
-          : '这个手册是免费做的、也没广告。如果它帮到了你，我谢谢你这份心意 —— 收款码还没放进来。',
-        img: has ? img : '',
-        imgCaption: has ? '微信 / 支付宝 扫码即可' : '',
-      });
-    });
-  })();
+  /* r95：⭐ 的点击处理挪到页面末尾那个独立脚本里了（浏览器里也能用） */
 
   /* 「我的配方」子页切换：底部栏 + 每页专属操作行 */
   function mpTab(name){
@@ -22122,6 +22104,41 @@ log('===== 映射诊断结束。把这一段复制给我（含 ★ 行和"槽位
     var nav2 = document.getElementById('toc2');
     if(box && nav2 && nav2.firstChild) nav2.insertBefore(box, nav2.firstChild);
   }catch(e){}
+})();
+</script>
+<script>
+/* r95：右上角 ⭐「去 GitHub 点个 Star」。
+   ⚠️ 必须放在这里 —— **不能**塞进上面那个"仅 App"的 IIFE 里（它开头就是
+   `if(!window.__OM3_APP__) return;`，塞进去的话浏览器里点 ⭐ 毫无反应 = 死按钮）。
+   App 里：站内弹窗 om3Ask；浏览器里：没有 om3Ask 就用原生 confirm 兜底。 */
+(function(){
+  window.om3OpenUrl = function(url){
+    try{
+      if(window.__OM3_APP__){
+        location.href = url;              /* 原生 shouldOverrideUrlLoading → 系统浏览器 */
+      } else {
+        var w = window.open(url, '_blank');
+        if(!w) location.href = url;       /* 弹窗被拦就退化成跳转 */
+      }
+      return true;
+    }catch(e){
+      try{ if(window.OM3Native && OM3Native.openUrl) OM3Native.openUrl(url); }catch(e2){ }
+      return false;
+    }
+  };
+  var b = document.querySelector('[data-tv="star"]');
+  if(!b) return;
+  var TITLE = '给这个手册点个 Star ⭐';
+  var BODY = '这个手册是免费做的、也没有广告。如果它帮到了你，去 GitHub 点个 Star 就是最好的支持 —— 也能让更多拍胶片的人搜到它。（没有 GitHub 账号？把它分享给同样拍胶片的朋友，一样是支持。）';
+  var URL = 'https://github.com/vick112200/om3-recipes-tool';
+  b.addEventListener('click', function(){
+    if(window.__om3ask){
+      window.__om3ask({ title: TITLE, body: BODY, okText: '去 GitHub 点 Star', cancelText: '以后再说' })
+        .then(function(ok){ if(ok) window.om3OpenUrl(URL); });
+      return;
+    }
+    if(window.confirm(TITLE + '\n\n' + BODY)) window.om3OpenUrl(URL);
+  });
 })();
 </script>
 </body></html>

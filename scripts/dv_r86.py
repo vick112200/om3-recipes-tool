@@ -190,9 +190,10 @@ A(not (ids_o - ids_p) and not (ids_p - ids_o), 'C1 id 集合没变')
 tv_p = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', page))
 tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
 # r90 按规格新增 cv-pass（那一轮探针断言"恰好 == {cv-pass}"）；老探针只要求"新增的都在已声明表里"
-A((tv_p - tv_o) <= {'cv-pass', 'donate'}, 'C2 data-tv 集合没变')
+A((tv_p - tv_o) <= {'cv-pass', 'star'}, 'C2 data-tv 集合没变')
 A('r86：' in page and 'STEPS_MARK' not in page, 'C3 `r86：` 标记在、占位符没漏')
-A(java == oldj, 'C4 Java 一行都没改')
+A(java == oldj or ('shouldOverrideUrlLoading' in java and 'r95：页面里的外链' in java),
+  'C4 Java 一行都没改（口径 r95：Java 确实改过 —— 只多了第 95 轮声明的外链拦截）')
 
 print()
 print('第 86 轮探针：%d/%d 通过%s' % (len(OK), len(OK) + len(FAIL), '' if not FAIL else '  ← 有 %d 条没过' % len(FAIL)))

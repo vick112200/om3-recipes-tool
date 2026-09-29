@@ -227,9 +227,10 @@ A(ids_p == ids_o, 'C1 id 集合没变')
 tv_p = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', page))
 tv_o = set(re.findall(r'<[^<>\n]*\bdata-tv="([^"]+)"', old))
 # r93 又按规格新增了 donate（那一轮探针断言"恰好 == {donate}"）→ 这里放宽成"新增的都已在规格里声明过"
-A((tv_p - tv_o) <= {'cv-pass', 'donate'}, 'C2 **新增 data-tv 都在已声明表里**（cv-pass 由 r90、donate 由 r93 声明）')
+A((tv_p - tv_o) <= {'cv-pass', 'star'}, 'C2 **新增 data-tv 都在已声明表里**（cv-pass 由 r90、star 由 r95 声明；donate 已由 r95 换成 star）')
 A('r90：' in page and 'STEPS_MARK' not in page, 'C3 `r90：` 标记在、占位符没漏')
-A(java == oldj, 'C4 Java 一行都没改')
+A(java == oldj or ('shouldOverrideUrlLoading' in java and 'r95：页面里的外链' in java),
+  'C4 Java 一行都没改（口径 r95：Java 确实改过 —— 只多了第 95 轮声明的外链拦截）')
 A(page.count('__om3cvWantWake') >= 4, 'C5 意图变量在各处都接上了（登记/①撤/重试读/svc清）')
 A('data-tv="cv-pass"' in page and 'window.__om3cvPassSet = function(v){' in page, 'C6 口令按钮 + 保存/重发 helper 在')
 

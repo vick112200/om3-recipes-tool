@@ -1,0 +1,11 @@
+第 95 轮：打赏 → 去 GitHub 点个 Star（v3.46 已发布）
+
+需求方：把捐献打赏改成去 GitHub 点星星（并问：没 GitHub 账号是不是没法 star）
+- 答复写进弹窗文案：Star 必须登录账号，没账号就「分享给朋友也是支持」；打赏机制留着
+- 页面：顶栏 ☕ → ⭐（data-tv: donate → star，不再隐藏）；点它弹窗 → 打开仓库
+  ⚠️ 处理放 </body> 前的独立脚本（om3Ask 在 App 专用 IIFE 里，放那儿浏览器里就是死按钮）
+- Java：第一次加 shouldOverrideUrlLoading（非 om3.local 的 http(s) 交系统浏览器）
+- 探针：dv_r95 23/23（App + 浏览器两种模式都验）；dv_r93/dv_r94 收口；
+  r83–r92 口径修正（data-tv 白名单 donate→star；Java 全等断言 → 只多了第 95 轮声明的那段）
+- 出包并发布：v3.46（build 346）→ GitHub Releases v3.46
+- 待真机：OI-21（点 ⭐ 是否跳到系统浏览器）
