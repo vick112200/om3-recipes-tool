@@ -1,152 +1,59 @@
-# om3 recipes tool · 工程说明
+# om3 recipes tool
 
-> 工作目录：`D:\workspace\om3-handbook`
-> 源码原来在 `C:\Users\82302\AppData\Local\Temp\`（临时目录，会被系统清理），现已搬到这里。
-> 仓库地址：<https://github.com/vick112200/om3-recipes-tool>
->
-> **公开仓库里有什么**：源码 + 工具 + 四份门面文档（`README.md` / `AGENTS.md` / `TEST-camera.md` / `OPEN-ITEMS.md`）。
-> **没进仓库的**（见 `.gitignore`，都在本机）：`HANDOVER.md` 与 `SPEC-round*.md` 这类逐轮开发档案、
-> 真机日志（含相机 SSID/MAC）、85 份回退点备份、签名密钥 `apk/om3.jks`、官方 App 反汇编（体积+版权）。
+把 **80 条 OM-3 / OM System 彩色配方**装进手机：能离线查、能按场景挑、能直接写进相机。
 
-## 目录结构
+> Android App（WebView + 单页 HTML）+ 一套自己写的相机连接功能。
+> 全部离线：一个 HTML 文件，界面、图片、字体都内嵌，不联网、不收集任何东西。
 
-```
-om3-handbook/
-├─ app/                        # 页面源码
-│  ├─ base.html                ★ 唯一真源（约 3.8 MB，所有改动都改这个文件）
-│  ├─ base.before_*.html       # 各阶段备份（改坏时可按名字回退）
-│  └─ （index.html 不存这里，构建时生成）
-├─ apk/                        # Android 打包
-│  ├─ build.sh                 ★ 一键构建 APK（aapt2 + javac + d8 + zipalign + apksigner）
-│  ├─ mkasset.py               # 把 app/index.html 注入 APK 资源 + 注入 window.__OM3_APP__
-│  ├─ bumpver.py               # 版本号自增（versionCode / versionName 两处）+ 写页面版本徽标
-│  ├─ java/com/om3/handbook/MainActivity.java   ★ App 外壳 + 原生桥（相机 HTTP / Wi-Fi / 蓝牙 / 文件选择 / 分享）
-│  ├─ AndroidManifest.xml      # 权限：相机、网络、附近设备(蓝牙)、明文 HTTP 等
-│  ├─ res/                     # 图标等资源
-│  ├─ om3.jks                  # 签名密钥（务必保留！丢了就不能覆盖安装）
-│  └─ build/                   # 构建中间产物（不建议提交/备份，可随时删）
-├─ make_single.py              # 生成桌面单文件 HTML（图片内嵌）
-├─ all_recipes.json            # 78 条配方原始数据（页面里已内嵌一份）
-└─ scripts/                    # 历史补丁脚本 + 自检脚本（改动记录都在这里）
-   ├─ check_syntax.py          # 抽出全部内联 <script> 交给 node --check（改完必跑）
-   ├─ check_app.py             # 带 __OM3_APP__=1 的四数验收（按钮/方案/错误数）
-   ├─ live_check.py            # 抓加载期运行时报错（改完必跑；注意它不带 __OM3_APP__）
-   ├─ verify_all.py            # 逐条验收（无头浏览器实测页签/底栏/置灰/搜索）
-   ├─ audit_all.py             # 结构自检（重复 id / 悬空引用 / 元素归属 / 浮层）
-   ├─ audit_code.py            # 代码自检（重复定义 / 死代码 / 空 catch / 定时器）
-   ├─ dv_*.py                  # 排查用一次性脚本（抓调用栈 / 验搜索栏 / 自递归扫描…）
-   └─ patch_*.py, clean*.py    # 各次改动的补丁（可追溯"什么时候改了什么"）
-```
+<!-- ↓↓↓ 截图：把手机截图存成下面这几个名字，然后删掉这行注释和 `<!--` `-->` 就能显示
+<p align="center">
+  <img src="screenshots/1-home.png" width="250">
+  <img src="screenshots/2-recipe.png" width="250">
+  <img src="screenshots/3-connect.png" width="250">
+</p>
+-->
 
-> 这些脚本以前读的是 `C:\Users\82302\AppData\Local\Temp\app\base.html`（旧位置），
-> 已全部改成读工程里的 `app/base.html`；`build.sh` / `mkasset.py` 同理。
+## 它能干什么
 
-## 构建流程（三步）
+- **配方合集**：80 条配方，按**白平衡签名**排成一条色带（A2 G1、A1 G1、A4 M1 …），一眼看出"偏暖/偏冷/不偏移"；
+  可按配方名、作者、场景搜索，也可按"人像 / 婚礼 / 风光 / 花卉 / 夜景"这类场景挑。
+- **每条配方都写全**：12 轴色轮数值 + 色调曲线（高光/中间调/暗部）+ 阴影补偿 / 锐度 / 对比 / 曝光 +
+  白平衡偏移，外加上作者样片、EXIF、参数解读和"适合 / 避开"。
+- **我的方案**：把自己挑的几条组成一套，按顺序写进相机的 C1–C4。
+- **连接相机**：手机直连相机 Wi-Fi（**扫码**或手填 SSID/密码），检测相机、**把配方写进相机**、把整套方案写进去。
+- **不装相机官方 App 也能用**；换手机、没网络都能用。
 
-```bash
-cd /d/workspace/om3-handbook
+## 下载
 
-# ① 页面源码 → 同步并注入 app 标记
-cp app/base.html app/index.html
-python apk/mkasset.py            # → apk/assets/index.html（注入 __OM3_APP__ 标记）
+到 [Releases](../../releases) 下载 APK 直接安装（Android 8.0+，签名固定，可直接覆盖升级）。
 
-# ② 打包 APK（build.sh 内部会先跑 bumpver.py 自增版本号 + 写徽标）
-cd apk && bash build.sh          # → apk/build/om3.apk
+> 也支持纯浏览器用：仓库里的 `app/base.html` 就是完整手册，双击用浏览器打开即可（连接相机功能只在 App 里可用）。
 
-# ③ 发布到桌面
-cp apk/build/om3.apk "/c/Users/82302/Desktop/om3 recipes tool.apk"
+## 怎么用（连相机三步）
 
-# 可选：桌面单文件 HTML（图片内嵌，约 20 MB）
-python make_single.py "/c/Users/82302/Desktop/OM-3色彩配方手册.html" 480 78
-```
+1. **相机上开 Wi-Fi**：`MENU → Wi-Fi/蓝牙 → 连接到智能手机`（相机会显示 SSID / 密码 / 二维码）。
+2. **App 里点「连接相机」**：相机屏幕上有二维码就点「扫码连接」扫它，没有就「手动填 SSID / 密码」。
+3. **检测相机 → 导入配方 / 写配方**：进「连接相机」页按提示走，写完在相机上选 C1–C4 就能拍。
 
-> 注意顺序：`mkasset.py` 用 `app/index.html` **覆盖** `apk/assets/index.html`，
-> 所以版本徽标由 `build.sh` 里的 `bumpver.py` 最后写（必须排在 mkasset 之后）。
-> **版本号规则**：第 16–45 轮是 **2.x**（`bumpver.py` 把 `versionCode + 1`，版本名 = `2.(code-200)`）；
-> **第 46 轮（v3.0）起进 3.x**：版本名 = `3.(code-300)` → `300 = 3.0`、`301 = 3.1`……
-> 所以**打出来的版本 = 构建前 manifest 里的 code + 1**（出 3.1 时构建前 manifest 是 `300`，构建后变 `301 / 3.1`）。
-> `build.sh` 里只有 **Android SDK 路径**指向临时目录 `C:\Users\82302\AppData\Local\Temp\sdk`，换机器要改；
-> 构建目录已改成工程自己的 `apk/`（以前写死 Temp/apk，会打包到旧文件）。
+> ⚠️ App **不会**替你开相机 Wi-Fi（那是有副作用的动作，得你点头）；相机 Wi-Fi 请自己在相机上开。
 
-## 改代码的固定流程（这几轮踩坑后总结，第 16 轮起按 `ai-dev-guardrails` 三阶段走）
+## 常见问题
 
-0. **先写/更新规格**（`SPEC-*.md`：功能点六要素 + "必须显式声明清单"七类 + 可逐条验证的验收标准）；
-   改完在规格末尾补 **逐条验收结果 + 设计与实现的差异分析**（差异要**改代码或改规格**，不许只记录）。
-1. **先读代码定位**（例如页签切换在 `base.html` 的 `function showPane(p)`，取值用 `$()` 或 `document.getElementById`），**不要先加补丁**；
-   拿不准就先抓**真实调用栈 / 真实 DOM 状态**当证据，别猜。
-2. 改前先 `cp app/base.html app/base.before_<改动名>.html`（回退点）；
-3. 改完立刻 `python scripts/check_syntax.py`（抽出全部内联脚本做 node --check）；
-4. 跑 `python scripts/live_check.py`（**必须错误数=0**）；
-5. 跑 `python scripts/check_app.py`（**四数验收**，见下）；
-6. 跑 `python scripts/verify_all.py`（页签/底栏/置灰/搜索逐条验收）+ 相关的 `dv_*.py`；
-   （顺手 `python scripts/check_open.py`：待验证清单里标「未验」的项都必须有能点的入口）
-7. 构建发布后，再跑一次 `check_app.py` **验最终产物**：
-   `python scripts/check_app.py "D:\workspace\om3-handbook\apk\assets\index.html"`。
+| 现象 | 怎么办 |
+|---|---|
+| 连不上 / 一直转圈 | 右上角 `☰` → **测试页** → 「分享日志」把日志发出来（里面写了每一步的结论） |
+| 忘了相机 Wi-Fi 密码 | 相机 `MENU → Wi-Fi/蓝牙 → 连接到智能手机` 会显示；或者点「扫码连接」扫相机屏幕 |
+| 写进相机没反应 | 确认相机在**传输/连接状态**（屏幕上有显示），再点一次 |
 
-> ⚠️ `live_check.py` **不带** `window.__OM3_APP__=1`，主脚本会提前 return，
-> 所以它只能查"加载期报错"，**不能用它数按钮**（会得到 0 个的假象）。
-> 数按钮/方案必须用 `check_app.py`。
->
-> 四数基准（**2026-09-29 实测 · v3.45**）：`om3errs=0`、`配方卡=77`、`加入方案按钮=110`（77 张卡 + 33 个优化版槽位）、
-> `方案条目数=1`、`运行错误=0`。
->
-> 真机怎么测：见 **`TEST-camera.md`**（连接相机三轮测试）。
-> **日志怎么给我**：测试页点「分享日志（发微信/邮件给我）」最省事；也可以丢进 `logs/` 或直接粘——见 `logs/README.md`（我这边 `python scripts/read_log.py` 自动分诊）。
-> 连接流程想先"推演"：`python scripts/sim_connect.py first|saved|nocam|noble`（假原生桥 + 时间线，不用真机）。
-> （历史值：2026-09-23 是 `加入方案按钮=81`＝58 张卡 + 23 个槽位 —— **这两个数会随配方/槽位增删而变**，
-> 判断"有没有回归"的正确做法是**拿改动前的备份跑一遍对照**，而不是死记基准值。）
+## 配方来源与致谢
 
-## 已知待办
+配方数值与作者自述来自 [om-recipes.com](https://om-recipes.com) 及各位作者（Rob Trek、Ali O'Keefe、Robson Cabanas 等），
+样片版权归原作者，本工具只做整理与参数换算，方便在相机上直接照抄。
 
-> **★★★ v2.31（第四十一轮）滑动回到最初那版（原生拖动 + CSS 吸附）**
-> - 用户反馈「滑动还是不行，回到最初那版」：第 40 轮我加的手势拦截（touchstart/move/end + 强制落点 + 380ms 兜底）
->   会跟浏览器**原生拖动抢控制权** → 真机"滑不动"。本轮把 JS 拦截**整套删除**。
-> - 现在：`scroll` 事件只更新位置标签（不碰 scrollLeft）；`‹ ›` 用 `scrollBy({left: ±(clientWidth+12)})` 翻一屏；
->   `scroll-snap-type:x mandatory` 保持（最初那版就有）。
-> - 「一次只换一张」改成**声明式**：`.scslide{scroll-snap-stop:always}`（浏览器原生行为、零 JS；
->   不支持就退化成自由滚，不会坏）。
-> - 验收：`dv_scene41`（19/19：浏览器认 `scrollSnapStop=always`、滚到第 4 张位置被保留、甩到末尾不跳回第一张、
->   `‹ ›` 位移 ±522）、`dv_scene39`(27/27)、`dv_r39`(35/35)、`dv_r37` 全通过；`dv_scene40.py` 已删除（测的是被撤掉的行为）。
->
+## 想自己编译？
 
-## 全量排查怎么跑（大改之后建议走一遍）
+`apk/build.sh`（aapt2 + javac + d8 + zipalign + apksigner）；页面真源是 `app/base.html`。
 
-```bash
-python scripts/dv_audit_static.py   # 静态：重复 id / 悬空引用 / 空 catch / 页面里可见的日期
-python scripts/dv_sweep.py          # 5 个页签是否真的可见有内容 + 缺元素 id 清单 + 报错
-python scripts/dv_mpflow.py         # 「我的配方」列表→详情→改名→删除（取消不许误删）
-python scripts/dv_tasktest.py       # 任务弹窗：后台运行 / 关闭 / 气泡
-```
+## 许可
 
-> ⚠️ 排查脚本**自己**也要带 `window.__OM3_APP__=1`（否则主模块直接 return，全是假象）。
-> 本轮的 `dv_sweep.py` 一开始就漏了，白查半天一个假 bug；现在它会把
-> `__OM3_APP__` / `__om3mpInit` 的类型打出来自检。
-
-## 改这块代码前必看的一条规律
-
-`app/base.html` 的多个 `<script>` 是**按顺序执行**的：块02 在解析期就缓存了一批 DOM 引用，
-但 `#toc2` 那一组元素（含 `#noresult2`）是块08 **运行时才注入**的 →
-任何"先缓存、后注入"的元素在块02 里都是 `null`，会抛
-`Cannot read properties of null`。本轮的 `nav2` / `empty2` 两个 bug 都是这个原因。
-**这类引用一律"用时再取"或判空。**
-
-改布局还有一条（v1.131 踩到的）：**别只改外层容器的 `display`**。
-优化版槽位卡里，色轮和文字是 `.osbody` 这个 flex 容器里的两列 —— 只给 `.oslot{display:block}`
-是没用的（所以上一轮"改了"却看不出变化）。要让色轮不再独占窄列，必须改 `.osbody` 本身的
-`flex-direction`。**量尺寸用 `scripts/dv_geom.py`，看图用 `scripts/dv_shot.py`，别靠肉眼判断。**
-
-## 备份建议
-
-- `app/base.before_*.html` 是各阶段备份，**别删**；
-- `apk/java/com/om3/handbook/MainActivity.before_*.java` 是**原生桥**的各阶段备份（第 64 轮起会动 Java），同样**别删**；
-- `apk/om3.jks` **务必单独备份**（丢了这个密钥，用户就无法覆盖安装更新）；
-- 建议给这个目录做一次整体备份（约 87 MB）。
-
-## 原生桥（`MainActivity.java`）改动注意
-
-- 页面与 Java 是**同一个 APK 里一起发的**，但**不要改已有桥方法的签名/参数个数** —— 新增能力请**加新方法**
-  （第 64 轮 `connectCamera2(ssid,pass,bssid)` 就是这么做的：老 `connectCamera(ssid,pass)` 原样保留并转调新方法），
-  这样"老页面配新 Java"也不会炸，页面还能按 `Native.xxx` 是否存在自动退回。
-- 改完 Java 不必等整包：`javac --release 8 -cp <android.jar> java/com/om3/handbook/MainActivity.java` 就能先编一遍
-  （`scripts/dv_r64.py` 里已经这么干；`android.jar` 在临时目录的 `sdk/android-34/`）。
-- 验证"新方法真进了包"：解开 `apk/build/om3.apk` 里的 `classes.dex` 搜方法名（只是个字符串表，`rg` 就能搜）。
+个人项目，自用为主。配方与样片版权归原作者；引用请注明来源。

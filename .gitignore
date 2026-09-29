@@ -70,3 +70,8 @@ scripts/models/
 #    逐轮交接日志与每轮规格留在本地，文件不会被删）
 HANDOVER.md
 SPEC-*.md
+
+# --- ⑨ 自用工作文档：给人看的仓库不需要（文件都在本机，只是不上传）---
+AGENTS.md
+TEST-camera.md
+OPEN-ITEMS.md
