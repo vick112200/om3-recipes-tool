@@ -1,14 +1,19 @@
-# OM-3 色彩配方手册 · 工程说明
+# om3 recipes tool · 工程说明
 
 > 工作目录：`D:\workspace\om3-handbook`
 > 源码原来在 `C:\Users\82302\AppData\Local\Temp\`（临时目录，会被系统清理），现已搬到这里。
+> 仓库地址：<https://github.com/vick112200/om3-recipes-tool>
+>
+> **公开仓库里有什么**：源码 + 工具 + 四份门面文档（`README.md` / `AGENTS.md` / `TEST-camera.md` / `OPEN-ITEMS.md`）。
+> **没进仓库的**（见 `.gitignore`，都在本机）：`HANDOVER.md` 与 `SPEC-round*.md` 这类逐轮开发档案、
+> 真机日志（含相机 SSID/MAC）、85 份回退点备份、签名密钥 `apk/om3.jks`、官方 App 反汇编（体积+版权）。
 
 ## 目录结构
 
 ```
 om3-handbook/
 ├─ app/                        # 页面源码
-│  ├─ base.html                ★ 唯一真源（约 2.0 MB，所有改动都改这个文件）
+│  ├─ base.html                ★ 唯一真源（约 3.8 MB，所有改动都改这个文件）
 │  ├─ base.before_*.html       # 各阶段备份（改坏时可按名字回退）
 │  └─ （index.html 不存这里，构建时生成）
 ├─ apk/                        # Android 打包

@@ -2,6 +2,10 @@
 
 > 项目：**OM-3 色彩配方手册** · 工作目录 `D:\workspace\om3-handbook`
 > 本文件是「进门须知」。**详细的当前状态在 `HANDOVER.md`，详细的工程说明在 `README.md`。**
+>
+> ⚠️ 仓库与本地之别：GitHub 上只有源码 + 工具 + 四份门面文档（README / AGENTS / TEST-camera / OPEN-ITEMS）；
+> `HANDOVER.md` 和 `SPEC-round*.md` 是**本地开发档案**（`.gitignore` 里排除了，文件都在本机，只是不上传）。
+> 所以下面的「先读 HANDOVER 顶部」这类规矩，在本机照旧执行。
 
 ---
 

@@ -63,3 +63,10 @@ desktop.ini
 app/base.bak.html
 app/*.bak.html
 scripts/models/
+
+# --- ⑧ 开发档案：只在本地，不进公开仓库 ---
+#   需求方 2026-09-29 决定：GitHub 上"只要最少的门面"
+#   （README.md / AGENTS.md / TEST-camera.md / OPEN-ITEMS.md 这四份进仓库；
+#    逐轮交接日志与每轮规格留在本地，文件不会被删）
+HANDOVER.md
+SPEC-*.md
