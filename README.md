@@ -30,7 +30,9 @@
 
 ## 下载
 
-到 [Releases](../../releases) 下载 APK 直接安装（Android 8.0+，签名固定，可直接覆盖升级）。
+**⬇ [om3-recipes-tool-v3.45.apk](../../releases/download/v3.45/om3-recipes-tool-v3.45.apk)** —— 75.7 MB，Android 8.0+
+
+也可以到 [Releases](../../releases) 看全部版本。签名固定，以后新版本**直接覆盖升级**，数据不会丢。
 
 > 也支持纯浏览器用：仓库里的 `app/base.html` 就是完整手册，双击用浏览器打开即可（连接相机功能只在 App 里可用）。
 
