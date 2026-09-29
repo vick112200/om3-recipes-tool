@@ -1,0 +1,17 @@
+import psycopg2
+conn = psycopg2.connect(host="172.26.136.55", port=30491, user="lcp", password="lcp", dbname="lcp-dev")
+cur = conn.cursor()
+def q(label, sql, args=None):
+    cur.execute(sql, args or ())
+    print("### "+label)
+    rows=cur.fetchall()
+    if not rows: print("    <no rows>")
+    for r in rows: print("   ", r)
+    print()
+q("wf_definitions", "SELECT id,key,name,workspace_id FROM wf_definitions ORDER BY id")
+q("wf_definition_versions", "SELECT id,definition_id,version,published_at FROM wf_definition_versions ORDER BY id")
+q("users", "SELECT id,username,display_name FROM users ORDER BY id")
+q("roles", "SELECT id,name,description FROM roles ORDER BY id")
+q("scripts", "SELECT id,name,workspace_id FROM ops_scripts ORDER BY id LIMIT 40")
+q("hosts name sample", "SELECT id,name,workspace_id FROM hosts ORDER BY id LIMIT 40")
+conn.close()

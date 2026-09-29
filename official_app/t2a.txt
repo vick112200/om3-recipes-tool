@@ -1,0 +1,1024 @@
+===== CLASS Lt2/a; =====
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lt2/a;)
+      name          : 'l'
+      type          : 'Ljava/lang/String;'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+      value         : "a"
+  Instance fields   -
+    #0              : (in Lt2/a;)
+      name          : 'a'
+      type          : 'Lt2/a$i;'
+      access        : 0x0002 (PRIVATE)
+    #1              : (in Lt2/a;)
+      name          : 'b'
+      type          : 'Lcom/omdigitalsolutions/oishare/OIShareApplication;'
+      access        : 0x0002 (PRIVATE)
+    #2              : (in Lt2/a;)
+      name          : 'c'
+      type          : 'Lt2/a$j;'
+      access        : 0x0002 (PRIVATE)
+    #3              : (in Lt2/a;)
+      name          : 'd'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #4              : (in Lt2/a;)
+      name          : 'e'
+      type          : 'LJ2/c;'
+      access        : 0x0002 (PRIVATE)
+    #5              : (in Lt2/a;)
+      name          : 'f'
+      type          : 'I'
+      access        : 0x0002 (PRIVATE)
+    #6              : (in Lt2/a;)
+      name          : 'g'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #7              : (in Lt2/a;)
+      name          : 'h'
+      type          : 'Lcom/omdigitalsolutions/oishare/e$j;'
+      access        : 0x0002 (PRIVATE)
+    #8              : (in Lt2/a;)
+      name          : 'i'
+      type          : 'Lcom/omdigitalsolutions/oishare/e$i;'
+      access        : 0x0002 (PRIVATE)
+    #9              : (in Lt2/a;)
+      name          : 'j'
+      type          : 'Lt2/a$k;'
+      access        : 0x0002 (PRIVATE)
+    #10              : (in Lt2/a;)
+      name          : 'k'
+      type          : 'LJ2/c$a;'
+      access        : 0x0002 (PRIVATE)
+  Direct methods    -
+    #0              : (in Lt2/a;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+514c54:                                        |[514c54] t2.a.<clinit>:()V
+514c64: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lt2/a;)
+      name          : '<init>'
+      type          : '(Lcom/omdigitalsolutions/oishare/OIShareApplication;Lt2/a$i;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 3
+      insns size    : 52 16-bit code units
+514c68:                                        |[514c68] t2.a.<init>:(Lcom/omdigitalsolutions/oishare/OIShareApplication;Lt2/a$i;)V
+514c78: 7010 c1b9 0200                         |0000: invoke-direct {v2}, Ljava/lang/Object;.<init>:()V // method@b9c1
+514c7e: 1200                                   |0003: const/4 v0, #int 0 // #0
+514c80: 5b20 656c                              |0004: iput-object v0, v2, Lt2/a;.a:Lt2/a$i; // field@6c65
+514c84: 5b20 666c                              |0006: iput-object v0, v2, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514c88: 5b20 676c                              |0008: iput-object v0, v2, Lt2/a;.c:Lt2/a$j; // field@6c67
+514c8c: 1201                                   |000a: const/4 v1, #int 0 // #0
+514c8e: 5c21 686c                              |000b: iput-boolean v1, v2, Lt2/a;.d:Z // field@6c68
+514c92: 5b20 696c                              |000d: iput-object v0, v2, Lt2/a;.e:LJ2/c; // field@6c69
+514c96: 5921 6a6c                              |000f: iput v1, v2, Lt2/a;.f:I // field@6c6a
+514c9a: 5c21 6b6c                              |0011: iput-boolean v1, v2, Lt2/a;.g:Z // field@6c6b
+514c9e: 2200 7423                              |0013: new-instance v0, Lt2/a$c; // type@2374
+514ca2: 7020 2ece 2000                         |0015: invoke-direct {v0, v2}, Lt2/a$c;.<init>:(Lt2/a;)V // method@ce2e
+514ca8: 5b20 6c6c                              |0018: iput-object v0, v2, Lt2/a;.h:Lcom/omdigitalsolutions/oishare/e$j; // field@6c6c
+514cac: 2200 7523                              |001a: new-instance v0, Lt2/a$d; // type@2375
+514cb0: 7020 30ce 2000                         |001c: invoke-direct {v0, v2}, Lt2/a$d;.<init>:(Lt2/a;)V // method@ce30
+514cb6: 5b20 6d6c                              |001f: iput-object v0, v2, Lt2/a;.i:Lcom/omdigitalsolutions/oishare/e$i; // field@6c6d
+514cba: 2200 7823                              |0021: new-instance v0, Lt2/a$f; // type@2378
+514cbe: 7020 36ce 2000                         |0023: invoke-direct {v0, v2}, Lt2/a$f;.<init>:(Lt2/a;)V // method@ce36
+514cc4: 5b20 6f6c                              |0026: iput-object v0, v2, Lt2/a;.k:LJ2/c$a; // field@6c6f
+514cc8: 5b23 666c                              |0028: iput-object v3, v2, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514ccc: 5b24 656c                              |002a: iput-object v4, v2, Lt2/a;.a:Lt2/a$i; // field@6c65
+514cd0: 2203 7c23                              |002c: new-instance v3, Lt2/a$j; // type@237c
+514cd4: 7030 45ce 2302                         |002e: invoke-direct {v3, v2, v2}, Lt2/a$j;.<init>:(Lt2/a;Lt2/a;)V // method@ce45
+514cda: 5b23 676c                              |0031: iput-object v3, v2, Lt2/a;.c:Lt2/a$j; // field@6c67
+514cde: 0e00                                   |0033: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lt2/a;)
+      name          : 'A'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 2
+      insns size    : 27 16-bit code units
+5151a8:                                        |[5151a8] t2.a.A:()V
+5151b8: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+5151bc: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+5151c0: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+5151c6: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5151cc: 1a02 e008                              |000a: const-string v2, ".connectTimeout" // string@08e0
+5151d0: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5151d6: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+5151dc: 0c01                                   |0012: move-result-object v1
+5151de: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+5151e4: 1220                                   |0016: const/4 v0, #int 2 // #2
+5151e6: 7020 4bce 0300                         |0017: invoke-direct {v3, v0}, Lt2/a;.B:(I)V // method@ce4b
+5151ec: 0e00                                   |001a: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lt2/a;)
+      name          : 'B'
+      type          : '(I)V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 4
+      insns size    : 78 16-bit code units
+5151f0:                                        |[5151f0] t2.a.B:(I)V
+515200: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+515204: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+515208: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+51520e: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515214: 1a02 720a                              |000a: const-string v2, ".resultCallback resCode=" // string@0a72
+515218: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+51521e: 6e20 2bba 4100                         |000f: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+515224: 6e10 3eba 0100                         |0012: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+51522a: 0c01                                   |0015: move-result-object v1
+51522c: 7120 484d 1000                         |0016: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515232: 5430 676c                              |0019: iget-object v0, v3, Lt2/a;.c:Lt2/a$j; // field@6c67
+515236: 1211                                   |001b: const/4 v1, #int 1 // #1
+515238: 6e20 621b 1000                         |001c: invoke-virtual {v0, v1}, Landroid/os/Handler;.removeMessages:(I)V // method@1b62
+51523e: 5430 676c                              |001f: iget-object v0, v3, Lt2/a;.c:Lt2/a$j; // field@6c67
+515242: 1221                                   |0021: const/4 v1, #int 2 // #2
+515244: 6e20 621b 1000                         |0022: invoke-virtual {v0, v1}, Landroid/os/Handler;.removeMessages:(I)V // method@1b62
+51524a: 5430 696c                              |0025: iget-object v0, v3, Lt2/a;.e:LJ2/c; // field@6c69
+51524e: 3800 1300                              |0027: if-eqz v0, 003a // +0013
+515252: 1201                                   |0029: const/4 v1, #int 0 // #0
+515254: 6e20 d208 1000                         |002a: invoke-virtual {v0, v1}, LJ2/c;.j:(Z)V // method@08d2
+51525a: 5430 696c                              |002d: iget-object v0, v3, Lt2/a;.e:LJ2/c; // field@6c69
+51525e: 6e10 d008 0000                         |002f: invoke-virtual {v0}, LJ2/c;.h:()V // method@08d0
+515264: 5430 696c                              |0032: iget-object v0, v3, Lt2/a;.e:LJ2/c; // field@6c69
+515268: 6e10 cf08 0000                         |0034: invoke-virtual {v0}, LJ2/c;.g:()V // method@08cf
+51526e: 1200                                   |0037: const/4 v0, #int 0 // #0
+515270: 5b30 696c                              |0038: iput-object v0, v3, Lt2/a;.e:LJ2/c; // field@6c69
+515274: 2200 3905                              |003a: new-instance v0, Landroid/os/Handler; // type@0539
+515278: 7100 7a1b 0000                         |003c: invoke-static {}, Landroid/os/Looper;.getMainLooper:()Landroid/os/Looper; // method@1b7a
+51527e: 0c01                                   |003f: move-result-object v1
+515280: 7020 511b 1000                         |0040: invoke-direct {v0, v1}, Landroid/os/Handler;.<init>:(Landroid/os/Looper;)V // method@1b51
+515286: 2201 7223                              |0043: new-instance v1, Lt2/a$a; // type@2372
+51528a: 7030 2ace 3104                         |0045: invoke-direct {v1, v3, v4}, Lt2/a$a;.<init>:(Lt2/a;I)V // method@ce2a
+515290: 1603 f401                              |0048: const-wide/16 v3, #int 500 // #1f4
+515294: 6e40 5f1b 1043                         |004a: invoke-virtual {v0, v1, v3, v4}, Landroid/os/Handler;.postDelayed:(Ljava/lang/Runnable;J)Z // method@1b5f
+51529a: 0e00                                   |004d: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lt2/a;)
+      name          : 'C'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 5
+      ins           : 1
+      outs          : 4
+      insns size    : 131 16-bit code units
+51529c:                                        |[51529c] t2.a.C:()V
+5152ac: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+5152b0: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+5152b4: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+5152ba: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5152c0: 1a02 a00a                              |000a: const-string v2, ".scanCamera" // string@0aa0
+5152c4: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5152ca: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+5152d0: 0c01                                   |0012: move-result-object v1
+5152d2: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+5152d8: 5440 666c                              |0016: iget-object v0, v4, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+5152dc: 6e10 8b85 0000                         |0018: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.K:()Lc2/A; // method@858b
+5152e2: 0c00                                   |001b: move-result-object v0
+5152e4: 1a01 c67a                              |001c: const-string v1, "is.wifiManualConnect" // string@7ac6
+5152e8: 6e20 c24b 1000                         |001e: invoke-virtual {v0, v1}, Lc2/A;.b:(Ljava/lang/String;)Z // method@4bc2
+5152ee: 0a00                                   |0021: move-result v0
+5152f0: 3800 0800                              |0022: if-eqz v0, 002a // +0008
+5152f4: 5444 6e6c                              |0024: iget-object v4, v4, Lt2/a;.j:Lt2/a$k; // field@6c6e
+5152f8: 7210 47ce 0400                         |0026: invoke-interface {v4}, Lt2/a$k;.h:()V // method@ce47
+5152fe: 0e00                                   |0029: return-void
+515300: 5440 696c                              |002a: iget-object v0, v4, Lt2/a;.e:LJ2/c; // field@6c69
+515304: 3900 1100                              |002c: if-nez v0, 003d // +0011
+515308: 2200 cb01                              |002e: new-instance v0, LJ2/c; // type@01cb
+51530c: 5441 666c                              |0030: iget-object v1, v4, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515310: 6e10 4816 0100                         |0032: invoke-virtual {v1}, Landroid/content/Context;.getApplicationContext:()Landroid/content/Context; // method@1648
+515316: 0c01                                   |0035: move-result-object v1
+515318: 5442 666c                              |0036: iget-object v2, v4, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+51531c: 7030 c708 1002                         |0038: invoke-direct {v0, v1, v2}, LJ2/c;.<init>:(Landroid/content/Context;Lcom/omdigitalsolutions/oishare/OIShareApplication;)V // method@08c7
+515322: 5b40 696c                              |003b: iput-object v0, v4, Lt2/a;.e:LJ2/c; // field@6c69
+515326: 5440 696c                              |003d: iget-object v0, v4, Lt2/a;.e:LJ2/c; // field@6c69
+51532a: 1211                                   |003f: const/4 v1, #int 1 // #1
+51532c: 6e20 d208 1000                         |0040: invoke-virtual {v0, v1}, LJ2/c;.j:(Z)V // method@08d2
+515332: 5440 696c                              |0043: iget-object v0, v4, Lt2/a;.e:LJ2/c; // field@6c69
+515336: 5442 6f6c                              |0045: iget-object v2, v4, Lt2/a;.k:LJ2/c$a; // field@6c6f
+51533a: 6e20 d308 2000                         |0047: invoke-virtual {v0, v2}, LJ2/c;.k:(LJ2/c$a;)V // method@08d3
+515340: 5440 696c                              |004a: iget-object v0, v4, Lt2/a;.e:LJ2/c; // field@6c69
+515344: 6e10 d108 0000                         |004c: invoke-virtual {v0}, LJ2/c;.i:()V // method@08d1
+51534a: 2200 7716                              |004f: new-instance v0, Lcom/omdigitalsolutions/oishare/f$a; // type@1677
+51534e: 7010 3089 0000                         |0051: invoke-direct {v0}, Lcom/omdigitalsolutions/oishare/f$a;.<init>:()V // method@8930
+515354: 5442 666c                              |0054: iget-object v2, v4, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515358: 6e10 8b85 0200                         |0056: invoke-virtual {v2}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.K:()Lc2/A; // method@858b
+51535e: 0c02                                   |0059: move-result-object v2
+515360: 1a03 3a90                              |005a: const-string v3, "str.wifi.camera.ssid" // string@903a
+515364: 6e20 c94b 3200                         |005c: invoke-virtual {v2, v3}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+51536a: 0c03                                   |005f: move-result-object v3
+51536c: 5b03 fa3a                              |0060: iput-object v3, v0, Lcom/omdigitalsolutions/oishare/f$a;.b:Ljava/lang/String; // field@3afa
+515370: 1a03 3990                              |0062: const-string v3, "str.wifi.camera.password" // string@9039
+515374: 6e20 c94b 3200                         |0064: invoke-virtual {v2, v3}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+51537a: 0c03                                   |0067: move-result-object v3
+51537c: 5b03 fe3a                              |0068: iput-object v3, v0, Lcom/omdigitalsolutions/oishare/f$a;.f:Ljava/lang/String; // field@3afe
+515380: 1a03 3790                              |006a: const-string v3, "str.wifi.Security.Type" // string@9037
+515384: 6e20 c44b 3200                         |006c: invoke-virtual {v2, v3}, Lc2/A;.d:(Ljava/lang/String;)I // method@4bc4
+51538a: 0a02                                   |006f: move-result v2
+51538c: 5902 f93a                              |0070: iput v2, v0, Lcom/omdigitalsolutions/oishare/f$a;.a:I // field@3af9
+515390: 12f2                                   |0072: const/4 v2, #int -1 // #ff
+515392: 5902 ff3a                              |0073: iput v2, v0, Lcom/omdigitalsolutions/oishare/f$a;.g:I // field@3aff
+515396: 5442 696c                              |0075: iget-object v2, v4, Lt2/a;.e:LJ2/c; // field@6c69
+51539a: 6e20 ca08 0200                         |0077: invoke-virtual {v2, v0}, LJ2/c;.b:(Lcom/omdigitalsolutions/oishare/f$a;)I // method@08ca
+5153a0: 5444 676c                              |007a: iget-object v4, v4, Lt2/a;.c:Lt2/a$j; // field@6c67
+5153a4: 1702 60ea 0000                         |007c: const-wide/32 v2, #float 8.40779e-41 // #0000ea60
+5153aa: 6e40 651b 1432                         |007f: invoke-virtual {v4, v1, v2, v3}, Landroid/os/Handler;.sendEmptyMessageDelayed:(IJ)Z // method@1b65
+5153b0: 0e00                                   |0082: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lt2/a;)
+      name          : 'E'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 2
+      insns size    : 35 16-bit code units
+515444:                                        |[515444] t2.a.E:()V
+515454: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+515458: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+51545c: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+515462: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515468: 1a02 a30b                              |000a: const-string v2, ".startWifiWithBle" // string@0ba3
+51546c: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515472: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+515478: 0c01                                   |0012: move-result-object v1
+51547a: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515480: 7100 24bd 0000                         |0016: invoke-static {}, Ljava/util/concurrent/Executors;.newSingleThreadExecutor:()Ljava/util/concurrent/ExecutorService; // method@bd24
+515486: 0c00                                   |0019: move-result-object v0
+515488: 2201 7723                              |001a: new-instance v1, Lt2/a$e; // type@2377
+51548c: 7020 34ce 3100                         |001c: invoke-direct {v1, v3}, Lt2/a$e;.<init>:(Lt2/a;)V // method@ce34
+515492: 7220 18bd 1000                         |001f: invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;.execute:(Ljava/lang/Runnable;)V // method@bd18
+515498: 0e00                                   |0022: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in Lt2/a;)
+      name          : 'G'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 3
+      insns size    : 39 16-bit code units
+515504:                                        |[515504] t2.a.G:()V
+515514: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+515518: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+51551c: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+515522: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515528: 1a02 bc0b                              |000a: const-string v2, ".switchMaintenanceMode" // string@0bbc
+51552c: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515532: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+515538: 0c01                                   |0012: move-result-object v1
+51553a: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515540: 5430 666c                              |0016: iget-object v0, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515544: 6e10 8585 0000                         |0018: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.H:()Lcom/omdigitalsolutions/oishare/a; // method@8585
+51554a: 0c00                                   |001b: move-result-object v0
+51554c: 2201 7923                              |001c: new-instance v1, Lt2/a$g; // type@2379
+515550: 7020 3cce 3100                         |001e: invoke-direct {v1, v3}, Lt2/a$g;.<init>:(Lt2/a;)V // method@ce3c
+515556: 1a03 8779                              |0021: const-string v3, "http://192.168.0.10/switch_cammode.cgi?mode=maintenance" // string@7987
+51555a: 6e30 0b86 3001                         |0023: invoke-virtual {v0, v3, v1}, Lcom/omdigitalsolutions/oishare/a;.r:(Ljava/lang/String;Lcom/omdigitalsolutions/oishare/a$b;)V // method@860b
+515560: 0e00                                   |0026: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #7              : (in Lt2/a;)
+      name          : 'a'
+      type          : '(Lt2/a;)Lt2/a$i;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514c24:                                        |[514c24] t2.a.a:(Lt2/a;)Lt2/a$i;
+514c34: 5400 656c                              |0000: iget-object v0, v0, Lt2/a;.a:Lt2/a$i; // field@6c65
+514c38: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #8              : (in Lt2/a;)
+      name          : 'b'
+      type          : '(Lt2/a;)Z'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514b44:                                        |[514b44] t2.a.b:(Lt2/a;)Z
+514b54: 5500 6b6c                              |0000: iget-boolean v0, v0, Lt2/a;.g:Z // field@6c6b
+514b58: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #9              : (in Lt2/a;)
+      name          : 'c'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514ce0:                                        |[514ce0] t2.a.c:(Lt2/a;)V
+514cf0: 7010 4ece 0000                         |0000: invoke-direct {v0}, Lt2/a;.E:()V // method@ce4e
+514cf6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #10              : (in Lt2/a;)
+      name          : 'd'
+      type          : '(Lt2/a;Z)Z'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 0
+      insns size    : 3 16-bit code units
+514b5c:                                        |[514b5c] t2.a.d:(Lt2/a;Z)Z
+514b6c: 5c01 6b6c                              |0000: iput-boolean v1, v0, Lt2/a;.g:Z // field@6c6b
+514b70: 0f01                                   |0002: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #11              : (in Lt2/a;)
+      name          : 'e'
+      type          : '(Lt2/a;)Lcom/omdigitalsolutions/oishare/e$i;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514ba4:                                        |[514ba4] t2.a.e:(Lt2/a;)Lcom/omdigitalsolutions/oishare/e$i;
+514bb4: 5400 6d6c                              |0000: iget-object v0, v0, Lt2/a;.i:Lcom/omdigitalsolutions/oishare/e$i; // field@6c6d
+514bb8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #12              : (in Lt2/a;)
+      name          : 'f'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514cf8:                                        |[514cf8] t2.a.f:(Lt2/a;)V
+514d08: 7010 4cce 0000                         |0000: invoke-direct {v0}, Lt2/a;.C:()V // method@ce4c
+514d0e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #13              : (in Lt2/a;)
+      name          : 'g'
+      type          : '(Lt2/a;)Lt2/a$j;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514c3c:                                        |[514c3c] t2.a.g:(Lt2/a;)Lt2/a$j;
+514c4c: 5400 676c                              |0000: iget-object v0, v0, Lt2/a;.c:Lt2/a$j; // field@6c67
+514c50: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #14              : (in Lt2/a;)
+      name          : 'h'
+      type          : '(Lt2/a;I)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 2
+      insns size    : 4 16-bit code units
+514d10:                                        |[514d10] t2.a.h:(Lt2/a;I)V
+514d20: 7020 4bce 1000                         |0000: invoke-direct {v0, v1}, Lt2/a;.B:(I)V // method@ce4b
+514d26: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #15              : (in Lt2/a;)
+      name          : 'i'
+      type          : '(Lt2/a;)I'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514bd4:                                        |[514bd4] t2.a.i:(Lt2/a;)I
+514be4: 5200 6a6c                              |0000: iget v0, v0, Lt2/a;.f:I // field@6c6a
+514be8: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #16              : (in Lt2/a;)
+      name          : 'j'
+      type          : '(Lt2/a;)I'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 0
+      insns size    : 7 16-bit code units
+514bec:                                        |[514bec] t2.a.j:(Lt2/a;)I
+514bfc: 5220 6a6c                              |0000: iget v0, v2, Lt2/a;.f:I // field@6c6a
+514c00: d801 0001                              |0002: add-int/lit8 v1, v0, #int 1 // #01
+514c04: 5921 6a6c                              |0004: iput v1, v2, Lt2/a;.f:I // field@6c6a
+514c08: 0f00                                   |0006: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #17              : (in Lt2/a;)
+      name          : 'k'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514d28:                                        |[514d28] t2.a.k:(Lt2/a;)V
+514d38: 7010 4ace 0000                         |0000: invoke-direct {v0}, Lt2/a;.A:()V // method@ce4a
+514d3e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #18              : (in Lt2/a;)
+      name          : 'l'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514d40:                                        |[514d40] t2.a.l:(Lt2/a;)V
+514d50: 7010 6ace 0000                         |0000: invoke-direct {v0}, Lt2/a;.z:()V // method@ce6a
+514d56: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #19              : (in Lt2/a;)
+      name          : 'm'
+      type          : '(Lt2/a;)Lcom/omdigitalsolutions/oishare/OIShareApplication;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514b8c:                                        |[514b8c] t2.a.m:(Lt2/a;)Lcom/omdigitalsolutions/oishare/OIShareApplication;
+514b9c: 5400 666c                              |0000: iget-object v0, v0, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514ba0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #20              : (in Lt2/a;)
+      name          : 'n'
+      type          : '(Lt2/a;)Z'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514b74:                                        |[514b74] t2.a.n:(Lt2/a;)Z
+514b84: 5500 686c                              |0000: iget-boolean v0, v0, Lt2/a;.d:Z // field@6c68
+514b88: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #21              : (in Lt2/a;)
+      name          : 'o'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514d58:                                        |[514d58] t2.a.o:(Lt2/a;)V
+514d68: 7010 68ce 0000                         |0000: invoke-direct {v0}, Lt2/a;.x:()V // method@ce68
+514d6e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #22              : (in Lt2/a;)
+      name          : 'p'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514d70:                                        |[514d70] t2.a.p:(Lt2/a;)V
+514d80: 7010 67ce 0000                         |0000: invoke-direct {v0}, Lt2/a;.w:()V // method@ce67
+514d86: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #23              : (in Lt2/a;)
+      name          : 'q'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514d88:                                        |[514d88] t2.a.q:(Lt2/a;)V
+514d98: 7010 66ce 0000                         |0000: invoke-direct {v0}, Lt2/a;.v:()V // method@ce66
+514d9e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #24              : (in Lt2/a;)
+      name          : 'r'
+      type          : '(Lt2/a;)V'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+514da0:                                        |[514da0] t2.a.r:(Lt2/a;)V
+514db0: 7010 69ce 0000                         |0000: invoke-direct {v0}, Lt2/a;.y:()V // method@ce69
+514db6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #25              : (in Lt2/a;)
+      name          : 's'
+      type          : '()Ljava/lang/String;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 3 16-bit code units
+514c0c:                                        |[514c0c] t2.a.s:()Ljava/lang/String;
+514c1c: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+514c20: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #26              : (in Lt2/a;)
+      name          : 't'
+      type          : '(Lt2/a;)Lcom/omdigitalsolutions/oishare/e$j;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+514bbc:                                        |[514bbc] t2.a.t:(Lt2/a;)Lcom/omdigitalsolutions/oishare/e$j;
+514bcc: 5400 6c6c                              |0000: iget-object v0, v0, Lt2/a;.h:Lcom/omdigitalsolutions/oishare/e$j; // field@6c6c
+514bd0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #27              : (in Lt2/a;)
+      name          : 'v'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 4
+      insns size    : 45 16-bit code units
+514ed4:                                        |[514ed4] t2.a.v:()V
+514ee4: 5430 666c                              |0000: iget-object v0, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514ee8: 6e10 8b85 0000                         |0002: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.K:()Lc2/A; // method@858b
+514eee: 0c00                                   |0005: move-result-object v0
+514ef0: 1a01 9e7a                              |0006: const-string v1, "is.CameraSupportBleRelease" // string@7a9e
+514ef4: 6e20 c24b 1000                         |0008: invoke-virtual {v0, v1}, Lc2/A;.b:(Ljava/lang/String;)Z // method@4bc2
+514efa: 0a01                                   |000b: move-result v1
+514efc: 1a02 3590                              |000c: const-string v2, "str.bleName" // string@9035
+514f00: 6e20 c94b 2000                         |000e: invoke-virtual {v0, v2}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+514f06: 0c00                                   |0011: move-result-object v0
+514f08: 3801 1700                              |0012: if-eqz v1, 0029 // +0017
+514f0c: 7110 174c 0000                         |0014: invoke-static {v0}, Lc2/F;.T:(Ljava/lang/String;)Z // method@4c17
+514f12: 0a01                                   |0017: move-result v1
+514f14: 3801 0300                              |0018: if-eqz v1, 001b // +0003
+514f18: 280f                                   |001a: goto 0029 // +000f
+514f1a: 5431 666c                              |001b: iget-object v1, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514f1e: 6e10 8985 0100                         |001d: invoke-virtual {v1}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.J:()Lcom/omdigitalsolutions/oishare/e; // method@8589
+514f24: 0c01                                   |0020: move-result-object v1
+514f26: 1302 1027                              |0021: const/16 v2, #int 10000 // #2710
+514f2a: 5433 6c6c                              |0023: iget-object v3, v3, Lt2/a;.h:Lcom/omdigitalsolutions/oishare/e$j; // field@6c6c
+514f2e: 6e40 1689 0132                         |0025: invoke-virtual {v1, v0, v2, v3}, Lcom/omdigitalsolutions/oishare/e;.e0:(Ljava/lang/String;ILcom/omdigitalsolutions/oishare/e$j;)V // method@8916
+514f34: 0e00                                   |0028: return-void
+514f36: 7010 4cce 0300                         |0029: invoke-direct {v3}, Lt2/a;.C:()V // method@ce4c
+514f3c: 0e00                                   |002c: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #28              : (in Lt2/a;)
+      name          : 'w'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 3
+      insns size    : 54 16-bit code units
+514f40:                                        |[514f40] t2.a.w:()V
+514f50: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+514f54: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+514f58: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+514f5e: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514f64: 1a02 aa08                              |000a: const-string v2, ".checkSupportCommand" // string@08aa
+514f68: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514f6e: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+514f74: 0c01                                   |0012: move-result-object v1
+514f76: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+514f7c: 5430 666c                              |0016: iget-object v0, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514f80: 6e10 7d85 0000                         |0018: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.D:()Lc2/k; // method@857d
+514f86: 0c00                                   |001b: move-result-object v0
+514f88: 3900 0700                              |001c: if-nez v0, 0023 // +0007
+514f8c: 1270                                   |001e: const/4 v0, #int 7 // #7
+514f8e: 7020 4bce 0300                         |001f: invoke-direct {v3, v0}, Lt2/a;.B:(I)V // method@ce4b
+514f94: 0e00                                   |0022: return-void
+514f96: 1a01 9290                              |0023: const-string v1, "switch_cammode" // string@9092
+514f9a: 1a02 967f                              |0025: const-string v2, "maintenance" // string@7f96
+514f9e: 6e30 a14c 1002                         |0027: invoke-virtual {v0, v1, v2}, Lc2/k;.d:(Ljava/lang/String;Ljava/lang/String;)Z // method@4ca1
+514fa4: 0a00                                   |002a: move-result v0
+514fa6: 3900 0700                              |002b: if-nez v0, 0032 // +0007
+514faa: 1230                                   |002d: const/4 v0, #int 3 // #3
+514fac: 7020 4bce 0300                         |002e: invoke-direct {v3, v0}, Lt2/a;.B:(I)V // method@ce4b
+514fb2: 0e00                                   |0031: return-void
+514fb4: 7010 50ce 0300                         |0032: invoke-direct {v3}, Lt2/a;.G:()V // method@ce50
+514fba: 0e00                                   |0035: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #29              : (in Lt2/a;)
+      name          : 'x'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 6
+      ins           : 1
+      outs          : 3
+      insns size    : 107 16-bit code units
+514fbc:                                        |[514fbc] t2.a.x:()V
+514fcc: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+514fd0: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+514fd4: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+514fda: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514fe0: 1a02 ab08                              |000a: const-string v2, ".checkSupportCommandFirmup" // string@08ab
+514fe4: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514fea: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+514ff0: 0c01                                   |0012: move-result-object v1
+514ff2: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+514ff8: 5450 666c                              |0016: iget-object v0, v5, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514ffc: 6e10 9785 0000                         |0018: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.Q:()LJ2/d; // method@8597
+515002: 0c00                                   |001b: move-result-object v0
+515004: 6e10 0709 0000                         |001c: invoke-virtual {v0}, LJ2/d;.o:()Ljava/lang/String; // method@0907
+51500a: 0c00                                   |001f: move-result-object v0
+51500c: 7110 174c 0000                         |0020: invoke-static {v0}, Lc2/F;.T:(Ljava/lang/String;)Z // method@4c17
+515012: 0a01                                   |0023: move-result v1
+515014: 1272                                   |0024: const/4 v2, #int 7 // #7
+515016: 3801 0600                              |0025: if-eqz v1, 002b // +0006
+51501a: 7020 4bce 2500                         |0027: invoke-direct {v5, v2}, Lt2/a;.B:(I)V // method@ce4b
+515020: 0e00                                   |002a: return-void
+515022: 5451 666c                              |002b: iget-object v1, v5, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515026: 6e10 8b85 0100                         |002d: invoke-virtual {v1}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.K:()Lc2/A; // method@858b
+51502c: 0c01                                   |0030: move-result-object v1
+51502e: 1a03 3390                              |0031: const-string v3, "str.PairingCameraSsid" // string@9033
+515032: 6e20 c94b 3100                         |0033: invoke-virtual {v1, v3}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+515038: 0c01                                   |0036: move-result-object v1
+51503a: 7110 174c 0100                         |0037: invoke-static {v1}, Lc2/F;.T:(Ljava/lang/String;)Z // method@4c17
+515040: 0a03                                   |003a: move-result v3
+515042: 3803 0600                              |003b: if-eqz v3, 0041 // +0006
+515046: 7020 4bce 2500                         |003d: invoke-direct {v5, v2}, Lt2/a;.B:(I)V // method@ce4b
+51504c: 0e00                                   |0040: return-void
+51504e: 5453 666c                              |0041: iget-object v3, v5, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515052: 6e10 7d85 0300                         |0043: invoke-virtual {v3}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.D:()Lc2/k; // method@857d
+515058: 0c03                                   |0046: move-result-object v3
+51505a: 3903 0600                              |0047: if-nez v3, 004d // +0006
+51505e: 7020 4bce 2500                         |0049: invoke-direct {v5, v2}, Lt2/a;.B:(I)V // method@ce4b
+515064: 0e00                                   |004c: return-void
+515066: 1a02 9290                              |004d: const-string v2, "switch_cammode" // string@9092
+51506a: 1a04 967f                              |004f: const-string v4, "maintenance" // string@7f96
+51506e: 6e30 a14c 2304                         |0051: invoke-virtual {v3, v2, v4}, Lc2/k;.d:(Ljava/lang/String;Ljava/lang/String;)Z // method@4ca1
+515074: 0a02                                   |0054: move-result v2
+515076: 3902 0700                              |0055: if-nez v2, 005c // +0007
+51507a: 1230                                   |0057: const/4 v0, #int 3 // #3
+51507c: 7020 4bce 0500                         |0058: invoke-direct {v5, v0}, Lt2/a;.B:(I)V // method@ce4b
+515082: 0e00                                   |005b: return-void
+515084: 6e20 f3b9 0100                         |005c: invoke-virtual {v1, v0}, Ljava/lang/String;.equals:(Ljava/lang/Object;)Z // method@b9f3
+51508a: 0a00                                   |005f: move-result v0
+51508c: 3800 0600                              |0060: if-eqz v0, 0066 // +0006
+515090: 7010 50ce 0500                         |0062: invoke-direct {v5}, Lt2/a;.G:()V // method@ce50
+515096: 2805                                   |0065: goto 006a // +0005
+515098: 1250                                   |0066: const/4 v0, #int 5 // #5
+51509a: 7020 4bce 0500                         |0067: invoke-direct {v5, v0}, Lt2/a;.B:(I)V // method@ce4b
+5150a0: 0e00                                   |006a: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #30              : (in Lt2/a;)
+      name          : 'y'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 5
+      ins           : 1
+      outs          : 4
+      insns size    : 71 16-bit code units
+5150a4:                                        |[5150a4] t2.a.y:()V
+5150b4: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+5150b8: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+5150bc: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+5150c2: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5150c8: 1a02 c108                              |000a: const-string v2, ".connectCamera" // string@08c1
+5150cc: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5150d2: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+5150d8: 0c01                                   |0012: move-result-object v1
+5150da: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+5150e0: 5441 666c                              |0016: iget-object v1, v4, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+5150e4: 6e10 9785 0100                         |0018: invoke-virtual {v1}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.Q:()LJ2/d; // method@8597
+5150ea: 0c01                                   |001b: move-result-object v1
+5150ec: 6e10 f008 0100                         |001c: invoke-virtual {v1}, LJ2/d;.H:()I // method@08f0
+5150f2: 0a01                                   |001f: move-result v1
+5150f4: 2202 611f                              |0020: new-instance v2, Ljava/lang/StringBuilder; // type@1f61
+5150f8: 7010 24ba 0200                         |0022: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+5150fe: 6e20 30ba 0200                         |0025: invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515104: 1a03 c208                              |0028: const-string v3, ".connectCamera netId=" // string@08c2
+515108: 6e20 30ba 3200                         |002a: invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+51510e: 6e20 2bba 1200                         |002d: invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+515114: 6e10 3eba 0200                         |0030: invoke-virtual {v2}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+51511a: 0c02                                   |0033: move-result-object v2
+51511c: 7120 484d 2000                         |0034: invoke-static {v0, v2}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515122: 3b01 0700                              |0037: if-gez v1, 003e // +0007
+515126: 1270                                   |0039: const/4 v0, #int 7 // #7
+515128: 7020 4bce 0400                         |003a: invoke-direct {v4, v0}, Lt2/a;.B:(I)V // method@ce4b
+51512e: 2809                                   |003d: goto 0046 // +0009
+515130: 5444 676c                              |003e: iget-object v4, v4, Lt2/a;.c:Lt2/a$j; // field@6c67
+515134: 1220                                   |0040: const/4 v0, #int 2 // #2
+515136: 1601 b80b                              |0041: const-wide/16 v1, #int 3000 // #bb8
+51513a: 6e40 651b 0421                         |0043: invoke-virtual {v4, v0, v1, v2}, Landroid/os/Handler;.sendEmptyMessageDelayed:(IJ)Z // method@1b65
+515140: 0e00                                   |0046: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #31              : (in Lt2/a;)
+      name          : 'z'
+      type          : '()V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 4
+      insns size    : 41 16-bit code units
+515144:                                        |[515144] t2.a.z:()V
+515154: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+515158: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+51515c: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+515162: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515168: 1a02 c608                              |000a: const-string v2, ".connectCheck" // string@08c6
+51516c: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+515172: 6e10 3eba 0100                         |000f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+515178: 0c01                                   |0012: move-result-object v1
+51517a: 7120 484d 1000                         |0013: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515180: 5430 666c                              |0016: iget-object v0, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+515184: 6e10 8585 0000                         |0018: invoke-virtual {v0}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.H:()Lcom/omdigitalsolutions/oishare/a; // method@8585
+51518a: 0c00                                   |001b: move-result-object v0
+51518c: 2201 7a23                              |001c: new-instance v1, Lt2/a$h; // type@237a
+515190: 7020 40ce 3100                         |001e: invoke-direct {v1, v3}, Lt2/a$h;.<init>:(Lt2/a;)V // method@ce40
+515196: 1303 b80b                              |0021: const/16 v3, #int 3000 // #bb8
+51519a: 1a02 4779                              |0023: const-string v2, "http://192.168.0.10/get_connectmode.cgi" // string@7947
+51519e: 6e40 0c86 2031                         |0025: invoke-virtual {v0, v2, v1, v3}, Lcom/omdigitalsolutions/oishare/a;.s:(Ljava/lang/String;Lcom/omdigitalsolutions/oishare/a$b;I)V // method@860c
+5151a4: 0e00                                   |0028: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lt2/a;)
+      name          : 'D'
+      type          : '(ZZLt2/a$k;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 4
+      outs          : 3
+      insns size    : 64 16-bit code units
+5153b4:                                        |[5153b4] t2.a.D:(ZZLt2/a$k;)V
+5153c4: 6200 706c                              |0000: sget-object v0, Lt2/a;.l:Ljava/lang/String; // field@6c70
+5153c8: 2201 611f                              |0002: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+5153cc: 7010 24ba 0100                         |0004: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+5153d2: 6e20 30ba 0100                         |0007: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5153d8: 1a02 7b0b                              |000a: const-string v2, ".startConnect bScanAP=" // string@0b7b
+5153dc: 6e20 30ba 2100                         |000c: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5153e2: 6e20 31ba 4100                         |000f: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@ba31
+5153e8: 1a02 9d01                              |0012: const-string v2, " bFirmup=" // string@019d
+5153ec: 6e20 30ba 2100                         |0014: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+5153f2: 6e20 31ba 5100                         |0017: invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@ba31
+5153f8: 6e10 3eba 0100                         |001a: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+5153fe: 0c01                                   |001d: move-result-object v1
+515400: 7120 484d 1000                         |001e: invoke-static {v0, v1}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+515406: 5430 666c                              |0021: iget-object v0, v3, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+51540a: 3900 0700                              |0023: if-nez v0, 002a // +0007
+51540e: 1274                                   |0025: const/4 v4, #int 7 // #7
+515410: 7020 4bce 4300                         |0026: invoke-direct {v3, v4}, Lt2/a;.B:(I)V // method@ce4b
+515416: 0e00                                   |0029: return-void
+515418: 5c35 686c                              |002a: iput-boolean v5, v3, Lt2/a;.d:Z // field@6c68
+51541c: 1205                                   |002c: const/4 v5, #int 0 // #0
+51541e: 5935 6a6c                              |002d: iput v5, v3, Lt2/a;.f:I // field@6c6a
+515422: 5c35 6b6c                              |002f: iput-boolean v5, v3, Lt2/a;.g:Z // field@6c6b
+515426: 5b36 6e6c                              |0031: iput-object v6, v3, Lt2/a;.j:Lt2/a$k; // field@6c6e
+51542a: 7100 24bd 0000                         |0033: invoke-static {}, Ljava/util/concurrent/Executors;.newSingleThreadExecutor:()Ljava/util/concurrent/ExecutorService; // method@bd24
+515430: 0c05                                   |0036: move-result-object v5
+515432: 2206 7323                              |0037: new-instance v6, Lt2/a$b; // type@2373
+515436: 7030 2cce 3604                         |0039: invoke-direct {v6, v3, v4}, Lt2/a$b;.<init>:(Lt2/a;Z)V // method@ce2c
+51543c: 7220 18bd 6500                         |003c: invoke-interface {v5, v6}, Ljava/util/concurrent/Executor;.execute:(Ljava/lang/Runnable;)V // method@bd18
+515442: 0e00                                   |003f: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lt2/a;)
+      name          : 'F'
+      type          : '()V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 2
+      insns size    : 43 16-bit code units
+51549c:                                        |[51549c] t2.a.F:()V
+5154ac: 5420 676c                              |0000: iget-object v0, v2, Lt2/a;.c:Lt2/a$j; // field@6c67
+5154b0: 1211                                   |0002: const/4 v1, #int 1 // #1
+5154b2: 6e20 621b 1000                         |0003: invoke-virtual {v0, v1}, Landroid/os/Handler;.removeMessages:(I)V // method@1b62
+5154b8: 5420 676c                              |0006: iget-object v0, v2, Lt2/a;.c:Lt2/a$j; // field@6c67
+5154bc: 1221                                   |0008: const/4 v1, #int 2 // #2
+5154be: 6e20 621b 1000                         |0009: invoke-virtual {v0, v1}, Landroid/os/Handler;.removeMessages:(I)V // method@1b62
+5154c4: 5420 696c                              |000c: iget-object v0, v2, Lt2/a;.e:LJ2/c; // field@6c69
+5154c8: 3800 1300                              |000e: if-eqz v0, 0021 // +0013
+5154cc: 1201                                   |0010: const/4 v1, #int 0 // #0
+5154ce: 6e20 d208 1000                         |0011: invoke-virtual {v0, v1}, LJ2/c;.j:(Z)V // method@08d2
+5154d4: 5420 696c                              |0014: iget-object v0, v2, Lt2/a;.e:LJ2/c; // field@6c69
+5154d8: 6e10 d008 0000                         |0016: invoke-virtual {v0}, LJ2/c;.h:()V // method@08d0
+5154de: 5420 696c                              |0019: iget-object v0, v2, Lt2/a;.e:LJ2/c; // field@6c69
+5154e2: 6e10 cf08 0000                         |001b: invoke-virtual {v0}, LJ2/c;.g:()V // method@08cf
+5154e8: 1200                                   |001e: const/4 v0, #int 0 // #0
+5154ea: 5b20 696c                              |001f: iput-object v0, v2, Lt2/a;.e:LJ2/c; // field@6c69
+5154ee: 5422 666c                              |0021: iget-object v2, v2, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+5154f2: 6e10 8585 0200                         |0023: invoke-virtual {v2}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.H:()Lcom/omdigitalsolutions/oishare/a; // method@8585
+5154f8: 0c02                                   |0026: move-result-object v2
+5154fa: 6e10 0286 0200                         |0027: invoke-virtual {v2}, Lcom/omdigitalsolutions/oishare/a;.i:()V // method@8602
+515500: 0e00                                   |002a: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lt2/a;)
+      name          : 'u'
+      type          : '(LJ2/c$a;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 8
+      ins           : 2
+      outs          : 3
+      insns size    : 133 16-bit code units
+514db8:                                        |[514db8] t2.a.u:(LJ2/c$a;)V
+514dc8: 2200 cb01                              |0000: new-instance v0, LJ2/c; // type@01cb
+514dcc: 5461 666c                              |0002: iget-object v1, v6, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514dd0: 7030 c708 1001                         |0004: invoke-direct {v0, v1, v1}, LJ2/c;.<init>:(Landroid/content/Context;Lcom/omdigitalsolutions/oishare/OIShareApplication;)V // method@08c7
+514dd6: 2200 cb01                              |0007: new-instance v0, LJ2/c; // type@01cb
+514dda: 5461 666c                              |0009: iget-object v1, v6, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514dde: 7030 c708 1001                         |000b: invoke-direct {v0, v1, v1}, LJ2/c;.<init>:(Landroid/content/Context;Lcom/omdigitalsolutions/oishare/OIShareApplication;)V // method@08c7
+514de4: 1211                                   |000e: const/4 v1, #int 1 // #1
+514de6: 6e20 d208 1000                         |000f: invoke-virtual {v0, v1}, LJ2/c;.j:(Z)V // method@08d2
+514dec: 6e20 d308 7000                         |0012: invoke-virtual {v0, v7}, LJ2/c;.k:(LJ2/c$a;)V // method@08d3
+514df2: 6e10 d108 0000                         |0015: invoke-virtual {v0}, LJ2/c;.i:()V // method@08d1
+514df8: 5467 666c                              |0018: iget-object v7, v6, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514dfc: 6e10 8b85 0700                         |001a: invoke-virtual {v7}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.K:()Lc2/A; // method@858b
+514e02: 0c07                                   |001d: move-result-object v7
+514e04: 1a01 3a90                              |001e: const-string v1, "str.wifi.camera.ssid" // string@903a
+514e08: 6e20 c94b 1700                         |0020: invoke-virtual {v7, v1}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+514e0e: 0c01                                   |0023: move-result-object v1
+514e10: 1a02 3990                              |0024: const-string v2, "str.wifi.camera.password" // string@9039
+514e14: 6e20 c94b 2700                         |0026: invoke-virtual {v7, v2}, Lc2/A;.i:(Ljava/lang/String;)Ljava/lang/String; // method@4bc9
+514e1a: 0c02                                   |0029: move-result-object v2
+514e1c: 1a03 3790                              |002a: const-string v3, "str.wifi.Security.Type" // string@9037
+514e20: 6e20 c44b 3700                         |002c: invoke-virtual {v7, v3}, Lc2/A;.d:(Ljava/lang/String;)I // method@4bc4
+514e26: 0a03                                   |002f: move-result v3
+514e28: 2204 7716                              |0030: new-instance v4, Lcom/omdigitalsolutions/oishare/f$a; // type@1677
+514e2c: 7010 3089 0400                         |0032: invoke-direct {v4}, Lcom/omdigitalsolutions/oishare/f$a;.<init>:()V // method@8930
+514e32: 7110 174c 0100                         |0035: invoke-static {v1}, Lc2/F;.T:(Ljava/lang/String;)Z // method@4c17
+514e38: 0a05                                   |0038: move-result v5
+514e3a: 3905 3500                              |0039: if-nez v5, 006e // +0035
+514e3e: 7110 174c 0200                         |003b: invoke-static {v2}, Lc2/F;.T:(Ljava/lang/String;)Z // method@4c17
+514e44: 0a05                                   |003e: move-result v5
+514e46: 3805 0b00                              |003f: if-eqz v5, 004a // +000b
+514e4a: 1a05 c67a                              |0041: const-string v5, "is.wifiManualConnect" // string@7ac6
+514e4e: 6e20 c24b 5700                         |0043: invoke-virtual {v7, v5}, Lc2/A;.b:(Ljava/lang/String;)Z // method@4bc2
+514e54: 0a07                                   |0046: move-result v7
+514e56: 3907 0300                              |0047: if-nez v7, 004a // +0003
+514e5a: 2825                                   |0049: goto 006e // +0025
+514e5c: 3801 0b00                              |004a: if-eqz v1, 0055 // +000b
+514e60: 6e10 00ba 0100                         |004c: invoke-virtual {v1}, Ljava/lang/String;.isEmpty:()Z // method@ba00
+514e66: 0a07                                   |004f: move-result v7
+514e68: 3907 0500                              |0050: if-nez v7, 0055 // +0005
+514e6c: 5b41 fa3a                              |0052: iput-object v1, v4, Lcom/omdigitalsolutions/oishare/f$a;.b:Ljava/lang/String; // field@3afa
+514e70: 280f                                   |0054: goto 0063 // +000f
+514e72: 5466 666c                              |0055: iget-object v6, v6, Lt2/a;.b:Lcom/omdigitalsolutions/oishare/OIShareApplication; // field@6c66
+514e76: 6e10 9785 0600                         |0057: invoke-virtual {v6}, Lcom/omdigitalsolutions/oishare/OIShareApplication;.Q:()LJ2/d; // method@8597
+514e7c: 0c06                                   |005a: move-result-object v6
+514e7e: 5247 ff3a                              |005b: iget v7, v4, Lcom/omdigitalsolutions/oishare/f$a;.g:I // field@3aff
+514e82: 6e20 0d09 7600                         |005d: invoke-virtual {v6, v7}, LJ2/d;.u:(I)Ljava/lang/String; // method@090d
+514e88: 0c06                                   |0060: move-result-object v6
+514e8a: 5b46 fa3a                              |0061: iput-object v6, v4, Lcom/omdigitalsolutions/oishare/f$a;.b:Ljava/lang/String; // field@3afa
+514e8e: 5b42 fe3a                              |0063: iput-object v2, v4, Lcom/omdigitalsolutions/oishare/f$a;.f:Ljava/lang/String; // field@3afe
+514e92: 5943 f93a                              |0065: iput v3, v4, Lcom/omdigitalsolutions/oishare/f$a;.a:I // field@3af9
+514e96: 12f6                                   |0067: const/4 v6, #int -1 // #ff
+514e98: 5946 ff3a                              |0068: iput v6, v4, Lcom/omdigitalsolutions/oishare/f$a;.g:I // field@3aff
+514e9c: 6e20 c908 4000                         |006a: invoke-virtual {v0, v4}, LJ2/c;.a:(Lcom/omdigitalsolutions/oishare/f$a;)V // method@08c9
+514ea2: 0e00                                   |006d: return-void
+514ea4: 6206 706c                              |006e: sget-object v6, Lt2/a;.l:Ljava/lang/String; // field@6c70
+514ea8: 2207 611f                              |0070: new-instance v7, Ljava/lang/StringBuilder; // type@1f61
+514eac: 7010 24ba 0700                         |0072: invoke-direct {v7}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+514eb2: 6e20 30ba 6700                         |0075: invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514eb8: 1a00 7f08                              |0078: const-string v0, ".checkConnectWifi カメラを覚えていない" // string@087f
+514ebc: 6e20 30ba 0700                         |007a: invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+514ec2: 6e10 3eba 0700                         |007d: invoke-virtual {v7}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+514ec8: 0c07                                   |0080: move-result-object v7
+514eca: 7120 484d 7600                         |0081: invoke-static {v6, v7}, Lc2/s;.b:(Ljava/lang/String;Ljava/lang/String;)V // method@4d48
+514ed0: 0e00                                   |0084: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 22463 (SourceFile)
+
+Class #5069            -

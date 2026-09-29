@@ -1,0 +1,65 @@
+# ============================================================
+#  om3 recipes tool —— 上传 GitHub 的忽略规则
+#  原则：**源码 + 文档 + 工具**进仓库；
+#        密钥 / 版权大文件 / 构建产物 / 个人数据 / 本地回退点 不进仓库。
+# ============================================================
+
+# --- ① 密钥：绝对不能公开（公开了别人就能给这个 App 签名）---
+apk/om3.jks
+*.jks
+*.keystore
+*.p12
+*.pem
+*.pk8
+
+# --- ② 版权 + 超大文件（官方 App 与它的反汇编）---
+om share.apk
+official_app/dis.txt
+official_app/classes.dex
+
+# --- ③ 构建产物（能重新生成）---
+apk/build/
+apk/assets/
+app/index.html
+*.apk
+*.idsig
+*.apks
+
+# --- ④ 本地回退点（每轮一份，共 85 份 × 2.7 MB；本地留着，不进仓库）---
+app/base.before_*.html
+apk/strings.before_*.xml
+apk/AndroidManifest.before_*.xml
+app/*.before_*.html
+
+# --- ⑤ 个人数据（真机日志里有相机 SSID / BSSID / MAC）---
+logs/
+新/
+review_sheets/
+
+# --- ⑥ 临时 / 残留 / 截图 ---
+__pycache__/
+*.pyc
+_probe_*.html
+_shot_*.png
+_*.png
+scripts/models/*.onnx
+40
+check_app
+dv_r33
+dv_r43
+recipe_wheel
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- ⑦ 编辑器 ---
+.vscode/
+.idea/
+*.swp
+
+# 额外：整份快照备份 / 模型
+app/base.bak.html
+app/*.bak.html
+scripts/models/

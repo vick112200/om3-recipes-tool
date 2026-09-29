@@ -1,0 +1,12 @@
+import psycopg2
+conn = psycopg2.connect(host="172.26.136.55", port=30491, user="lcp", password="lcp", dbname="lcp-dev")
+cur = conn.cursor()
+cur.execute("SELECT column_name FROM information_schema.columns WHERE table_name='notifications'")
+print("notifications cols:", [r[0] for r in cur.fetchall()])
+cur.execute("SELECT column_name FROM information_schema.columns WHERE table_name='notification_outbox'")
+print("outbox cols:", [r[0] for r in cur.fetchall()])
+cur.execute("SELECT kind, count(*) FROM notifications GROUP BY kind ORDER BY kind")
+print("notifications by kind:", cur.fetchall())
+cur.execute("SELECT kind,status,count(*) FROM notification_outbox GROUP BY kind,status ORDER BY kind")
+print("outbox by kind:", cur.fetchall())
+conn.close()

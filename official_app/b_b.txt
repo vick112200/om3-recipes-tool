@@ -1,0 +1,345 @@
+===== CLASS LM2/b$b; =====
+  Access flags      : 0x0000 ()
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+    #0              : 'Ljava/util/concurrent/Callable;'
+  Static fields     -
+  Instance fields   -
+    #0              : (in LM2/b$b;)
+      name          : 'a'
+      type          : 'I'
+      access        : 0x0002 (PRIVATE)
+    #1              : (in LM2/b$b;)
+      name          : 'b'
+      type          : 'I'
+      access        : 0x0002 (PRIVATE)
+    #2              : (in LM2/b$b;)
+      name          : 'c'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0002 (PRIVATE)
+    #3              : (in LM2/b$b;)
+      name          : 'd'
+      type          : 'I'
+      access        : 0x0002 (PRIVATE)
+    #4              : (in LM2/b$b;)
+      name          : 'e'
+      type          : '[B'
+      access        : 0x0002 (PRIVATE)
+    #5              : (in LM2/b$b;)
+      name          : 'f'
+      type          : 'LM2/b;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+  Direct methods    -
+    #0              : (in LM2/b$b;)
+      name          : '<init>'
+      type          : '(LM2/b;III)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 5
+      outs          : 1
+      insns size    : 17 16-bit code units
+16e968:                                        |[16e968] M2.b$b.<init>:(LM2/b;III)V
+16e978: 5b01 3c07                              |0000: iput-object v1, v0, LM2/b$b;.f:LM2/b; // field@073c
+16e97c: 7010 c1b9 0000                         |0002: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@b9c1
+16e982: 1201                                   |0005: const/4 v1, #int 0 // #0
+16e984: 5b01 3907                              |0006: iput-object v1, v0, LM2/b$b;.c:Ljava/lang/String; // field@0739
+16e988: 5b01 3b07                              |0008: iput-object v1, v0, LM2/b$b;.e:[B // field@073b
+16e98c: 5902 3707                              |000a: iput v2, v0, LM2/b$b;.a:I // field@0737
+16e990: 5903 3a07                              |000c: iput v3, v0, LM2/b$b;.d:I // field@073a
+16e994: 5904 3807                              |000e: iput v4, v0, LM2/b$b;.b:I // field@0738
+16e998: 0e00                                   |0010: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=7
+        0x0006 line=8
+        0x0008 line=9
+        0x000a line=10
+        0x000c line=11
+        0x000e line=12
+      locals        :
+        0x0000 - 0x0011 reg=0 this LM2/b$b;
+        0x0000 - 0x0011 reg=1 (null) LM2/b;
+        0x0000 - 0x0011 reg=2 (null) I
+        0x0000 - 0x0011 reg=3 (null) I
+        0x0000 - 0x0011 reg=4 (null) I
+
+    #1              : (in LM2/b$b;)
+      name          : '<init>'
+      type          : '(LM2/b;ILjava/lang/String;I)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 5
+      outs          : 1
+      insns size    : 18 16-bit code units
+16e99c:                                        |[16e99c] M2.b$b.<init>:(LM2/b;ILjava/lang/String;I)V
+16e9ac: 5b01 3c07                              |0000: iput-object v1, v0, LM2/b$b;.f:LM2/b; // field@073c
+16e9b0: 7010 c1b9 0000                         |0002: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@b9c1
+16e9b6: 1201                                   |0005: const/4 v1, #int 0 // #0
+16e9b8: 5901 3a07                              |0006: iput v1, v0, LM2/b$b;.d:I // field@073a
+16e9bc: 1201                                   |0008: const/4 v1, #int 0 // #0
+16e9be: 5b01 3b07                              |0009: iput-object v1, v0, LM2/b$b;.e:[B // field@073b
+16e9c2: 5902 3707                              |000b: iput v2, v0, LM2/b$b;.a:I // field@0737
+16e9c6: 5b03 3907                              |000d: iput-object v3, v0, LM2/b$b;.c:Ljava/lang/String; // field@0739
+16e9ca: 5904 3807                              |000f: iput v4, v0, LM2/b$b;.b:I // field@0738
+16e9ce: 0e00                                   |0011: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=1
+        0x0006 line=2
+        0x0009 line=3
+        0x000b line=4
+        0x000d line=5
+        0x000f line=6
+      locals        :
+        0x0000 - 0x0012 reg=0 this LM2/b$b;
+        0x0000 - 0x0012 reg=1 (null) LM2/b;
+        0x0000 - 0x0012 reg=2 (null) I
+        0x0000 - 0x0012 reg=3 (null) Ljava/lang/String;
+        0x0000 - 0x0012 reg=4 (null) I
+
+    #2              : (in LM2/b$b;)
+      name          : '<init>'
+      type          : '(LM2/b;I[BI)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 5
+      outs          : 1
+      insns size    : 18 16-bit code units
+16e934:                                        |[16e934] M2.b$b.<init>:(LM2/b;I[BI)V
+16e944: 5b01 3c07                              |0000: iput-object v1, v0, LM2/b$b;.f:LM2/b; // field@073c
+16e948: 7010 c1b9 0000                         |0002: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@b9c1
+16e94e: 1201                                   |0005: const/4 v1, #int 0 // #0
+16e950: 5b01 3907                              |0006: iput-object v1, v0, LM2/b$b;.c:Ljava/lang/String; // field@0739
+16e954: 1201                                   |0008: const/4 v1, #int 0 // #0
+16e956: 5901 3a07                              |0009: iput v1, v0, LM2/b$b;.d:I // field@073a
+16e95a: 5902 3707                              |000b: iput v2, v0, LM2/b$b;.a:I // field@0737
+16e95e: 5b03 3b07                              |000d: iput-object v3, v0, LM2/b$b;.e:[B // field@073b
+16e962: 5904 3807                              |000f: iput v4, v0, LM2/b$b;.b:I // field@0738
+16e966: 0e00                                   |0011: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=13
+        0x0006 line=14
+        0x0009 line=15
+        0x000b line=16
+        0x000d line=17
+        0x000f line=18
+      locals        :
+        0x0000 - 0x0012 reg=0 this LM2/b$b;
+        0x0000 - 0x0012 reg=1 (null) LM2/b;
+        0x0000 - 0x0012 reg=2 (null) I
+        0x0000 - 0x0012 reg=3 (null) [B
+        0x0000 - 0x0012 reg=4 (null) I
+
+    #3              : (in LM2/b$b;)
+      name          : 'b'
+      type          : '(I)V'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 2
+      insns size    : 28 16-bit code units
+16e9d0:                                        |[16e9d0] M2.b$b.b:(I)V
+16e9e0: 1200                                   |0000: const/4 v0, #int 0 // #0
+16e9e2: db01 040a                              |0001: div-int/lit8 v1, v4, #int 10 // #0a
+16e9e6: 3510 1800                              |0003: if-ge v0, v1, 001b // +0018
+16e9ea: 5431 3c07                              |0005: iget-object v1, v3, LM2/b$b;.f:LM2/b; // field@073c
+16e9ee: 7110 050b 0100                         |0007: invoke-static {v1}, LM2/b;.e:(LM2/b;)Z // method@0b05
+16e9f4: 0a01                                   |000a: move-result v1
+16e9f6: 3801 0300                              |000b: if-eqz v1, 000e // +0003
+16e9fa: 280e                                   |000d: goto 001b // +000e
+16e9fc: 1601 0a00                              |000e: const-wide/16 v1, #int 10 // #a
+16ea00: 7120 61ba 2100                         |0010: invoke-static {v1, v2}, Ljava/lang/Thread;.sleep:(J)V // method@ba61
+16ea06: 2805                                   |0013: goto 0018 // +0005
+16ea08: 0d01                                   |0014: move-exception v1
+16ea0a: 6e10 76ba 0100                         |0015: invoke-virtual {v1}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ea10: d800 0001                              |0018: add-int/lit8 v0, v0, #int 1 // #01
+16ea14: 28e7                                   |001a: goto 0001 // -0019
+16ea16: 0e00                                   |001b: return-void
+      catches       : 1
+        0x0010 - 0x0013
+          Ljava/lang/InterruptedException; -> 0x0014
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in LM2/b$b;)
+      name          : 'a'
+      type          : '()Ljava/lang/Integer;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 1
+      outs          : 4
+      insns size    : 284 16-bit code units
+16e6d0:                                        |[16e6d0] M2.b$b.a:()Ljava/lang/Integer;
+16e6e0: 12f0                                   |0000: const/4 v0, #int -1 // #ff
+16e6e2: 7110 78b9 0000                         |0001: invoke-static {v0}, Ljava/lang/Integer;.valueOf:(I)Ljava/lang/Integer; // method@b978
+16e6e8: 0c00                                   |0004: move-result-object v0
+16e6ea: 5251 3707                              |0005: iget v1, v5, LM2/b$b;.a:I // field@0737
+16e6ee: 1302 0f04                              |0007: const/16 v2, #int 1039 // #40f
+16e6f2: 1203                                   |0009: const/4 v3, #int 0 // #0
+16e6f4: 3221 a500                              |000a: if-eq v1, v2, 00af // +00a5
+16e6f8: 1302 1004                              |000c: const/16 v2, #int 1040 // #410
+16e6fc: 3221 9600                              |000e: if-eq v1, v2, 00a4 // +0096
+16e700: 1302 020c                              |0010: const/16 v2, #int 3074 // #c02
+16e704: 3221 8900                              |0012: if-eq v1, v2, 009b // +0089
+16e708: 1302 010f                              |0014: const/16 v2, #int 3841 // #f01
+16e70c: 3221 7c00                              |0016: if-eq v1, v2, 0092 // +007c
+16e710: 1302 011d                              |0018: const/16 v2, #int 7425 // #1d01
+16e714: 3221 6d00                              |001a: if-eq v1, v2, 0087 // +006d
+16e718: 1302 016a                              |001c: const/16 v2, #int 27137 // #6a01
+16e71c: 3221 5e00                              |001e: if-eq v1, v2, 007c // +005e
+16e720: 1302 016b                              |0020: const/16 v2, #int 27393 // #6b01
+16e724: 3221 4f00                              |0022: if-eq v1, v2, 0071 // +004f
+16e728: 2b01 e400 0000                         |0024: packed-switch v1, 00000108 // +000000e4
+16e72e: 2b01 eb00 0000                         |0027: packed-switch v1, 00000112 // +000000eb
+16e734: 1201                                   |002a: const/4 v1, #int 0 // #0
+16e736: 2900 8e00                              |002b: goto/16 00b9 // +008e
+16e73a: 5451 3c07                              |002d: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e73e: 5452 3b07                              |002f: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e742: 5254 3807                              |0031: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e746: 6e40 f80a 2134                         |0033: invoke-virtual {v1, v2, v4, v3}, LM2/b;.H:([BILM2/b$c;)Z // method@0af8
+16e74c: 0a01                                   |0036: move-result v1
+16e74e: 2900 8200                              |0037: goto/16 00b9 // +0082
+16e752: 5451 3c07                              |0039: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e756: 5452 3b07                              |003b: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e75a: 5254 3807                              |003d: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e75e: 6e40 f90a 2134                         |003f: invoke-virtual {v1, v2, v4, v3}, LM2/b;.I:([BILM2/b$c;)Z // method@0af9
+16e764: 0a01                                   |0042: move-result v1
+16e766: 2900 7600                              |0043: goto/16 00b9 // +0076
+16e76a: 5451 3c07                              |0045: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e76e: 5452 3b07                              |0047: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e772: 5254 3807                              |0049: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e776: 6e40 fb0a 2134                         |004b: invoke-virtual {v1, v2, v4, v3}, LM2/b;.K:([BILM2/b$c;)Z // method@0afb
+16e77c: 0a01                                   |004e: move-result v1
+16e77e: 286a                                   |004f: goto 00b9 // +006a
+16e780: 5451 3c07                              |0050: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e784: 5452 3b07                              |0052: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e788: 5254 3807                              |0054: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e78c: 6e40 f20a 2134                         |0056: invoke-virtual {v1, v2, v4, v3}, LM2/b;.B:([BILM2/b$c;)Z // method@0af2
+16e792: 0a01                                   |0059: move-result v1
+16e794: 285f                                   |005a: goto 00b9 // +005f
+16e796: 5451 3c07                              |005b: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e79a: 5452 3b07                              |005d: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e79e: 5254 3807                              |005f: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e7a2: 6e40 f30a 2134                         |0061: invoke-virtual {v1, v2, v4, v3}, LM2/b;.C:([BILM2/b$c;)Z // method@0af3
+16e7a8: 0a01                                   |0064: move-result v1
+16e7aa: 2854                                   |0065: goto 00b9 // +0054
+16e7ac: 5451 3c07                              |0066: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e7b0: 5452 3b07                              |0068: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e7b4: 5254 3807                              |006a: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e7b8: 6e40 f40a 2134                         |006c: invoke-virtual {v1, v2, v4, v3}, LM2/b;.D:([BILM2/b$c;)Z // method@0af4
+16e7be: 0a01                                   |006f: move-result v1
+16e7c0: 2849                                   |0070: goto 00b9 // +0049
+16e7c2: 5451 3c07                              |0071: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e7c6: 5452 3b07                              |0073: iget-object v2, v5, LM2/b$b;.e:[B // field@073b
+16e7ca: 5254 3807                              |0075: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e7ce: 6e40 f70a 2134                         |0077: invoke-virtual {v1, v2, v4, v3}, LM2/b;.G:([BILM2/b$c;)Z // method@0af7
+16e7d4: 0a01                                   |007a: move-result v1
+16e7d6: 283e                                   |007b: goto 00b9 // +003e
+16e7d8: 5451 3c07                              |007c: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e7dc: 5252 3a07                              |007e: iget v2, v5, LM2/b$b;.d:I // field@073a
+16e7e0: 5254 3807                              |0080: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e7e4: 6e40 f50a 2134                         |0082: invoke-virtual {v1, v2, v4, v3}, LM2/b;.E:(IILM2/b$c;)Z // method@0af5
+16e7ea: 0a01                                   |0085: move-result v1
+16e7ec: 2833                                   |0086: goto 00b9 // +0033
+16e7ee: 5451 3c07                              |0087: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e7f2: 5252 3a07                              |0089: iget v2, v5, LM2/b$b;.d:I // field@073a
+16e7f6: 5254 3807                              |008b: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e7fa: 6e40 fc0a 2134                         |008d: invoke-virtual {v1, v2, v4, v3}, LM2/b;.L:(IILM2/b$c;)Z // method@0afc
+16e800: 0a01                                   |0090: move-result v1
+16e802: 2828                                   |0091: goto 00b9 // +0028
+16e804: 5451 3c07                              |0092: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e808: 5252 3807                              |0094: iget v2, v5, LM2/b$b;.b:I // field@0738
+16e80c: 6e30 180b 2103                         |0096: invoke-virtual {v1, v2, v3}, LM2/b;.x:(ILM2/b$c;)Z // method@0b18
+16e812: 0a01                                   |0099: move-result v1
+16e814: 281f                                   |009a: goto 00b9 // +001f
+16e816: 5451 3c07                              |009b: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e81a: 5452 3907                              |009d: iget-object v2, v5, LM2/b$b;.c:Ljava/lang/String; // field@0739
+16e81e: 6e30 090b 2103                         |009f: invoke-virtual {v1, v2, v3}, LM2/b;.i:(Ljava/lang/String;LM2/b$c;)Z // method@0b09
+16e824: 0a01                                   |00a2: move-result v1
+16e826: 2816                                   |00a3: goto 00b9 // +0016
+16e828: 5451 3c07                              |00a4: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e82c: 5252 3a07                              |00a6: iget v2, v5, LM2/b$b;.d:I // field@073a
+16e830: 5254 3807                              |00a8: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e834: 6e40 160b 2134                         |00aa: invoke-virtual {v1, v2, v4, v3}, LM2/b;.v:(IILM2/b$c;)Z // method@0b16
+16e83a: 0a01                                   |00ad: move-result v1
+16e83c: 280b                                   |00ae: goto 00b9 // +000b
+16e83e: 5451 3c07                              |00af: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e842: 5252 3a07                              |00b1: iget v2, v5, LM2/b$b;.d:I // field@073a
+16e846: 5254 3807                              |00b3: iget v4, v5, LM2/b$b;.b:I // field@0738
+16e84a: 6e40 1a0b 2134                         |00b5: invoke-virtual {v1, v2, v4, v3}, LM2/b;.z:(IILM2/b$c;)Z // method@0b1a
+16e850: 0a01                                   |00b8: move-result v1
+16e852: 3801 0700                              |00b9: if-eqz v1, 00c0 // +0007
+16e856: 5251 3807                              |00bb: iget v1, v5, LM2/b$b;.b:I // field@0738
+16e85a: 7020 e70a 1500                         |00bd: invoke-direct {v5, v1}, LM2/b$b;.b:(I)V // method@0ae7
+16e860: 5451 3c07                              |00c0: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e864: 7110 070b 0100                         |00c2: invoke-static {v1}, LM2/b;.g:(LM2/b;)I // method@0b07
+16e86a: 0a01                                   |00c5: move-result v1
+16e86c: 3801 0d00                              |00c6: if-eqz v1, 00d3 // +000d
+16e870: 5455 3c07                              |00c8: iget-object v5, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e874: 7110 070b 0500                         |00ca: invoke-static {v5}, LM2/b;.g:(LM2/b;)I // method@0b07
+16e87a: 0a05                                   |00cd: move-result v5
+16e87c: 7110 78b9 0500                         |00ce: invoke-static {v5}, Ljava/lang/Integer;.valueOf:(I)Ljava/lang/Integer; // method@b978
+16e882: 0c00                                   |00d1: move-result-object v0
+16e884: 2834                                   |00d2: goto 0106 // +0034
+16e886: 5451 3c07                              |00d3: iget-object v1, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e88a: 7110 030b 0100                         |00d5: invoke-static {v1}, LM2/b;.c:(LM2/b;)[B // method@0b03
+16e890: 0c01                                   |00d8: move-result-object v1
+16e892: 3801 2d00                              |00d9: if-eqz v1, 0106 // +002d
+16e896: 5251 3707                              |00db: iget v1, v5, LM2/b$b;.a:I // field@0737
+16e89a: e101 0108                              |00dd: shr-int/lit8 v1, v1, #int 8 // #08
+16e89e: 5452 3c07                              |00df: iget-object v2, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e8a2: 7110 030b 0200                         |00e1: invoke-static {v2}, LM2/b;.c:(LM2/b;)[B // method@0b03
+16e8a8: 0c02                                   |00e4: move-result-object v2
+16e8aa: 1233                                   |00e5: const/4 v3, #int 3 // #3
+16e8ac: 4802 0203                              |00e6: aget-byte v2, v2, v3
+16e8b0: 3321 1e00                              |00e8: if-ne v1, v2, 0106 // +001e
+16e8b4: 5251 3707                              |00ea: iget v1, v5, LM2/b$b;.a:I // field@0737
+16e8b8: d511 ff00                              |00ec: and-int/lit16 v1, v1, #int 255 // #00ff
+16e8bc: 5452 3c07                              |00ee: iget-object v2, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e8c0: 7110 030b 0200                         |00f0: invoke-static {v2}, LM2/b;.c:(LM2/b;)[B // method@0b03
+16e8c6: 0c02                                   |00f3: move-result-object v2
+16e8c8: 1253                                   |00f4: const/4 v3, #int 5 // #5
+16e8ca: 4802 0203                              |00f5: aget-byte v2, v2, v3
+16e8ce: 3321 0f00                              |00f7: if-ne v1, v2, 0106 // +000f
+16e8d2: 5455 3c07                              |00f9: iget-object v5, v5, LM2/b$b;.f:LM2/b; // field@073c
+16e8d6: 7110 030b 0500                         |00fb: invoke-static {v5}, LM2/b;.c:(LM2/b;)[B // method@0b03
+16e8dc: 0c05                                   |00fe: move-result-object v5
+16e8de: 1260                                   |00ff: const/4 v0, #int 6 // #6
+16e8e0: 4805 0500                              |0100: aget-byte v5, v5, v0
+16e8e4: 7110 78b9 0500                         |0102: invoke-static {v5}, Ljava/lang/Integer;.valueOf:(I)Ljava/lang/Integer; // method@b978
+16e8ea: 0c00                                   |0105: move-result-object v0
+16e8ec: 1100                                   |0106: return-object v0
+16e8ee: 0000                                   |0107: nop // spacer
+16e8f0: 0001 0300 0168 0000 4200 0000 3700 ... |0108: packed-switch-data (10 units)
+16e904: 0001 0300 0169 0000 1e00 0000 1200 ... |0112: packed-switch-data (10 units)
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in LM2/b$b;)
+      name          : 'call'
+      type          : '()Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 5 16-bit code units
+16e918:                                        |[16e918] M2.b$b.call:()Ljava/lang/Object;
+16e928: 6e10 e60a 0000                         |0000: invoke-virtual {v0}, LM2/b$b;.a:()Ljava/lang/Integer; // method@0ae6
+16e92e: 0c00                                   |0003: move-result-object v0
+16e930: 1100                                   |0004: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 22463 (SourceFile)
+
+Class #346            -

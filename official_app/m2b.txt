@@ -1,0 +1,1565 @@
+===== CLASS LM2/b; =====
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+    #0              : (in LM2/b;)
+      name          : 'a'
+      type          : 'LN2/a;'
+      access        : 0x0002 (PRIVATE)
+    #1              : (in LM2/b;)
+      name          : 'b'
+      type          : 'Landroid/content/Context;'
+      access        : 0x0002 (PRIVATE)
+    #2              : (in LM2/b;)
+      name          : 'c'
+      type          : 'LM2/b$d;'
+      access        : 0x0002 (PRIVATE)
+    #3              : (in LM2/b;)
+      name          : 'd'
+      type          : 'B'
+      access        : 0x0002 (PRIVATE)
+    #4              : (in LM2/b;)
+      name          : 'e'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #5              : (in LM2/b;)
+      name          : 'f'
+      type          : 'Ljava/lang/Object;'
+      access        : 0x0002 (PRIVATE)
+    #6              : (in LM2/b;)
+      name          : 'g'
+      type          : '[B'
+      access        : 0x0002 (PRIVATE)
+    #7              : (in LM2/b;)
+      name          : 'h'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #8              : (in LM2/b;)
+      name          : 'i'
+      type          : 'I'
+      access        : 0x0002 (PRIVATE)
+    #9              : (in LM2/b;)
+      name          : 'j'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #10              : (in LM2/b;)
+      name          : 'k'
+      type          : 'LM2/d;'
+      access        : 0x0002 (PRIVATE)
+    #11              : (in LM2/b;)
+      name          : 'l'
+      type          : 'LM2/d;'
+      access        : 0x0002 (PRIVATE)
+    #12              : (in LM2/b;)
+      name          : 'm'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #13              : (in LM2/b;)
+      name          : 'n'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #14              : (in LM2/b;)
+      name          : 'o'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #15              : (in LM2/b;)
+      name          : 'p'
+      type          : 'LM2/b$d;'
+      access        : 0x0002 (PRIVATE)
+    #16              : (in LM2/b;)
+      name          : 'q'
+      type          : 'Z'
+      access        : 0x0002 (PRIVATE)
+    #17              : (in LM2/b;)
+      name          : 'r'
+      type          : 'LN2/a$f;'
+      access        : 0x0002 (PRIVATE)
+  Direct methods    -
+    #0              : (in LM2/b;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+16f8ec:                                        |[16f8ec] M2.b.<clinit>:()V
+16f8fc: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in LM2/b;)
+      name          : '<init>'
+      type          : '(Landroid/content/Context;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 6
+      ins           : 2
+      outs          : 2
+      insns size    : 55 16-bit code units
+16f900:                                        |[16f900] M2.b.<init>:(Landroid/content/Context;)V
+16f910: 7010 c1b9 0400                         |0000: invoke-direct {v4}, Ljava/lang/Object;.<init>:()V // method@b9c1
+16f916: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f918: 5b40 3d07                              |0004: iput-object v0, v4, LM2/b;.a:LN2/a; // field@073d
+16f91c: 5b40 3e07                              |0006: iput-object v0, v4, LM2/b;.b:Landroid/content/Context; // field@073e
+16f920: 5b40 3f07                              |0008: iput-object v0, v4, LM2/b;.c:LM2/b$d; // field@073f
+16f924: 1211                                   |000a: const/4 v1, #int 1 // #1
+16f926: 5d41 4007                              |000b: iput-byte v1, v4, LM2/b;.d:B // field@0740
+16f92a: 1202                                   |000d: const/4 v2, #int 0 // #0
+16f92c: 5c42 4107                              |000e: iput-boolean v2, v4, LM2/b;.e:Z // field@0741
+16f930: 2203 551f                              |0010: new-instance v3, Ljava/lang/Object; // type@1f55
+16f934: 7010 c1b9 0300                         |0012: invoke-direct {v3}, Ljava/lang/Object;.<init>:()V // method@b9c1
+16f93a: 5b43 4207                              |0015: iput-object v3, v4, LM2/b;.f:Ljava/lang/Object; // field@0742
+16f93e: 5b40 4307                              |0017: iput-object v0, v4, LM2/b;.g:[B // field@0743
+16f942: 5c41 4407                              |0019: iput-boolean v1, v4, LM2/b;.h:Z // field@0744
+16f946: 5942 4507                              |001b: iput v2, v4, LM2/b;.i:I // field@0745
+16f94a: 5c42 4607                              |001d: iput-boolean v2, v4, LM2/b;.j:Z // field@0746
+16f94e: 5b40 4707                              |001f: iput-object v0, v4, LM2/b;.k:LM2/d; // field@0747
+16f952: 5b40 4807                              |0021: iput-object v0, v4, LM2/b;.l:LM2/d; // field@0748
+16f956: 5c42 4907                              |0023: iput-boolean v2, v4, LM2/b;.m:Z // field@0749
+16f95a: 5c42 4a07                              |0025: iput-boolean v2, v4, LM2/b;.n:Z // field@074a
+16f95e: 5c42 4b07                              |0027: iput-boolean v2, v4, LM2/b;.o:Z // field@074b
+16f962: 5b40 4c07                              |0029: iput-object v0, v4, LM2/b;.p:LM2/b$d; // field@074c
+16f966: 5c42 4d07                              |002b: iput-boolean v2, v4, LM2/b;.q:Z // field@074d
+16f96a: 2200 1502                              |002d: new-instance v0, LM2/b$a; // type@0215
+16f96e: 7020 d90a 4000                         |002f: invoke-direct {v0, v4}, LM2/b$a;.<init>:(LM2/b;)V // method@0ad9
+16f974: 5b40 4e07                              |0032: iput-object v0, v4, LM2/b;.r:LN2/a$f; // field@074e
+16f978: 5b45 3e07                              |0034: iput-object v5, v4, LM2/b;.b:Landroid/content/Context; // field@073e
+16f97c: 0e00                                   |0036: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in LM2/b;)
+      name          : 'a'
+      type          : '(LM2/b;)LM2/b$d;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16ea5c:                                        |[16ea5c] M2.b.a:(LM2/b;)LM2/b$d;
+16ea6c: 5400 3f07                              |0000: iget-object v0, v0, LM2/b;.c:LM2/b$d; // field@073f
+16ea70: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in LM2/b;)
+      name          : 'b'
+      type          : '(LM2/b;)LM2/b$c;'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 5 16-bit code units
+16ea40:                                        |[16ea40] M2.b.b:(LM2/b;)LM2/b$c;
+16ea50: 6e10 c5b9 0000                         |0000: invoke-virtual {v0}, Ljava/lang/Object;.getClass:()Ljava/lang/Class; // method@b9c5
+16ea56: 1200                                   |0003: const/4 v0, #int 0 // #0
+16ea58: 1100                                   |0004: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in LM2/b;)
+      name          : 'c'
+      type          : '(LM2/b;)[B'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16f04c:                                        |[16f04c] M2.b.c:(LM2/b;)[B
+16f05c: 5400 4307                              |0000: iget-object v0, v0, LM2/b;.g:[B // field@0743
+16f060: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in LM2/b;)
+      name          : 'd'
+      type          : '(LM2/b;[B)[B'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 0
+      insns size    : 3 16-bit code units
+16f064:                                        |[16f064] M2.b.d:(LM2/b;[B)[B
+16f074: 5b01 4307                              |0000: iput-object v1, v0, LM2/b;.g:[B // field@0743
+16f078: 1101                                   |0002: return-object v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in LM2/b;)
+      name          : 'e'
+      type          : '(LM2/b;)Z'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16ea74:                                        |[16ea74] M2.b.e:(LM2/b;)Z
+16ea84: 5500 4407                              |0000: iget-boolean v0, v0, LM2/b;.h:Z // field@0744
+16ea88: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #7              : (in LM2/b;)
+      name          : 'f'
+      type          : '(LM2/b;Z)Z'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 0
+      insns size    : 3 16-bit code units
+16ea8c:                                        |[16ea8c] M2.b.f:(LM2/b;Z)Z
+16ea9c: 5c01 4407                              |0000: iput-boolean v1, v0, LM2/b;.h:Z // field@0744
+16eaa0: 0f01                                   |0002: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #8              : (in LM2/b;)
+      name          : 'g'
+      type          : '(LM2/b;)I'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16f114:                                        |[16f114] M2.b.g:(LM2/b;)I
+16f124: 5200 4507                              |0000: iget v0, v0, LM2/b;.i:I // field@0745
+16f128: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #9              : (in LM2/b;)
+      name          : 'h'
+      type          : '(LM2/b;I)I'
+      access        : 0x1008 (STATIC SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 0
+      insns size    : 3 16-bit code units
+16f12c:                                        |[16f12c] M2.b.h:(LM2/b;I)I
+16f13c: 5901 4507                              |0000: iput v1, v0, LM2/b;.i:I // field@0745
+16f140: 0f01                                   |0002: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #10              : (in LM2/b;)
+      name          : 'k'
+      type          : '([B)Ljava/lang/String;'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 3
+      insns size    : 46 16-bit code units
+16f880:                                        |[16f880] M2.b.k:([B)Ljava/lang/String;
+16f890: 1a05 0000                              |0000: const-string v5, "" // string@0000
+16f894: 3906 0300                              |0002: if-nez v6, 0005 // +0003
+16f898: 1105                                   |0004: return-object v5
+16f89a: 2160                                   |0005: array-length v0, v6
+16f89c: 1201                                   |0006: const/4 v1, #int 0 // #0
+16f89e: 3501 2600                              |0007: if-ge v1, v0, 002d // +0026
+16f8a2: 4802 0601                              |0009: aget-byte v2, v6, v1
+16f8a6: 2203 611f                              |000b: new-instance v3, Ljava/lang/StringBuilder; // type@1f61
+16f8aa: 7010 24ba 0300                         |000d: invoke-direct {v3}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f8b0: 6e20 30ba 5300                         |0010: invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f8b6: 6205 5552                              |0013: sget-object v5, Ljava/util/Locale;.US:Ljava/util/Locale; // field@5255
+16f8ba: 7110 e3b8 0200                         |0015: invoke-static {v2}, Ljava/lang/Byte;.valueOf:(B)Ljava/lang/Byte; // method@b8e3
+16f8c0: 0c02                                   |0018: move-result-object v2
+16f8c2: 2410 e325 0200                         |0019: filled-new-array {v2}, [Ljava/lang/Object; // type@25e3
+16f8c8: 0c02                                   |001c: move-result-object v2
+16f8ca: 1a04 4605                              |001d: const-string v4, "%02x " // string@0546
+16f8ce: 7130 f6b9 4502                         |001f: invoke-static {v5, v4, v2}, Ljava/lang/String;.format:(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String; // method@b9f6
+16f8d4: 0c05                                   |0022: move-result-object v5
+16f8d6: 6e20 30ba 5300                         |0023: invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f8dc: 6e10 3eba 0300                         |0026: invoke-virtual {v3}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f8e2: 0c05                                   |0029: move-result-object v5
+16f8e4: d801 0101                              |002a: add-int/lit8 v1, v1, #int 1 // #01
+16f8e8: 28db                                   |002c: goto 0007 // -0025
+16f8ea: 1105                                   |002d: return-object v5
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #11              : (in LM2/b;)
+      name          : 's'
+      type          : '(Landroid/content/Context;)Z'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 2
+      insns size    : 13 16-bit code units
+16eb94:                                        |[16eb94] M2.b.s:(Landroid/content/Context;)Z
+16eba4: 1a00 567d                              |0000: const-string v0, "location" // string@7d56
+16eba8: 6e20 6516 0100                         |0002: invoke-virtual {v1, v0}, Landroid/content/Context;.getSystemService:(Ljava/lang/String;)Ljava/lang/Object; // method@1665
+16ebae: 0c01                                   |0005: move-result-object v1
+16ebb0: 1f01 e904                              |0006: check-cast v1, Landroid/location/LocationManager; // type@04e9
+16ebb4: 6e10 b719 0100                         |0008: invoke-virtual {v1}, Landroid/location/LocationManager;.isLocationEnabled:()Z // method@19b7
+16ebba: 0a01                                   |000b: move-result v1
+16ebbc: 0f01                                   |000c: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #12              : (in LM2/b;)
+      name          : 'u'
+      type          : '(II[B)[B'
+      access        : 0x0002 (PRIVATE)
+      code          -
+      registers     : 10
+      ins           : 4
+      outs          : 0
+      insns size    : 67 16-bit code units
+16f07c:                                        |[16f07c] M2.b.u:(II[B)[B
+16f08c: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f08e: 3909 0400                              |0001: if-nez v9, 0005 // +0004
+16f092: 0101                                   |0003: move v1, v0
+16f094: 2802                                   |0004: goto 0006 // +0002
+16f096: 2191                                   |0005: array-length v1, v9
+16f098: 8d11                                   |0006: int-to-byte v1, v1
+16f09a: d802 0108                              |0007: add-int/lit8 v2, v1, #int 8 // #08
+16f09e: 2322 c224                              |0009: new-array v2, v2, [B // type@24c2
+16f0a2: 1213                                   |000b: const/4 v3, #int 1 // #1
+16f0a4: 4f03 0200                              |000c: aput-byte v3, v2, v0
+16f0a8: 5664 4007                              |000e: iget-byte v4, v6, LM2/b;.d:B // field@0740
+16f0ac: d805 0401                              |0010: add-int/lit8 v5, v4, #int 1 // #01
+16f0b0: 8d55                                   |0012: int-to-byte v5, v5
+16f0b2: 5d65 4007                              |0013: iput-byte v5, v6, LM2/b;.d:B // field@0740
+16f0b6: 4f04 0203                              |0015: aput-byte v4, v2, v3
+16f0ba: d806 0103                              |0017: add-int/lit8 v6, v1, #int 3 // #03
+16f0be: 8d66                                   |0019: int-to-byte v6, v6
+16f0c0: 1224                                   |001a: const/4 v4, #int 2 // #2
+16f0c2: 4f06 0204                              |001b: aput-byte v6, v2, v4
+16f0c6: 8d76                                   |001d: int-to-byte v6, v7
+16f0c8: 1234                                   |001e: const/4 v4, #int 3 // #3
+16f0ca: 4f06 0204                              |001f: aput-byte v6, v2, v4
+16f0ce: 1246                                   |0021: const/4 v6, #int 4 // #4
+16f0d0: 4f03 0206                              |0022: aput-byte v3, v2, v6
+16f0d4: b037                                   |0024: add-int/2addr v7, v3
+16f0d6: 8d86                                   |0025: int-to-byte v6, v8
+16f0d8: 1253                                   |0026: const/4 v3, #int 5 // #5
+16f0da: 4f06 0203                              |0027: aput-byte v6, v2, v3
+16f0de: b087                                   |0029: add-int/2addr v7, v8
+16f0e0: 1266                                   |002a: const/4 v6, #int 6 // #6
+16f0e2: 0108                                   |002b: move v8, v0
+16f0e4: 3518 0d00                              |002c: if-ge v8, v1, 0039 // +000d
+16f0e8: 4803 0908                              |002e: aget-byte v3, v9, v8
+16f0ec: d804 0601                              |0030: add-int/lit8 v4, v6, #int 1 // #01
+16f0f0: 4f03 0206                              |0032: aput-byte v3, v2, v6
+16f0f4: b037                                   |0034: add-int/2addr v7, v3
+16f0f6: d808 0801                              |0035: add-int/lit8 v8, v8, #int 1 // #01
+16f0fa: 0146                                   |0037: move v6, v4
+16f0fc: 28f4                                   |0038: goto 002c // -000c
+16f0fe: d808 0601                              |0039: add-int/lit8 v8, v6, #int 1 // #01
+16f102: d577 ff00                              |003b: and-int/lit16 v7, v7, #int 255 // #00ff
+16f106: 8d77                                   |003d: int-to-byte v7, v7
+16f108: 4f07 0206                              |003e: aput-byte v7, v2, v6
+16f10c: 4f00 0208                              |0040: aput-byte v0, v2, v8
+16f110: 1102                                   |0042: return-object v2
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in LM2/b;)
+      name          : 'A'
+      type          : '(II)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 5
+      insns size    : 104 16-bit code units
+16f4f0:                                        |[16f4f0] M2.b.A:(II)I
+16f500: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f502: 5b30 4307                              |0001: iput-object v0, v3, LM2/b;.g:[B // field@0743
+16f506: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f508: 5c30 4407                              |0004: iput-boolean v0, v3, LM2/b;.h:Z // field@0744
+16f50c: 5930 4507                              |0006: iput v0, v3, LM2/b;.i:I // field@0745
+16f510: 5430 3f07                              |0008: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f514: 3800 1600                              |000a: if-eqz v0, 0020 // +0016
+16f518: 2201 611f                              |000c: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f51c: 7010 24ba 0100                         |000e: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f522: 1a02 7f96                              |0011: const-string v2, "レリーズコマンド発行：" // string@967f
+16f526: 6e20 30ba 2100                         |0013: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f52c: 6e20 2bba 4100                         |0016: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+16f532: 6e10 3eba 0100                         |0019: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f538: 0c01                                   |001c: move-result-object v1
+16f53a: 7220 ea0a 1000                         |001d: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f540: 1210                                   |0020: const/4 v0, #int 1 // #1
+16f542: 7110 20bd 0000                         |0021: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f548: 0c00                                   |0024: move-result-object v0
+16f54a: 2201 1602                              |0025: new-instance v1, LM2/b$b; // type@0216
+16f54e: 1302 0f04                              |0027: const/16 v2, #int 1039 // #40f
+16f552: 7055 e30a 3142                         |0029: invoke-direct {v1, v3, v2, v4, v5}, LM2/b$b;.<init>:(LM2/b;III)V // method@0ae3
+16f558: 7220 1dbd 1000                         |002c: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f55e: 0c04                                   |002f: move-result-object v4
+16f560: 7210 2bbd 0400                         |0030: invoke-interface {v4}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f566: 0c04                                   |0033: move-result-object v4
+16f568: 1f04 481f                              |0034: check-cast v4, Ljava/lang/Integer; // type@1f48
+16f56c: 6e10 6eb9 0400                         |0036: invoke-virtual {v4}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f572: 0a04                                   |0039: move-result v4
+16f574: 2806                                   |003a: goto 0040 // +0006
+16f576: 0d04                                   |003b: move-exception v4
+16f578: 6e10 76ba 0400                         |003c: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f57e: 12f4                                   |003f: const/4 v4, #int -1 // #ff
+16f580: 7210 1abd 0000                         |0040: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f586: 5435 3f07                              |0043: iget-object v5, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f58a: 3805 2200                              |0045: if-eqz v5, 0067 // +0022
+16f58e: 12e5                                   |0047: const/4 v5, #int -2 // #fe
+16f590: 3254 0700                              |0048: if-eq v4, v5, 004f // +0007
+16f594: 7110 19ba 0400                         |004a: invoke-static {v4}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f59a: 0c05                                   |004d: move-result-object v5
+16f59c: 2803                                   |004e: goto 0051 // +0003
+16f59e: 1a05 1597                              |004f: const-string v5, "応答なし" // string@9715
+16f5a2: 5433 3f07                              |0051: iget-object v3, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f5a6: 2200 611f                              |0053: new-instance v0, Ljava/lang/StringBuilder; // type@1f61
+16f5aa: 7010 24ba 0000                         |0055: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f5b0: 1a01 8096                              |0058: const-string v1, "レリーズコマンド結果：" // string@9680
+16f5b4: 6e20 30ba 1000                         |005a: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f5ba: 6e20 30ba 5000                         |005d: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f5c0: 6e10 3eba 0000                         |0060: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f5c6: 0c05                                   |0063: move-result-object v5
+16f5c8: 7220 ea0a 5300                         |0064: invoke-interface {v3, v5}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f5ce: 0f04                                   |0067: return v4
+      catches       : 1
+        0x0030 - 0x003a
+          Ljava/lang/Exception; -> 0x003b
+      positions     :
+      locals        :
+
+    #1              : (in LM2/b;)
+      name          : 'B'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16ecf8:                                        |[16ecf8] M2.b.B:([BILM2/b$c;)Z
+16ed08: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ed0c: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ed0e: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16ed12: 1305 6800                              |0005: const/16 v5, #int 104 // #68
+16ed16: 1231                                   |0007: const/4 v1, #int 3 // #3
+16ed18: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16ed1e: 0c03                                   |000b: move-result-object v3
+16ed20: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ed24: 1305 0368                              |000e: const/16 v5, #int 26627 // #6803
+16ed28: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ed2e: 0a00                                   |0013: move-result v0
+16ed30: 2805                                   |0014: goto 0019 // +0005
+16ed32: 0d02                                   |0015: move-exception v2
+16ed34: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ed3a: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #2              : (in LM2/b;)
+      name          : 'C'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16ed4c:                                        |[16ed4c] M2.b.C:([BILM2/b$c;)Z
+16ed5c: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ed60: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ed62: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16ed66: 1305 6800                              |0005: const/16 v5, #int 104 // #68
+16ed6a: 1221                                   |0007: const/4 v1, #int 2 // #2
+16ed6c: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16ed72: 0c03                                   |000b: move-result-object v3
+16ed74: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ed78: 1305 0268                              |000e: const/16 v5, #int 26626 // #6802
+16ed7c: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ed82: 0a00                                   |0013: move-result v0
+16ed84: 2805                                   |0014: goto 0019 // +0005
+16ed86: 0d02                                   |0015: move-exception v2
+16ed88: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ed8e: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #3              : (in LM2/b;)
+      name          : 'D'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16eda0:                                        |[16eda0] M2.b.D:([BILM2/b$c;)Z
+16edb0: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16edb4: 1200                                   |0002: const/4 v0, #int 0 // #0
+16edb6: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16edba: 1305 6800                              |0005: const/16 v5, #int 104 // #68
+16edbe: 1211                                   |0007: const/4 v1, #int 1 // #1
+16edc0: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16edc6: 0c03                                   |000b: move-result-object v3
+16edc8: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16edcc: 1305 0168                              |000e: const/16 v5, #int 26625 // #6801
+16edd0: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16edd6: 0a00                                   |0013: move-result v0
+16edd8: 2805                                   |0014: goto 0019 // +0005
+16edda: 0d02                                   |0015: move-exception v2
+16eddc: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ede2: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #4              : (in LM2/b;)
+      name          : 'E'
+      type          : '(IILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 35 16-bit code units
+16edf4:                                        |[16edf4] M2.b.E:(IILM2/b$c;)Z
+16ee04: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ee08: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ee0a: 3805 1f00                              |0003: if-eqz v5, 0022 // +001f
+16ee0e: 1215                                   |0005: const/4 v5, #int 1 // #1
+16ee10: 2351 c224                              |0006: new-array v1, v5, [B // type@24c2
+16ee14: 3c03 0500                              |0008: if-gtz v3, 000d // +0005
+16ee18: 4f00 0100                              |000a: aput-byte v0, v1, v0
+16ee1c: 2803                                   |000c: goto 000f // +0003
+16ee1e: 4f05 0100                              |000d: aput-byte v5, v1, v0
+16ee22: 1303 6a00                              |000f: const/16 v3, #int 106 // #6a
+16ee26: 7040 150b 3215                         |0011: invoke-direct {v2, v3, v5, v1}, LM2/b;.u:(II[B)[B // method@0b15
+16ee2c: 0c03                                   |0014: move-result-object v3
+16ee2e: 5422 3d07                              |0015: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ee32: 1305 016a                              |0017: const/16 v5, #int 27137 // #6a01
+16ee36: 6e40 ad0b 5243                         |0019: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ee3c: 0a00                                   |001c: move-result v0
+16ee3e: 2805                                   |001d: goto 0022 // +0005
+16ee40: 0d02                                   |001e: move-exception v2
+16ee42: 6e10 76ba 0200                         |001f: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ee48: 0f00                                   |0022: return v0
+      catches       : 1
+        0x0015 - 0x001d
+          LM2/c; -> 0x001e
+      positions     :
+      locals        :
+
+    #5              : (in LM2/b;)
+      name          : 'F'
+      type          : '(II)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 5
+      insns size    : 104 16-bit code units
+16f5e0:                                        |[16f5e0] M2.b.F:(II)I
+16f5f0: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f5f2: 5b30 4307                              |0001: iput-object v0, v3, LM2/b;.g:[B // field@0743
+16f5f6: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f5f8: 5c30 4407                              |0004: iput-boolean v0, v3, LM2/b;.h:Z // field@0744
+16f5fc: 5930 4507                              |0006: iput v0, v3, LM2/b;.i:I // field@0745
+16f600: 5430 3f07                              |0008: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f604: 3800 1600                              |000a: if-eqz v0, 0020 // +0016
+16f608: 2201 611f                              |000c: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f60c: 7010 24ba 0100                         |000e: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f612: 1a02 8f1d                              |0011: const-string v2, "GPS付与コマンド発行：" // string@1d8f
+16f616: 6e20 30ba 2100                         |0013: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f61c: 6e20 2bba 4100                         |0016: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+16f622: 6e10 3eba 0100                         |0019: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f628: 0c01                                   |001c: move-result-object v1
+16f62a: 7220 ea0a 1000                         |001d: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f630: 1210                                   |0020: const/4 v0, #int 1 // #1
+16f632: 7110 20bd 0000                         |0021: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f638: 0c00                                   |0024: move-result-object v0
+16f63a: 2201 1602                              |0025: new-instance v1, LM2/b$b; // type@0216
+16f63e: 1302 016a                              |0027: const/16 v2, #int 27137 // #6a01
+16f642: 7055 e30a 3142                         |0029: invoke-direct {v1, v3, v2, v4, v5}, LM2/b$b;.<init>:(LM2/b;III)V // method@0ae3
+16f648: 7220 1dbd 1000                         |002c: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f64e: 0c04                                   |002f: move-result-object v4
+16f650: 7210 2bbd 0400                         |0030: invoke-interface {v4}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f656: 0c04                                   |0033: move-result-object v4
+16f658: 1f04 481f                              |0034: check-cast v4, Ljava/lang/Integer; // type@1f48
+16f65c: 6e10 6eb9 0400                         |0036: invoke-virtual {v4}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f662: 0a04                                   |0039: move-result v4
+16f664: 2806                                   |003a: goto 0040 // +0006
+16f666: 0d04                                   |003b: move-exception v4
+16f668: 6e10 76ba 0400                         |003c: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f66e: 12f4                                   |003f: const/4 v4, #int -1 // #ff
+16f670: 7210 1abd 0000                         |0040: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f676: 5435 3f07                              |0043: iget-object v5, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f67a: 3805 2200                              |0045: if-eqz v5, 0067 // +0022
+16f67e: 12e5                                   |0047: const/4 v5, #int -2 // #fe
+16f680: 3254 0700                              |0048: if-eq v4, v5, 004f // +0007
+16f684: 7110 19ba 0400                         |004a: invoke-static {v4}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f68a: 0c05                                   |004d: move-result-object v5
+16f68c: 2803                                   |004e: goto 0051 // +0003
+16f68e: 1a05 1597                              |004f: const-string v5, "応答なし" // string@9715
+16f692: 5433 3f07                              |0051: iget-object v3, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f696: 2200 611f                              |0053: new-instance v0, Ljava/lang/StringBuilder; // type@1f61
+16f69a: 7010 24ba 0000                         |0055: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f6a0: 1a01 901d                              |0058: const-string v1, "GPS付与コマンド結果：" // string@1d90
+16f6a4: 6e20 30ba 1000                         |005a: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f6aa: 6e20 30ba 5000                         |005d: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f6b0: 6e10 3eba 0000                         |0060: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f6b6: 0c05                                   |0063: move-result-object v5
+16f6b8: 7220 ea0a 5300                         |0064: invoke-interface {v3, v5}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f6be: 0f04                                   |0067: return v4
+      catches       : 1
+        0x0030 - 0x003a
+          Ljava/lang/Exception; -> 0x003b
+      positions     :
+      locals        :
+
+    #6              : (in LM2/b;)
+      name          : 'G'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 8
+      ins           : 4
+      outs          : 4
+      insns size    : 58 16-bit code units
+16ee5c:                                        |[16ee5c] M2.b.G:([BILM2/b$c;)Z
+16ee6c: 5447 3d07                              |0000: iget-object v7, v4, LM2/b;.a:LN2/a; // field@073d
+16ee70: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ee72: 3807 3600                              |0003: if-eqz v7, 0039 // +0036
+16ee76: 1307 6b00                              |0005: const/16 v7, #int 107 // #6b
+16ee7a: 1211                                   |0007: const/4 v1, #int 1 // #1
+16ee7c: 7040 150b 7451                         |0008: invoke-direct {v4, v7, v1, v5}, LM2/b;.u:(II[B)[B // method@0b15
+16ee82: 0c05                                   |000b: move-result-object v5
+16ee84: 3805 2000                              |000c: if-eqz v5, 002c // +0020
+16ee88: 5447 3f07                              |000e: iget-object v7, v4, LM2/b;.c:LM2/b$d; // field@073f
+16ee8c: 3807 1c00                              |0010: if-eqz v7, 002c // +001c
+16ee90: 7020 0b0b 5400                         |0012: invoke-direct {v4, v5}, LM2/b;.k:([B)Ljava/lang/String; // method@0b0b
+16ee96: 0c07                                   |0015: move-result-object v7
+16ee98: 5441 3f07                              |0016: iget-object v1, v4, LM2/b;.c:LM2/b$d; // field@073f
+16ee9c: 2202 611f                              |0018: new-instance v2, Ljava/lang/StringBuilder; // type@1f61
+16eea0: 7010 24ba 0200                         |001a: invoke-direct {v2}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16eea6: 1a03 cb50                              |001d: const-string v3, "RMC-データコマンド発行：" // string@50cb
+16eeaa: 6e20 30ba 3200                         |001f: invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16eeb0: 6e20 30ba 7200                         |0022: invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16eeb6: 6e10 3eba 0200                         |0025: invoke-virtual {v2}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16eebc: 0c07                                   |0028: move-result-object v7
+16eebe: 7220 ea0a 7100                         |0029: invoke-interface {v1, v7}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16eec4: 5444 3d07                              |002c: iget-object v4, v4, LM2/b;.a:LN2/a; // field@073d
+16eec8: 1307 016b                              |002e: const/16 v7, #int 27393 // #6b01
+16eecc: 6e40 ad0b 7465                         |0030: invoke-virtual {v4, v7, v5, v6}, LN2/a;.s0:(I[BI)Z // method@0bad
+16eed2: 0a00                                   |0033: move-result v0
+16eed4: 2805                                   |0034: goto 0039 // +0005
+16eed6: 0d04                                   |0035: move-exception v4
+16eed8: 6e10 76ba 0400                         |0036: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16eede: 0f00                                   |0039: return v0
+      catches       : 1
+        0x002c - 0x0034
+          LM2/c; -> 0x0035
+      positions     :
+      locals        :
+
+    #7              : (in LM2/b;)
+      name          : 'H'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16eef0:                                        |[16eef0] M2.b.H:([BILM2/b$c;)Z
+16ef00: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ef04: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ef06: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16ef0a: 1305 6900                              |0005: const/16 v5, #int 105 // #69
+16ef0e: 1231                                   |0007: const/4 v1, #int 3 // #3
+16ef10: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16ef16: 0c03                                   |000b: move-result-object v3
+16ef18: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ef1c: 1305 0369                              |000e: const/16 v5, #int 26883 // #6903
+16ef20: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ef26: 0a00                                   |0013: move-result v0
+16ef28: 2805                                   |0014: goto 0019 // +0005
+16ef2a: 0d02                                   |0015: move-exception v2
+16ef2c: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ef32: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #8              : (in LM2/b;)
+      name          : 'I'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16ef44:                                        |[16ef44] M2.b.I:([BILM2/b$c;)Z
+16ef54: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ef58: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ef5a: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16ef5e: 1305 6900                              |0005: const/16 v5, #int 105 // #69
+16ef62: 1221                                   |0007: const/4 v1, #int 2 // #2
+16ef64: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16ef6a: 0c03                                   |000b: move-result-object v3
+16ef6c: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ef70: 1305 0269                              |000e: const/16 v5, #int 26882 // #6902
+16ef74: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ef7a: 0a00                                   |0013: move-result v0
+16ef7c: 2805                                   |0014: goto 0019 // +0005
+16ef7e: 0d02                                   |0015: move-exception v2
+16ef80: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ef86: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #9              : (in LM2/b;)
+      name          : 'J'
+      type          : '([BI)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 5
+      insns size    : 80 16-bit code units
+16f6d0:                                        |[16f6d0] M2.b.J:([BI)I
+16f6e0: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f6e2: 5b30 4307                              |0001: iput-object v0, v3, LM2/b;.g:[B // field@0743
+16f6e6: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f6e8: 5c30 4407                              |0004: iput-boolean v0, v3, LM2/b;.h:Z // field@0744
+16f6ec: 5930 4507                              |0006: iput v0, v3, LM2/b;.i:I // field@0745
+16f6f0: 1210                                   |0008: const/4 v0, #int 1 // #1
+16f6f2: 7110 20bd 0000                         |0009: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f6f8: 0c00                                   |000c: move-result-object v0
+16f6fa: 2201 1602                              |000d: new-instance v1, LM2/b$b; // type@0216
+16f6fe: 1302 016b                              |000f: const/16 v2, #int 27393 // #6b01
+16f702: 7055 e50a 3142                         |0011: invoke-direct {v1, v3, v2, v4, v5}, LM2/b$b;.<init>:(LM2/b;I[BI)V // method@0ae5
+16f708: 7220 1dbd 1000                         |0014: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f70e: 0c04                                   |0017: move-result-object v4
+16f710: 7210 2bbd 0400                         |0018: invoke-interface {v4}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f716: 0c04                                   |001b: move-result-object v4
+16f718: 1f04 481f                              |001c: check-cast v4, Ljava/lang/Integer; // type@1f48
+16f71c: 6e10 6eb9 0400                         |001e: invoke-virtual {v4}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f722: 0a04                                   |0021: move-result v4
+16f724: 2806                                   |0022: goto 0028 // +0006
+16f726: 0d04                                   |0023: move-exception v4
+16f728: 6e10 76ba 0400                         |0024: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f72e: 12f4                                   |0027: const/4 v4, #int -1 // #ff
+16f730: 7210 1abd 0000                         |0028: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f736: 5435 3f07                              |002b: iget-object v5, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f73a: 3805 2200                              |002d: if-eqz v5, 004f // +0022
+16f73e: 12e5                                   |002f: const/4 v5, #int -2 // #fe
+16f740: 3254 0700                              |0030: if-eq v4, v5, 0037 // +0007
+16f744: 7110 19ba 0400                         |0032: invoke-static {v4}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f74a: 0c05                                   |0035: move-result-object v5
+16f74c: 2803                                   |0036: goto 0039 // +0003
+16f74e: 1a05 1597                              |0037: const-string v5, "応答なし" // string@9715
+16f752: 5433 3f07                              |0039: iget-object v3, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f756: 2200 611f                              |003b: new-instance v0, Ljava/lang/StringBuilder; // type@1f61
+16f75a: 7010 24ba 0000                         |003d: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f760: 1a01 cc50                              |0040: const-string v1, "RMC-データコマンド結果：" // string@50cc
+16f764: 6e20 30ba 1000                         |0042: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f76a: 6e20 30ba 5000                         |0045: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f770: 6e10 3eba 0000                         |0048: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f776: 0c05                                   |004b: move-result-object v5
+16f778: 7220 ea0a 5300                         |004c: invoke-interface {v3, v5}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f77e: 0f04                                   |004f: return v4
+      catches       : 1
+        0x0018 - 0x0022
+          Ljava/lang/Exception; -> 0x0023
+      positions     :
+      locals        :
+
+    #10              : (in LM2/b;)
+      name          : 'K'
+      type          : '([BILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 26 16-bit code units
+16ef98:                                        |[16ef98] M2.b.K:([BILM2/b$c;)Z
+16efa8: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16efac: 1200                                   |0002: const/4 v0, #int 0 // #0
+16efae: 3805 1600                              |0003: if-eqz v5, 0019 // +0016
+16efb2: 1305 6900                              |0005: const/16 v5, #int 105 // #69
+16efb6: 1211                                   |0007: const/4 v1, #int 1 // #1
+16efb8: 7040 150b 5231                         |0008: invoke-direct {v2, v5, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16efbe: 0c03                                   |000b: move-result-object v3
+16efc0: 5422 3d07                              |000c: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16efc4: 1305 0169                              |000e: const/16 v5, #int 26881 // #6901
+16efc8: 6e40 ad0b 5243                         |0010: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16efce: 0a00                                   |0013: move-result v0
+16efd0: 2805                                   |0014: goto 0019 // +0005
+16efd2: 0d02                                   |0015: move-exception v2
+16efd4: 6e10 76ba 0200                         |0016: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16efda: 0f00                                   |0019: return v0
+      catches       : 1
+        0x000c - 0x0014
+          LM2/c; -> 0x0015
+      positions     :
+      locals        :
+
+    #11              : (in LM2/b;)
+      name          : 'L'
+      type          : '(IILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 31 16-bit code units
+16efec:                                        |[16efec] M2.b.L:(IILM2/b$c;)Z
+16effc: 1215                                   |0000: const/4 v5, #int 1 // #1
+16effe: 5420 3d07                              |0001: iget-object v0, v2, LM2/b;.a:LN2/a; // field@073d
+16f002: 1201                                   |0003: const/4 v1, #int 0 // #0
+16f004: 3800 1a00                              |0004: if-eqz v0, 001e // +001a
+16f008: 8d33                                   |0006: int-to-byte v3, v3
+16f00a: 2350 c224                              |0007: new-array v0, v5, [B // type@24c2
+16f00e: 4f03 0001                              |0009: aput-byte v3, v0, v1
+16f012: 1303 1d00                              |000b: const/16 v3, #int 29 // #1d
+16f016: 7040 150b 3205                         |000d: invoke-direct {v2, v3, v5, v0}, LM2/b;.u:(II[B)[B // method@0b15
+16f01c: 0c03                                   |0010: move-result-object v3
+16f01e: 5422 3d07                              |0011: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16f022: 1305 011d                              |0013: const/16 v5, #int 7425 // #1d01
+16f026: 6e40 ad0b 5243                         |0015: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16f02c: 0a01                                   |0018: move-result v1
+16f02e: 2805                                   |0019: goto 001e // +0005
+16f030: 0d02                                   |001a: move-exception v2
+16f032: 6e10 76ba 0200                         |001b: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f038: 0f01                                   |001e: return v1
+      catches       : 1
+        0x0011 - 0x0019
+          LM2/c; -> 0x001a
+      positions     :
+      locals        :
+
+    #12              : (in LM2/b;)
+      name          : 'M'
+      type          : '(II)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 5
+      insns size    : 104 16-bit code units
+16f790:                                        |[16f790] M2.b.M:(II)I
+16f7a0: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f7a2: 5b30 4307                              |0001: iput-object v0, v3, LM2/b;.g:[B // field@0743
+16f7a6: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f7a8: 5c30 4407                              |0004: iput-boolean v0, v3, LM2/b;.h:Z // field@0744
+16f7ac: 5930 4507                              |0006: iput v0, v3, LM2/b;.i:I // field@0745
+16f7b0: 5430 3f07                              |0008: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f7b4: 3800 1600                              |000a: if-eqz v0, 0020 // +0016
+16f7b8: 2201 611f                              |000c: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f7bc: 7010 24ba 0100                         |000e: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f7c2: 1a02 7696                              |0011: const-string v2, "リモコンモードコマンド発行：" // string@9676
+16f7c6: 6e20 30ba 2100                         |0013: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f7cc: 6e20 2bba 4100                         |0016: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+16f7d2: 6e10 3eba 0100                         |0019: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f7d8: 0c01                                   |001c: move-result-object v1
+16f7da: 7220 ea0a 1000                         |001d: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f7e0: 1210                                   |0020: const/4 v0, #int 1 // #1
+16f7e2: 7110 20bd 0000                         |0021: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f7e8: 0c00                                   |0024: move-result-object v0
+16f7ea: 2201 1602                              |0025: new-instance v1, LM2/b$b; // type@0216
+16f7ee: 1302 011d                              |0027: const/16 v2, #int 7425 // #1d01
+16f7f2: 7055 e30a 3142                         |0029: invoke-direct {v1, v3, v2, v4, v5}, LM2/b$b;.<init>:(LM2/b;III)V // method@0ae3
+16f7f8: 7220 1dbd 1000                         |002c: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f7fe: 0c04                                   |002f: move-result-object v4
+16f800: 7210 2bbd 0400                         |0030: invoke-interface {v4}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f806: 0c04                                   |0033: move-result-object v4
+16f808: 1f04 481f                              |0034: check-cast v4, Ljava/lang/Integer; // type@1f48
+16f80c: 6e10 6eb9 0400                         |0036: invoke-virtual {v4}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f812: 0a04                                   |0039: move-result v4
+16f814: 2806                                   |003a: goto 0040 // +0006
+16f816: 0d04                                   |003b: move-exception v4
+16f818: 6e10 76ba 0400                         |003c: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f81e: 12f4                                   |003f: const/4 v4, #int -1 // #ff
+16f820: 7210 1abd 0000                         |0040: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f826: 5435 3f07                              |0043: iget-object v5, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f82a: 3805 2200                              |0045: if-eqz v5, 0067 // +0022
+16f82e: 12e5                                   |0047: const/4 v5, #int -2 // #fe
+16f830: 3254 0700                              |0048: if-eq v4, v5, 004f // +0007
+16f834: 7110 19ba 0400                         |004a: invoke-static {v4}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f83a: 0c05                                   |004d: move-result-object v5
+16f83c: 2803                                   |004e: goto 0051 // +0003
+16f83e: 1a05 1597                              |004f: const-string v5, "応答なし" // string@9715
+16f842: 5433 3f07                              |0051: iget-object v3, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f846: 2200 611f                              |0053: new-instance v0, Ljava/lang/StringBuilder; // type@1f61
+16f84a: 7010 24ba 0000                         |0055: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f850: 1a01 7796                              |0058: const-string v1, "リモコンモードコマンド結果：" // string@9677
+16f854: 6e20 30ba 1000                         |005a: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f85a: 6e20 30ba 5000                         |005d: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f860: 6e10 3eba 0000                         |0060: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f866: 0c05                                   |0063: move-result-object v5
+16f868: 7220 ea0a 5300                         |0064: invoke-interface {v3, v5}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f86e: 0f04                                   |0067: return v4
+      catches       : 1
+        0x0030 - 0x003a
+          Ljava/lang/Exception; -> 0x003b
+      positions     :
+      locals        :
+
+    #13              : (in LM2/b;)
+      name          : 'N'
+      type          : '(Ljava/lang/String;Ljava/lang/String;I)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 4
+      outs          : 5
+      insns size    : 9 16-bit code units
+16fa28:                                        |[16fa28] M2.b.N:(Ljava/lang/String;Ljava/lang/String;I)V
+16fa38: 5411 3d07                              |0000: iget-object v1, v1, LM2/b;.a:LN2/a; // field@073d
+16fa3c: 3801 0600                              |0002: if-eqz v1, 0008 // +0006
+16fa40: 12f0                                   |0004: const/4 v0, #int -1 // #ff
+16fa42: 6e50 a70b 2143                         |0005: invoke-virtual {v1, v2, v3, v4, v0}, LN2/a;.p0:(Ljava/lang/String;Ljava/lang/String;II)V // method@0ba7
+16fa48: 0e00                                   |0008: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #14              : (in LM2/b;)
+      name          : 'O'
+      type          : '(Ljava/lang/String;Ljava/lang/String;II)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 5
+      outs          : 5
+      insns size    : 8 16-bit code units
+16fa4c:                                        |[16fa4c] M2.b.O:(Ljava/lang/String;Ljava/lang/String;II)V
+16fa5c: 5400 3d07                              |0000: iget-object v0, v0, LM2/b;.a:LN2/a; // field@073d
+16fa60: 3800 0500                              |0002: if-eqz v0, 0007 // +0005
+16fa64: 6e54 a70b 1032                         |0004: invoke-virtual {v0, v1, v2, v3, v4}, LN2/a;.p0:(Ljava/lang/String;Ljava/lang/String;II)V // method@0ba7
+16fa6a: 0e00                                   |0007: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #15              : (in LM2/b;)
+      name          : 'P'
+      type          : '()V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 1
+      insns size    : 14 16-bit code units
+16fa6c:                                        |[16fa6c] M2.b.P:()V
+16fa7c: 5410 3d07                              |0000: iget-object v0, v1, LM2/b;.a:LN2/a; // field@073d
+16fa80: 3800 0500                              |0002: if-eqz v0, 0007 // +0005
+16fa84: 6e10 b90b 0000                         |0004: invoke-virtual {v0}, LN2/a;.y0:()V // method@0bb9
+16fa8a: 1210                                   |0007: const/4 v0, #int 1 // #1
+16fa8c: 5c10 4407                              |0008: iput-boolean v0, v1, LM2/b;.h:Z // field@0744
+16fa90: 1200                                   |000a: const/4 v0, #int 0 // #0
+16fa92: 5910 4507                              |000b: iput v0, v1, LM2/b;.i:I // field@0745
+16fa96: 0e00                                   |000d: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #16              : (in LM2/b;)
+      name          : 'i'
+      type          : '(Ljava/lang/String;LM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 4
+      insns size    : 41 16-bit code units
+16eaa4:                                        |[16eaa4] M2.b.i:(Ljava/lang/String;LM2/b$c;)Z
+16eab4: 5424 3d07                              |0000: iget-object v4, v2, LM2/b;.a:LN2/a; // field@073d
+16eab8: 1200                                   |0002: const/4 v0, #int 0 // #0
+16eaba: 3804 2500                              |0003: if-eqz v4, 0028 // +0025
+16eabe: 1a04 ea5b                              |0005: const-string v4, "UTF-8" // string@5bea
+16eac2: 6e20 f8b9 4300                         |0007: invoke-virtual {v3, v4}, Ljava/lang/String;.getBytes:(Ljava/lang/String;)[B // method@b9f8
+16eac8: 0c03                                   |000a: move-result-object v3
+16eaca: 2806                                   |000b: goto 0011 // +0006
+16eacc: 0d03                                   |000c: move-exception v3
+16eace: 6e10 76ba 0300                         |000d: invoke-virtual {v3}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ead4: 1203                                   |0010: const/4 v3, #int 0 // #0
+16ead6: 3903 0300                              |0011: if-nez v3, 0014 // +0003
+16eada: 0f00                                   |0013: return v0
+16eadc: 1304 0c00                              |0014: const/16 v4, #int 12 // #c
+16eae0: 1221                                   |0016: const/4 v1, #int 2 // #2
+16eae2: 7040 150b 4231                         |0017: invoke-direct {v2, v4, v1, v3}, LM2/b;.u:(II[B)[B // method@0b15
+16eae8: 0c03                                   |001a: move-result-object v3
+16eaea: 5422 3d07                              |001b: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16eaee: 1304 020c                              |001d: const/16 v4, #int 3074 // #c02
+16eaf2: 6e30 ab0b 4203                         |001f: invoke-virtual {v2, v4, v3}, LN2/a;.r0:(I[B)Z // method@0bab
+16eaf8: 0a00                                   |0022: move-result v0
+16eafa: 2805                                   |0023: goto 0028 // +0005
+16eafc: 0d02                                   |0024: move-exception v2
+16eafe: 6e10 76ba 0200                         |0025: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16eb04: 0f00                                   |0028: return v0
+      catches       : 2
+        0x0005 - 0x000b
+          Ljava/io/UnsupportedEncodingException; -> 0x000c
+        0x001b - 0x0023
+          LM2/c; -> 0x0024
+      positions     :
+      locals        :
+
+    #17              : (in LM2/b;)
+      name          : 'j'
+      type          : '(Ljava/lang/String;)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 2
+      outs          : 5
+      insns size    : 91 16-bit code units
+16f144:                                        |[16f144] M2.b.j:(Ljava/lang/String;)I
+16f154: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f156: 5b40 4307                              |0001: iput-object v0, v4, LM2/b;.g:[B // field@0743
+16f15a: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f15c: 5c40 4407                              |0004: iput-boolean v0, v4, LM2/b;.h:Z // field@0744
+16f160: 5940 4507                              |0006: iput v0, v4, LM2/b;.i:I // field@0745
+16f164: 5440 3f07                              |0008: iget-object v0, v4, LM2/b;.c:LM2/b$d; // field@073f
+16f168: 3800 0700                              |000a: if-eqz v0, 0011 // +0007
+16f16c: 1a01 3096                              |000c: const-string v1, "パスコード認証開始" // string@9630
+16f170: 7220 ea0a 1000                         |000e: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f176: 1210                                   |0011: const/4 v0, #int 1 // #1
+16f178: 7110 20bd 0000                         |0012: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f17e: 0c00                                   |0015: move-result-object v0
+16f180: 2201 1602                              |0016: new-instance v1, LM2/b$b; // type@0216
+16f184: 1302 020c                              |0018: const/16 v2, #int 3074 // #c02
+16f188: 1303 1027                              |001a: const/16 v3, #int 10000 // #2710
+16f18c: 7053 e40a 4152                         |001c: invoke-direct {v1, v4, v2, v5, v3}, LM2/b$b;.<init>:(LM2/b;ILjava/lang/String;I)V // method@0ae4
+16f192: 7220 1dbd 1000                         |001f: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f198: 0c05                                   |0022: move-result-object v5
+16f19a: 7210 2bbd 0500                         |0023: invoke-interface {v5}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f1a0: 0c05                                   |0026: move-result-object v5
+16f1a2: 1f05 481f                              |0027: check-cast v5, Ljava/lang/Integer; // type@1f48
+16f1a6: 6e10 6eb9 0500                         |0029: invoke-virtual {v5}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f1ac: 0a05                                   |002c: move-result v5
+16f1ae: 2806                                   |002d: goto 0033 // +0006
+16f1b0: 0d05                                   |002e: move-exception v5
+16f1b2: 6e10 76ba 0500                         |002f: invoke-virtual {v5}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f1b8: 12f5                                   |0032: const/4 v5, #int -1 // #ff
+16f1ba: 7210 1abd 0000                         |0033: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f1c0: 5440 3f07                              |0036: iget-object v0, v4, LM2/b;.c:LM2/b$d; // field@073f
+16f1c4: 3800 2200                              |0038: if-eqz v0, 005a // +0022
+16f1c8: 12e0                                   |003a: const/4 v0, #int -2 // #fe
+16f1ca: 3205 0700                              |003b: if-eq v5, v0, 0042 // +0007
+16f1ce: 7110 19ba 0500                         |003d: invoke-static {v5}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f1d4: 0c00                                   |0040: move-result-object v0
+16f1d6: 2803                                   |0041: goto 0044 // +0003
+16f1d8: 1a00 1597                              |0042: const-string v0, "応答なし" // string@9715
+16f1dc: 5444 3f07                              |0044: iget-object v4, v4, LM2/b;.c:LM2/b$d; // field@073f
+16f1e0: 2201 611f                              |0046: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f1e4: 7010 24ba 0100                         |0048: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f1ea: 1a02 2f96                              |004b: const-string v2, "パスコード認証結果：" // string@962f
+16f1ee: 6e20 30ba 2100                         |004d: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f1f4: 6e20 30ba 0100                         |0050: invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f1fa: 6e10 3eba 0100                         |0053: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f200: 0c00                                   |0056: move-result-object v0
+16f202: 7220 ea0a 0400                         |0057: invoke-interface {v4, v0}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f208: 0f05                                   |005a: return v5
+      catches       : 1
+        0x0023 - 0x002d
+          Ljava/lang/Exception; -> 0x002e
+      positions     :
+      locals        :
+
+    #18              : (in LM2/b;)
+      name          : 'l'
+      type          : '(Ljava/lang/String;Z)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 3
+      insns size    : 37 16-bit code units
+16f21c:                                        |[16f21c] M2.b.l:(Ljava/lang/String;Z)I
+16f22c: 5430 3d07                              |0000: iget-object v0, v3, LM2/b;.a:LN2/a; // field@073d
+16f230: 3800 2100                              |0002: if-eqz v0, 0023 // +0021
+16f234: 5430 3f07                              |0004: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f238: 3800 1600                              |0006: if-eqz v0, 001c // +0016
+16f23c: 2201 611f                              |0008: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f240: 7010 24ba 0100                         |000a: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f246: 1a02 2797                              |000d: const-string v2, "接続開始：" // string@9727
+16f24a: 6e20 30ba 2100                         |000f: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f250: 6e20 30ba 4100                         |0012: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f256: 6e10 3eba 0100                         |0015: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f25c: 0c01                                   |0018: move-result-object v1
+16f25e: 7220 ea0a 1000                         |0019: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f264: 5433 3d07                              |001c: iget-object v3, v3, LM2/b;.a:LN2/a; // field@073d
+16f268: 6e30 890b 4305                         |001e: invoke-virtual {v3, v4, v5}, LN2/a;.a0:(Ljava/lang/String;Z)I // method@0b89
+16f26e: 0a03                                   |0021: move-result v3
+16f270: 2802                                   |0022: goto 0024 // +0002
+16f272: 12f3                                   |0023: const/4 v3, #int -1 // #ff
+16f274: 0f03                                   |0024: return v3
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #19              : (in LM2/b;)
+      name          : 'm'
+      type          : '()V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 2
+      insns size    : 19 16-bit code units
+16f980:                                        |[16f980] M2.b.m:()V
+16f990: 5420 3d07                              |0000: iget-object v0, v2, LM2/b;.a:LN2/a; // field@073d
+16f994: 3800 1000                              |0002: if-eqz v0, 0012 // +0010
+16f998: 5420 3f07                              |0004: iget-object v0, v2, LM2/b;.c:LM2/b$d; // field@073f
+16f99c: 3800 0700                              |0006: if-eqz v0, 000d // +0007
+16f9a0: 1a01 2297                              |0008: const-string v1, "接続切断" // string@9722
+16f9a4: 7220 ea0a 1000                         |000a: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f9aa: 5422 3d07                              |000d: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16f9ae: 6e10 8b0b 0200                         |000f: invoke-virtual {v2}, LN2/a;.b0:()V // method@0b8b
+16f9b4: 0e00                                   |0012: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #20              : (in LM2/b;)
+      name          : 'n'
+      type          : '()V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 2
+      insns size    : 48 16-bit code units
+16f9b8:                                        |[16f9b8] M2.b.n:()V
+16f9c8: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f9ca: 5c30 4a07                              |0001: iput-boolean v0, v3, LM2/b;.n:Z // field@074a
+16f9ce: 5431 3f07                              |0003: iget-object v1, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f9d2: 3801 0700                              |0005: if-eqz v1, 000c // +0007
+16f9d6: 1a02 5012                              |0007: const-string v2, "BLE Finalize" // string@1250
+16f9da: 7220 ea0a 2100                         |0009: invoke-interface {v1, v2}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f9e0: 5431 3d07                              |000c: iget-object v1, v3, LM2/b;.a:LN2/a; // field@073d
+16f9e4: 1202                                   |000e: const/4 v2, #int 0 // #0
+16f9e6: 3801 0700                              |000f: if-eqz v1, 0016 // +0007
+16f9ea: 6e10 8f0b 0100                         |0011: invoke-virtual {v1}, LN2/a;.d0:()V // method@0b8f
+16f9f0: 5b32 3d07                              |0014: iput-object v2, v3, LM2/b;.a:LN2/a; // field@073d
+16f9f4: 5431 4707                              |0016: iget-object v1, v3, LM2/b;.k:LM2/d; // field@0747
+16f9f8: 3801 0700                              |0018: if-eqz v1, 001f // +0007
+16f9fc: 6e10 230b 0100                         |001a: invoke-virtual {v1}, LM2/d;.c:()V // method@0b23
+16fa02: 5b32 4707                              |001d: iput-object v2, v3, LM2/b;.k:LM2/d; // field@0747
+16fa06: 5431 4807                              |001f: iget-object v1, v3, LM2/b;.l:LM2/d; // field@0748
+16fa0a: 3801 0700                              |0021: if-eqz v1, 0028 // +0007
+16fa0e: 6e10 230b 0100                         |0023: invoke-virtual {v1}, LM2/d;.c:()V // method@0b23
+16fa14: 5b32 4807                              |0026: iput-object v2, v3, LM2/b;.l:LM2/d; // field@0748
+16fa18: 5c30 4907                              |0028: iput-boolean v0, v3, LM2/b;.m:Z // field@0749
+16fa1c: 1211                                   |002a: const/4 v1, #int 1 // #1
+16fa1e: 5c31 4407                              |002b: iput-boolean v1, v3, LM2/b;.h:Z // field@0744
+16fa22: 5930 4507                              |002d: iput v0, v3, LM2/b;.i:I // field@0745
+16fa26: 0e00                                   |002f: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #21              : (in LM2/b;)
+      name          : 'o'
+      type          : '(LM2/b$d;)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 2
+      insns size    : 76 16-bit code units
+16f278:                                        |[16f278] M2.b.o:(LM2/b$d;)I
+16f288: 5b34 3f07                              |0000: iput-object v4, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f28c: 5434 3d07                              |0002: iget-object v4, v3, LM2/b;.a:LN2/a; // field@073d
+16f290: 3804 0800                              |0004: if-eqz v4, 000c // +0008
+16f294: 6e10 8f0b 0400                         |0006: invoke-virtual {v4}, LN2/a;.d0:()V // method@0b8f
+16f29a: 1204                                   |0009: const/4 v4, #int 0 // #0
+16f29c: 5b34 3d07                              |000a: iput-object v4, v3, LM2/b;.a:LN2/a; // field@073d
+16f2a0: 2204 3102                              |000c: new-instance v4, LN2/a; // type@0231
+16f2a4: 5430 3e07                              |000e: iget-object v0, v3, LM2/b;.b:Landroid/content/Context; // field@073e
+16f2a8: 7020 6d0b 0400                         |0010: invoke-direct {v4, v0}, LN2/a;.<init>:(Landroid/content/Context;)V // method@0b6d
+16f2ae: 5b34 3d07                              |0013: iput-object v4, v3, LM2/b;.a:LN2/a; // field@073d
+16f2b2: 6e10 9d0b 0400                         |0015: invoke-virtual {v4}, LN2/a;.k0:()I // method@0b9d
+16f2b8: 0a04                                   |0018: move-result v4
+16f2ba: 3904 0c00                              |0019: if-nez v4, 0025 // +000c
+16f2be: 5430 3e07                              |001b: iget-object v0, v3, LM2/b;.b:Landroid/content/Context; // field@073e
+16f2c2: 7110 130b 0000                         |001d: invoke-static {v0}, LM2/b;.s:(Landroid/content/Context;)Z // method@0b13
+16f2c8: 0a00                                   |0020: move-result v0
+16f2ca: 3900 0400                              |0021: if-nez v0, 0025 // +0004
+16f2ce: 1304 8300                              |0023: const/16 v4, #int 131 // #83
+16f2d2: 3904 0900                              |0025: if-nez v4, 002e // +0009
+16f2d6: 5430 3d07                              |0027: iget-object v0, v3, LM2/b;.a:LN2/a; // field@073d
+16f2da: 5431 4e07                              |0029: iget-object v1, v3, LM2/b;.r:LN2/a$f; // field@074e
+16f2de: 6e20 b30b 1000                         |002b: invoke-virtual {v0, v1}, LN2/a;.v0:(LN2/a$f;)V // method@0bb3
+16f2e4: 5430 3f07                              |002e: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f2e8: 3800 1600                              |0030: if-eqz v0, 0046 // +0016
+16f2ec: 2201 611f                              |0032: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f2f0: 7010 24ba 0100                         |0034: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f2f6: 1a02 5112                              |0037: const-string v2, "BLE Initialize=" // string@1251
+16f2fa: 6e20 30ba 2100                         |0039: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f300: 6e20 2bba 4100                         |003c: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+16f306: 6e10 3eba 0100                         |003f: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f30c: 0c01                                   |0042: move-result-object v1
+16f30e: 7220 ea0a 1000                         |0043: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f314: 3904 0500                              |0046: if-nez v4, 004b // +0005
+16f318: 1210                                   |0048: const/4 v0, #int 1 // #1
+16f31a: 5c30 4a07                              |0049: iput-boolean v0, v3, LM2/b;.n:Z // field@074a
+16f31e: 0f04                                   |004b: return v4
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #22              : (in LM2/b;)
+      name          : 'p'
+      type          : '(I)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 1
+      insns size    : 15 16-bit code units
+16eb24:                                        |[16eb24] M2.b.p:(I)Z
+16eb34: 5400 3d07                              |0000: iget-object v0, v0, LM2/b;.a:LN2/a; // field@073d
+16eb38: 3800 0b00                              |0002: if-eqz v0, 000d // +000b
+16eb3c: 6e10 930b 0000                         |0004: invoke-virtual {v0}, LN2/a;.f0:()I // method@0b93
+16eb42: 0a00                                   |0007: move-result v0
+16eb44: b510                                   |0008: and-int/2addr v0, v1
+16eb46: 3800 0400                              |0009: if-eqz v0, 000d // +0004
+16eb4a: 1210                                   |000b: const/4 v0, #int 1 // #1
+16eb4c: 2802                                   |000c: goto 000e // +0002
+16eb4e: 1200                                   |000d: const/4 v0, #int 0 // #0
+16eb50: 0f00                                   |000e: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #23              : (in LM2/b;)
+      name          : 'q'
+      type          : '()Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16eb54:                                        |[16eb54] M2.b.q:()Z
+16eb64: 5500 4907                              |0000: iget-boolean v0, v0, LM2/b;.m:Z // field@0749
+16eb68: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #24              : (in LM2/b;)
+      name          : 'r'
+      type          : '()Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 11 16-bit code units
+16eb6c:                                        |[16eb6c] M2.b.r:()Z
+16eb7c: 5400 3d07                              |0000: iget-object v0, v0, LM2/b;.a:LN2/a; // field@073d
+16eb80: 3800 0700                              |0002: if-eqz v0, 0009 // +0007
+16eb84: 6e10 9f0b 0000                         |0004: invoke-virtual {v0}, LN2/a;.l0:()Z // method@0b9f
+16eb8a: 0a00                                   |0007: move-result v0
+16eb8c: 2802                                   |0008: goto 000a // +0002
+16eb8e: 1200                                   |0009: const/4 v0, #int 0 // #0
+16eb90: 0f00                                   |000a: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #25              : (in LM2/b;)
+      name          : 't'
+      type          : '()Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+16ebc0:                                        |[16ebc0] M2.b.t:()Z
+16ebd0: 5500 4a07                              |0000: iget-boolean v0, v0, LM2/b;.n:Z // field@074a
+16ebd4: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #26              : (in LM2/b;)
+      name          : 'v'
+      type          : '(IILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 32 16-bit code units
+16ebd8:                                        |[16ebd8] M2.b.v:(IILM2/b$c;)Z
+16ebe8: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ebec: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ebee: 3805 1c00                              |0003: if-eqz v5, 001f // +001c
+16ebf2: 8d33                                   |0005: int-to-byte v3, v3
+16ebf4: 1215                                   |0006: const/4 v5, #int 1 // #1
+16ebf6: 2355 c224                              |0007: new-array v5, v5, [B // type@24c2
+16ebfa: 4f03 0500                              |0009: aput-byte v3, v5, v0
+16ebfe: 1243                                   |000b: const/4 v3, #int 4 // #4
+16ec00: 1301 1000                              |000c: const/16 v1, #int 16 // #10
+16ec04: 7040 150b 3251                         |000e: invoke-direct {v2, v3, v1, v5}, LM2/b;.u:(II[B)[B // method@0b15
+16ec0a: 0c03                                   |0011: move-result-object v3
+16ec0c: 5422 3d07                              |0012: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ec10: 1305 1004                              |0014: const/16 v5, #int 1040 // #410
+16ec14: 6e40 ad0b 5243                         |0016: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ec1a: 0a00                                   |0019: move-result v0
+16ec1c: 2805                                   |001a: goto 001f // +0005
+16ec1e: 0d02                                   |001b: move-exception v2
+16ec20: 6e10 76ba 0200                         |001c: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ec26: 0f00                                   |001f: return v0
+      catches       : 1
+        0x0012 - 0x001a
+          LM2/c; -> 0x001b
+      positions     :
+      locals        :
+
+    #27              : (in LM2/b;)
+      name          : 'w'
+      type          : '(II)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 5
+      insns size    : 104 16-bit code units
+16f320:                                        |[16f320] M2.b.w:(II)I
+16f330: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f332: 5b30 4307                              |0001: iput-object v0, v3, LM2/b;.g:[B // field@0743
+16f336: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f338: 5c30 4407                              |0004: iput-boolean v0, v3, LM2/b;.h:Z // field@0744
+16f33c: 5930 4507                              |0006: iput v0, v3, LM2/b;.i:I // field@0745
+16f340: 5430 3f07                              |0008: iget-object v0, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f344: 3800 1600                              |000a: if-eqz v0, 0020 // +0016
+16f348: 2201 611f                              |000c: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f34c: 7010 24ba 0100                         |000e: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f352: 1a02 dc96                              |0011: const-string v2, "動画ボタンコマンド発行：" // string@96dc
+16f356: 6e20 30ba 2100                         |0013: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f35c: 6e20 2bba 4100                         |0016: invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;.append:(I)Ljava/lang/StringBuilder; // method@ba2b
+16f362: 6e10 3eba 0100                         |0019: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f368: 0c01                                   |001c: move-result-object v1
+16f36a: 7220 ea0a 1000                         |001d: invoke-interface {v0, v1}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f370: 1210                                   |0020: const/4 v0, #int 1 // #1
+16f372: 7110 20bd 0000                         |0021: invoke-static {v0}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f378: 0c00                                   |0024: move-result-object v0
+16f37a: 2201 1602                              |0025: new-instance v1, LM2/b$b; // type@0216
+16f37e: 1302 1004                              |0027: const/16 v2, #int 1040 // #410
+16f382: 7055 e30a 3142                         |0029: invoke-direct {v1, v3, v2, v4, v5}, LM2/b$b;.<init>:(LM2/b;III)V // method@0ae3
+16f388: 7220 1dbd 1000                         |002c: invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f38e: 0c04                                   |002f: move-result-object v4
+16f390: 7210 2bbd 0400                         |0030: invoke-interface {v4}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f396: 0c04                                   |0033: move-result-object v4
+16f398: 1f04 481f                              |0034: check-cast v4, Ljava/lang/Integer; // type@1f48
+16f39c: 6e10 6eb9 0400                         |0036: invoke-virtual {v4}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f3a2: 0a04                                   |0039: move-result v4
+16f3a4: 2806                                   |003a: goto 0040 // +0006
+16f3a6: 0d04                                   |003b: move-exception v4
+16f3a8: 6e10 76ba 0400                         |003c: invoke-virtual {v4}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f3ae: 12f4                                   |003f: const/4 v4, #int -1 // #ff
+16f3b0: 7210 1abd 0000                         |0040: invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f3b6: 5435 3f07                              |0043: iget-object v5, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f3ba: 3805 2200                              |0045: if-eqz v5, 0067 // +0022
+16f3be: 12e5                                   |0047: const/4 v5, #int -2 // #fe
+16f3c0: 3254 0700                              |0048: if-eq v4, v5, 004f // +0007
+16f3c4: 7110 19ba 0400                         |004a: invoke-static {v4}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f3ca: 0c05                                   |004d: move-result-object v5
+16f3cc: 2803                                   |004e: goto 0051 // +0003
+16f3ce: 1a05 1597                              |004f: const-string v5, "応答なし" // string@9715
+16f3d2: 5433 3f07                              |0051: iget-object v3, v3, LM2/b;.c:LM2/b$d; // field@073f
+16f3d6: 2200 611f                              |0053: new-instance v0, Ljava/lang/StringBuilder; // type@1f61
+16f3da: 7010 24ba 0000                         |0055: invoke-direct {v0}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f3e0: 1a01 dd96                              |0058: const-string v1, "動画ボタンコマンド結果：" // string@96dd
+16f3e4: 6e20 30ba 1000                         |005a: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f3ea: 6e20 30ba 5000                         |005d: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f3f0: 6e10 3eba 0000                         |0060: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f3f6: 0c05                                   |0063: move-result-object v5
+16f3f8: 7220 ea0a 5300                         |0064: invoke-interface {v3, v5}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f3fe: 0f04                                   |0067: return v4
+      catches       : 1
+        0x0030 - 0x003a
+          Ljava/lang/Exception; -> 0x003b
+      positions     :
+      locals        :
+
+    #28              : (in LM2/b;)
+      name          : 'x'
+      type          : '(ILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 4
+      insns size    : 31 16-bit code units
+16ec38:                                        |[16ec38] M2.b.x:(ILM2/b$c;)Z
+16ec48: 1215                                   |0000: const/4 v5, #int 1 // #1
+16ec4a: 5430 3d07                              |0001: iget-object v0, v3, LM2/b;.a:LN2/a; // field@073d
+16ec4e: 1201                                   |0003: const/4 v1, #int 0 // #0
+16ec50: 3800 1a00                              |0004: if-eqz v0, 001e // +001a
+16ec54: 2350 c224                              |0006: new-array v0, v5, [B // type@24c2
+16ec58: 1222                                   |0008: const/4 v2, #int 2 // #2
+16ec5a: 4f02 0001                              |0009: aput-byte v2, v0, v1
+16ec5e: 1302 0f00                              |000b: const/16 v2, #int 15 // #f
+16ec62: 7040 150b 2305                         |000d: invoke-direct {v3, v2, v5, v0}, LM2/b;.u:(II[B)[B // method@0b15
+16ec68: 0c05                                   |0010: move-result-object v5
+16ec6a: 5433 3d07                              |0011: iget-object v3, v3, LM2/b;.a:LN2/a; // field@073d
+16ec6e: 1300 010f                              |0013: const/16 v0, #int 3841 // #f01
+16ec72: 6e40 ad0b 0345                         |0015: invoke-virtual {v3, v0, v5, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ec78: 0a01                                   |0018: move-result v1
+16ec7a: 2805                                   |0019: goto 001e // +0005
+16ec7c: 0d03                                   |001a: move-exception v3
+16ec7e: 6e10 76ba 0300                         |001b: invoke-virtual {v3}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ec84: 0f01                                   |001e: return v1
+      catches       : 1
+        0x0011 - 0x0019
+          LM2/c; -> 0x001a
+      positions     :
+      locals        :
+
+    #29              : (in LM2/b;)
+      name          : 'y'
+      type          : '(I)I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 5
+      insns size    : 95 16-bit code units
+16f410:                                        |[16f410] M2.b.y:(I)I
+16f420: 1200                                   |0000: const/4 v0, #int 0 // #0
+16f422: 5b50 4307                              |0001: iput-object v0, v5, LM2/b;.g:[B // field@0743
+16f426: 1200                                   |0003: const/4 v0, #int 0 // #0
+16f428: 5c50 4407                              |0004: iput-boolean v0, v5, LM2/b;.h:Z // field@0744
+16f42c: 5950 4507                              |0006: iput v0, v5, LM2/b;.i:I // field@0745
+16f430: 5451 3f07                              |0008: iget-object v1, v5, LM2/b;.c:LM2/b$d; // field@073f
+16f434: 3801 0700                              |000a: if-eqz v1, 0011 // +0007
+16f438: 1a02 bd97                              |000c: const-string v2, "電源ON開始" // string@97bd
+16f43c: 7220 ea0a 2100                         |000e: invoke-interface {v1, v2}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f442: 1211                                   |0011: const/4 v1, #int 1 // #1
+16f444: 7110 20bd 0100                         |0012: invoke-static {v1}, Ljava/util/concurrent/Executors;.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService; // method@bd20
+16f44a: 0c02                                   |0015: move-result-object v2
+16f44c: 2203 1602                              |0016: new-instance v3, LM2/b$b; // type@0216
+16f450: 1304 010f                              |0018: const/16 v4, #int 3841 // #f01
+16f454: 7056 e30a 5304                         |001a: invoke-direct {v3, v5, v4, v0, v6}, LM2/b$b;.<init>:(LM2/b;III)V // method@0ae3
+16f45a: 7220 1dbd 3200                         |001d: invoke-interface {v2, v3}, Ljava/util/concurrent/ExecutorService;.submit:(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future; // method@bd1d
+16f460: 0c06                                   |0020: move-result-object v6
+16f462: 12f0                                   |0021: const/4 v0, #int -1 // #ff
+16f464: 7210 2bbd 0600                         |0022: invoke-interface {v6}, Ljava/util/concurrent/Future;.get:()Ljava/lang/Object; // method@bd2b
+16f46a: 0c06                                   |0025: move-result-object v6
+16f46c: 1f06 481f                              |0026: check-cast v6, Ljava/lang/Integer; // type@1f48
+16f470: 6e10 6eb9 0600                         |0028: invoke-virtual {v6}, Ljava/lang/Integer;.intValue:()I // method@b96e
+16f476: 0a06                                   |002b: move-result v6
+16f478: 3a06 0b00                              |002c: if-ltz v6, 0037 // +000b
+16f47c: 3561 0300                              |002e: if-ge v1, v6, 0031 // +0003
+16f480: 2807                                   |0030: goto 0037 // +0007
+16f482: 0160                                   |0031: move v0, v6
+16f484: 2805                                   |0032: goto 0037 // +0005
+16f486: 0d06                                   |0033: move-exception v6
+16f488: 6e10 76ba 0600                         |0034: invoke-virtual {v6}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16f48e: 7210 1abd 0200                         |0037: invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;.shutdown:()V // method@bd1a
+16f494: 5456 3f07                              |003a: iget-object v6, v5, LM2/b;.c:LM2/b$d; // field@073f
+16f498: 3806 2200                              |003c: if-eqz v6, 005e // +0022
+16f49c: 12e6                                   |003e: const/4 v6, #int -2 // #fe
+16f49e: 3260 0700                              |003f: if-eq v0, v6, 0046 // +0007
+16f4a2: 7110 19ba 0000                         |0041: invoke-static {v0}, Ljava/lang/String;.valueOf:(I)Ljava/lang/String; // method@ba19
+16f4a8: 0c06                                   |0044: move-result-object v6
+16f4aa: 2803                                   |0045: goto 0048 // +0003
+16f4ac: 1a06 1597                              |0046: const-string v6, "応答なし" // string@9715
+16f4b0: 5455 3f07                              |0048: iget-object v5, v5, LM2/b;.c:LM2/b$d; // field@073f
+16f4b4: 2201 611f                              |004a: new-instance v1, Ljava/lang/StringBuilder; // type@1f61
+16f4b8: 7010 24ba 0100                         |004c: invoke-direct {v1}, Ljava/lang/StringBuilder;.<init>:()V // method@ba24
+16f4be: 1a02 bc97                              |004f: const-string v2, "電源ON結果：" // string@97bc
+16f4c2: 6e20 30ba 2100                         |0051: invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f4c8: 6e20 30ba 6100                         |0054: invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@ba30
+16f4ce: 6e10 3eba 0100                         |0057: invoke-virtual {v1}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@ba3e
+16f4d4: 0c06                                   |005a: move-result-object v6
+16f4d6: 7220 ea0a 6500                         |005b: invoke-interface {v5, v6}, LM2/b$d;.e:(Ljava/lang/String;)V // method@0aea
+16f4dc: 0f00                                   |005e: return v0
+      catches       : 1
+        0x0022 - 0x002c
+          Ljava/lang/Exception; -> 0x0033
+      positions     :
+      locals        :
+
+    #30              : (in LM2/b;)
+      name          : 'z'
+      type          : '(IILM2/b$c;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 4
+      outs          : 4
+      insns size    : 32 16-bit code units
+16ec98:                                        |[16ec98] M2.b.z:(IILM2/b$c;)Z
+16eca8: 5425 3d07                              |0000: iget-object v5, v2, LM2/b;.a:LN2/a; // field@073d
+16ecac: 1200                                   |0002: const/4 v0, #int 0 // #0
+16ecae: 3805 1c00                              |0003: if-eqz v5, 001f // +001c
+16ecb2: 8d33                                   |0005: int-to-byte v3, v3
+16ecb4: 1215                                   |0006: const/4 v5, #int 1 // #1
+16ecb6: 2355 c224                              |0007: new-array v5, v5, [B // type@24c2
+16ecba: 4f03 0500                              |0009: aput-byte v3, v5, v0
+16ecbe: 1243                                   |000b: const/4 v3, #int 4 // #4
+16ecc0: 1301 0f00                              |000c: const/16 v1, #int 15 // #f
+16ecc4: 7040 150b 3251                         |000e: invoke-direct {v2, v3, v1, v5}, LM2/b;.u:(II[B)[B // method@0b15
+16ecca: 0c03                                   |0011: move-result-object v3
+16eccc: 5422 3d07                              |0012: iget-object v2, v2, LM2/b;.a:LN2/a; // field@073d
+16ecd0: 1305 0f04                              |0014: const/16 v5, #int 1039 // #40f
+16ecd4: 6e40 ad0b 5243                         |0016: invoke-virtual {v2, v5, v3, v4}, LN2/a;.s0:(I[BI)Z // method@0bad
+16ecda: 0a00                                   |0019: move-result v0
+16ecdc: 2805                                   |001a: goto 001f // +0005
+16ecde: 0d02                                   |001b: move-exception v2
+16ece0: 6e10 76ba 0200                         |001c: invoke-virtual {v2}, Ljava/lang/Throwable;.printStackTrace:()V // method@ba76
+16ece6: 0f00                                   |001f: return v0
+      catches       : 1
+        0x0012 - 0x001a
+          LM2/c; -> 0x001b
+      positions     :
+      locals        :
+
+  source_file_idx   : 22463 (SourceFile)
+
+Class #349            -

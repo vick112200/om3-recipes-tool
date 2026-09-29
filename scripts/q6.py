@@ -1,0 +1,17 @@
+import psycopg2
+conn = psycopg2.connect(host="172.26.136.55", port=30491, user="lcp", password="lcp", dbname="lcp-dev")
+cur = conn.cursor()
+def q(label, sql, args=None):
+    cur.execute(sql, args or ())
+    print("### "+label)
+    rows=cur.fetchall()
+    if not rows: print("    <no rows>")
+    for r in rows: print("   ", r)
+    print()
+q("role_permission_rules cols", "SELECT column_name FROM information_schema.columns WHERE table_name='role_permission_rules'")
+q("perms role 1007", "SELECT * FROM role_permission_rules WHERE role_id=1007")
+q("perms role 1 (platform-admin)", "SELECT * FROM role_permission_rules WHERE role_id=1")
+q("bindings role 1007", "SELECT * FROM role_bindings WHERE role_id=1007")
+q("bindings user 13", "SELECT * FROM role_bindings WHERE user_id=13")
+q("perm itsm tickets", "SELECT * FROM permissions WHERE code LIKE 'itsm:tickets%' OR code LIKE 'workflow:tasks%'")
+conn.close()

@@ -1,0 +1,16 @@
+import psycopg2
+conn = psycopg2.connect(host="172.26.136.55", port=30491, user="lcp", password="lcp", dbname="lcp-dev")
+cur = conn.cursor()
+def q(l,s,a=None):
+    cur.execute(s,a or ()); print("### "+l); rows=cur.fetchall()
+    if not rows: print("    <no rows>")
+    for r in rows: print("   ",r)
+    print()
+q("roles with itsm:tickets:patch", "SELECT role_id,pattern FROM role_permission_rules WHERE pattern LIKE '%itsm:tickets:patch%' OR pattern='*:*'")
+q("host test-app exact", "SELECT id,name,workspace_id FROM hosts WHERE name ILIKE '%test-app%'")
+q("hosts ws NULL count", "SELECT count(*) FROM hosts WHERE workspace_id IS NULL")
+q("hosts sample ws null", "SELECT id,name,workspace_id FROM hosts WHERE workspace_id IS NULL ORDER BY id LIMIT 20")
+q("ops_scripts cols", "SELECT column_name FROM information_schema.columns WHERE table_name='ops_scripts'")
+q("itsm_tickets cols", "SELECT column_name FROM information_schema.columns WHERE table_name='itsm_tickets'")
+q("workspaces", "SELECT id,name FROM workspaces ORDER BY id")
+conn.close()

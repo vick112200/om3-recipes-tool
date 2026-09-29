@@ -1,0 +1,20 @@
+import psycopg2
+conn = psycopg2.connect(host="172.26.136.55", port=30491, user="lcp", password="lcp", dbname="lcp-dev")
+cur = conn.cursor()
+def cols(t):
+    cur.execute("SELECT column_name,data_type FROM information_schema.columns WHERE table_name=%s ORDER BY ordinal_position",(t,))
+    print("COLS %s: %s"%(t,cur.fetchall())); print()
+def q(label, sql, args=None):
+    cur.execute(sql, args or ())
+    print("### "+label)
+    rows=cur.fetchall()
+    if not rows: print("    <no rows>")
+    for r in rows: print("   ", r)
+    print()
+cols("itsm_catalog_items")
+cols("wf_definitions")
+cols("wf_definition_versions")
+q("wf_definitions all", "SELECT id,key,name,status FROM wf_definitions ORDER BY id")
+q("wf_definition_versions all", "SELECT id,definition_id,version,status FROM wf_definition_versions ORDER BY id")
+q("users", "SELECT id,username,display_name FROM users ORDER BY id")
+conn.close()
