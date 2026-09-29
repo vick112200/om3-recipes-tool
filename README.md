@@ -5,12 +5,17 @@
 > Android App（WebView + 单页 HTML）+ 一套自己写的相机连接功能。
 > 全部离线：一个 HTML 文件，界面、图片、字体都内嵌，不联网、不收集任何东西。
 
-<!-- ↓↓↓ 截图：把手机截图存成下面这几个名字，然后删掉这行注释和 `<!--` `-->` 就能显示
 <p align="center">
-  <img src="screenshots/1-home.png" width="250">
-  <img src="screenshots/2-recipe.png" width="250">
-  <img src="screenshots/3-connect.png" width="250">
+  <img src="screenshots/recipe-detail.jpg" width="240">
+  <img src="screenshots/plans.jpg" width="240"><br>
+  <img src="screenshots/plan-detail.jpg" width="240">
+  <img src="screenshots/share.jpg" width="240">
 </p>
+
+<!-- 还差两张，拍好放进 screenshots/ 再去掉这段注释：
+     ① 配方合集首页 → screenshots/recipes.jpg（用**最新版** App 截，标题才是 om3 recipes tool）
+     ② 连接相机页 → screenshots/connect.jpg
+<p align="center"><img src="screenshots/recipes.jpg" width="240"> <img src="screenshots/connect.jpg" width="240"></p>
 -->
 
 ## 它能干什么
